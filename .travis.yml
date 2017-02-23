@@ -3,11 +3,10 @@ language: python
 # Platform
 # Python version
 python:
-  - "3.3"
+  - "3.7"
 # command to install dependencies
 install:
   - pip install virtualenv
-  - pip install pathlib
   - git clone https://github.com/packagecontrol/package_reviewer.git
   - cd package_reviewer
   - virtualenv venv
@@ -15,4 +14,4 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - python -m package_reviewer
+  - python -m package_reviewer "https://github.com/Kristinita/SashaTravis"
