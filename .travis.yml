@@ -1,13 +1,17 @@
 # language
 language: python
 # Platform
-os: windows
 # Python version
 python:
   - "3.3"
 # command to install dependencies
 install:
-  - pip install flake8
+  - pip install virtualenv
+  - git clone https://github.com/packagecontrol/package_reviewer.git
+  - cd package_reviewer
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
 # command to run tests
 script:
-  - flake8 .
+  - python -m package_reviewer
