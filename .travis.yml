@@ -3,7 +3,7 @@ language: python
 # Platform
 # Python version
 python:
-  - "3.6"
+  - "3.7-dev"
 # command to install dependencies
 install:
   - pip install virtualenv
