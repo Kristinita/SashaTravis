@@ -1,5 +1,7 @@
 # language
 language: python
+# Platform
+os: windows
 # Python version
 python:
   - "3.3"
