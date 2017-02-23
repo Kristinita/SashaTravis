@@ -7,6 +7,7 @@ python:
 # command to install dependencies
 install:
   - pip install virtualenv
+  - pip install pathlib
   - git clone https://github.com/packagecontrol/package_reviewer.git
   - cd package_reviewer
   - virtualenv venv
