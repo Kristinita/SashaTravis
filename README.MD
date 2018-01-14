@@ -1,1 +1,1 @@
-Sasha Goddess! Yes!
+Sasha Goddess!
