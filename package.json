@@ -1,0 +1,10 @@
+{
+  "name": "SashaTravis",
+  "version": "0.0.2",
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^4.2.0"
+  }
+}

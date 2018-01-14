@@ -1,6 +1,5 @@
 # language
 language: python
-# Platform
 # Python version
 python:
   - "3.7-dev"
