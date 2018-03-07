@@ -1,16 +1,8 @@
-# language
+group: travis_latest
 language: python
-# Python version
 python:
-  - "3.7-dev"
-# command to install dependencies
-install:
-  - pip install virtualenv
-  - git clone https://github.com/packagecontrol/package_reviewer.git
-  - cd package_reviewer
-  - virtualenv venv
-  - source venv/bin/activate
-  - pip install -r requirements.txt
-# command to run tests
+  - "3.6.4"
+
 script:
-  - python -m package_reviewer "https://github.com/Kristinita/SashaTravis"
+  - python --version
+  - node --version
