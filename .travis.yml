@@ -1,8 +1,7 @@
-group: travis_latest
+group: travis_lts
 language: python
 python:
   - "3.6.4"
 
 script:
-  - python --version
   - node --version
