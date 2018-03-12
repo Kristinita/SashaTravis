@@ -12,7 +12,7 @@ deploy:
   target-branch: master
   local-dir: SashaSrc
   repo: Kristinita/SashaTravis.github.io
-  github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
+  github-token: ${GITHUB_API_KEY}
   keep-history: true
   on:
     branch: master
