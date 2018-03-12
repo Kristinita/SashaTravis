@@ -2,4 +2,7 @@ script:
   - cp -a SashaSrc SashaDest
 
 after_success:
+  - echo "Build success!"
+
+deploy:
   - bash travis-deploy.sh

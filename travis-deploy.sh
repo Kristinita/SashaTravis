@@ -2,7 +2,7 @@
 GH_USERNAME=Kristinita
 
 #advanced settings
-BRANCH=master
+BRANCH=mster
 GITHUB_OUTPUT_FOLDER=built_website
 PELICAN_OUTPUT_FOLDER=SashaDest
 TARGET_REPO=$GH_USERNAME/SashaTravis.github.io.git
