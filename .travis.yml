@@ -12,8 +12,10 @@ deploy:
   target-branch: master
   local-dir: SashaSrc
   repo: Kristinita/SashaTravis.github.io
-  github-token: GITHUB_API_KEY
+  github-token: $GITHUB_API_KEY
   file_glob: true
+  name: Kristinita
+  e-mail: $GITHUB_EMAIL
   keep-history: true
   on:
     branch: master
