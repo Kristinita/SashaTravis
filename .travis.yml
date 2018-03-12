@@ -1,7 +1,7 @@
 language: python
 
 script:
-  - zarembo -a SashaSrc SashaDest
+  - cp -a SashaSrc SashaDest
 
 # after_success:
   # - bash travis-deploy.sh
