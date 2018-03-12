@@ -7,8 +7,8 @@ PELICAN_OUTPUT_FOLDER=SashaDest
 TARGET_REPO=$GH_USERNAME/SashaTravis.github.io.git
 
 echo -e "Starting to deploy to GitHub Pages\n"
-git config --global user.email "travis@travis-ci.org"
-git config --global user.name "Travis"
+git config --global user.email "SashaChernykhEmpressOfUniverse@kristinita.ru"
+git config --global user.name "Kristinita"
 # Pull hash and commit message of the most recent commit
 commitHash=$(git rev-parse HEAD)
 commitMessage=$(git log -1 --pretty=%B)
