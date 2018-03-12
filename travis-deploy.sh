@@ -20,7 +20,7 @@ cd $GITHUB_OUTPUT_FOLDER
 rsync -rv --exclude=.git  ../$PELICAN_OUTPUT_FOLDER/* . --delete
 #add, commit and push files
 git add -A .
-detailedMessage="Commit $commitHash pushed to GitHub Pages by Travis CI build $TRAVIS_BUILD_NUMBER"
+detailedMessage="Commit https://github.com/$TRAVIS_REPO_SLUG/commit/$commitHash pushed to GitHub Pages by Travis CI build $TRAVIS_BUILD_NUMBER"
 git commit -m "$commitMessage" -m "$detailedMessage"
 git push -fq origin $BRANCH
 echo -e "Deploy completed"
