@@ -1,5 +1,16 @@
 script:
   - cp -a SashaSrc SashaDest
 
-after_success:
-  - bash travis-deploy.sh
+# after_success:
+  # - bash travis-deploy.sh
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local-dir: SashaDest
+  repo: Kristinita/SashaTravis.github.io
+  github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
+  verbose: true
