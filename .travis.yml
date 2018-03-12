@@ -13,6 +13,5 @@ deploy:
   keep-history: true
   on:
     branch: master
-  project-name:
-    - "Kristinita's Search"
+  project-name: Поиск Кристиниты
   verbose: true
