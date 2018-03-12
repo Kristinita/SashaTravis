@@ -13,7 +13,7 @@ git config --global user.name "Kristinita"
 commitHash=$(git rev-parse HEAD)
 commitMessage=$(git log -1 --pretty=%B)
 #get the current output in a separate directory
-git clone --quiet --branch=$BRANCH https://${GH_PAGES}@github.com/$TARGET_REPO $PELICAN_OUTPUT_FOLDER > /dev/null
+git clone --quiet --branch=$BRANCH https://$GITHUB_API_KEY@github.com/$TARGET_REPO $PELICAN_OUTPUT_FOLDER > /dev/null
 #copy the new output
 cd $PELICAN_OUTPUT_FOLDER
 rsync -rv --exclude=.git  ../$PELICAN_OUTPUT_FOLDER/* . --delete
