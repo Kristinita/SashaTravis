@@ -1,3 +1,5 @@
+language: python
+
 script:
   - cp -a SashaSrc SashaDest
 
