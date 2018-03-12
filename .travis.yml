@@ -10,7 +10,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   target-branch: master
-  local-dir: SashaDest
+  local-dir: SashaSrc
   repo: Kristinita/SashaTravis.github.io
   github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
