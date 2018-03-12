@@ -1,23 +1,30 @@
 language: python
 
+install:
+  - echo Print Home directory
+  - echo $HOME
+  - bash tidy-install.sh
+  - echo
+
 script:
-  - cp -a SashaSrc SashaDest
+  - echo Print final directory
+  - pwd
 
 # after_success:
   # - bash travis-deploy.sh
 
-deploy:
-  edge:
-    branch: v1.8.47
-  provider: pages
-  skip-cleanup: true
-  target-branch: master
-  local-dir: SashaSrc
-  repo: Kristinita/SashaTravis.github.io
-  github-token: $GITHUB_API_KEY
-  name: Kristinita
-  e-mail: $GITHUB_EMAIL
-  keep-history: true
-  on:
-    branch: master
-  verbose: true
+# deploy:
+#   edge:
+#     branch: v1.8.47
+#   provider: pages
+#   skip-cleanup: true
+#   target-branch: master
+#   local-dir: SashaDest
+#   repo: Kristinita/SashaTravis.github.io
+#   github-token: $GITHUB_API_KEY
+#   name: Kristinita
+#   e-mail: $GITHUB_EMAIL
+#   keep-history: true
+#   on:
+#     branch: master
+#   verbose: true
