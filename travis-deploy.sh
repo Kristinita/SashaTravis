@@ -9,7 +9,7 @@ TARGET_REPO=$GH_USERNAME/SashaTravis.github.io.git
 
 echo -e "Starting to deploy to GitHub Pages"
 git config --global user.email "SashaChernykhEmpressOfUniverse@kristinita.ru"
-git config --global user.name "Kristinita"
+git config --global user.name ${GITHUB_EMAIL}
 # Pull hash and commit message of the most recent commit
 commitHash=$(git rev-parse HEAD)
 commitMessage=$(git log -1 --pretty=%B)
@@ -20,7 +20,7 @@ cd $GITHUB_OUTPUT_FOLDER
 rsync -rv --exclude=.git  ../$PELICAN_OUTPUT_FOLDER/* . --delete
 #add, commit and push files
 git add -A .
-detailedMessage="Commit $commitHash pushed to GitHub Pages by Travis build $TRAVIS_BUILD_NUMBER"
+detailedMessage="Commit $commitHash pushed to GitHub Pages by Travis CI build $TRAVIS_BUILD_NUMBER"
 git commit -m "$commitMessage" -m "$detailedMessage"
 git push -fq origin $BRANCH
 echo -e "Deploy completed"
