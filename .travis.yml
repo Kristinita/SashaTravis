@@ -11,5 +11,5 @@ deploy:
   keep-history: true
   on:
     branch: master
-  project-name: Kristinita\\'s Search
+  project-name: Kristinita\'s Search
   verbose: true
