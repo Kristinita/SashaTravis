@@ -1,9 +1,7 @@
-env:
-  - git config --global core.quotePath false
-
 language: python
 
 install:
+  - git config --global core.quotePath false
   - gem install travis
 
 script:
