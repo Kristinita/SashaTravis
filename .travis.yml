@@ -4,7 +4,7 @@ install:
   - gem install travis
 
 script:
-  - travis lint -x
+  - travis lint
 
 deploy:
   provider: pages
