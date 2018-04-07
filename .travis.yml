@@ -1,10 +1,10 @@
-language: pytho
+language: python
 
 install:
   - gem install travis
 
 script:
-  - travis lint
+  - travis lint -x
 
 deploy:
   provider: pages
