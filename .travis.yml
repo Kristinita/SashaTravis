@@ -1,7 +1,10 @@
-language: python
+language: pytho
+
+install:
+  - gem install travis
 
 script:
-  - 'echo "No script!"'
+  - travis lint -x
 
 deploy:
   provider: pages
