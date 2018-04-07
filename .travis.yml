@@ -1,3 +1,6 @@
+env:
+  - git config --global core.quotePath false
+
 language: python
 
 install:
