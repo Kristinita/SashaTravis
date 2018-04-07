@@ -1,5 +1,8 @@
 language: python
 
+script:
+  - 'echo "No script!"'
+
 deploy:
   provider: pages
   skip-cleanup: true
