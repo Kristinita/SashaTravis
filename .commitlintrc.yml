@@ -10,8 +10,6 @@
 # https://probot.github.io/apps/commitlint/
 # Config-conventional extends:
 # http://marionebl.github.io/commitlint/#/guides-local-setup?id=install-commitlint
-extends:
-  - '@commitlint/config-conventional'
 # commitlint rules:
 # 0 — disable, 1 — warning, 2 — error:
 # I'm not use warnings, that CI works correct.
