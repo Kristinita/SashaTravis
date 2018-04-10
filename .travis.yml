@@ -1,20 +1,7 @@
-language: python
-
-before_install:
-  - git config --global core.quotePath false
+language: node_js
 
 install:
-  - gem install travis
+  - npm install --save-dev @commitlint/travis-cli
 
 script:
-  - travis lint -x
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  target-branch: SashaDeploy
-  github-token: $GITHUB_API_KEY
-  keep-history: true
-  on:
-    branch: SashaSrc
-  verbose: true
+  - commitlint-travis
