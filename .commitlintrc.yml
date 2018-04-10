@@ -1,6 +1,17 @@
+# Commitlint
+# Lint commit messages:
+# http://marionebl.github.io/commitlint
+# [WARNING] Commitlint doesn't install globally:
+# https://github.com/marionebl/commitlint/issues/179
+# Probot Commitlint
+# Check commits in pull requests.
+# [WARNING] Probot Commitlint doesn't work with commitlint configuration files:
+# https://github.com/ahmed-taj/commitlint-bot/pull/8
+# https://probot.github.io/apps/commitlint/
+# Config-conventional extends:
+# http://marionebl.github.io/commitlint/#/guides-local-setup?id=install-commitlint
 extends:
   - '@commitlint/config-conventional'
-  - '@commitlint/prompt'
 # commitlint rules:
 # 0 — disable, 1 — warning, 2 — error:
 # I'm not use warnings, that CI works correct.
