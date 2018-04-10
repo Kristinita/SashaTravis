@@ -5,3 +5,5 @@ Amazing!
 La Leyenda!
 Beautiful!
 Fantastic!
+
+.commitlintrc.yml
