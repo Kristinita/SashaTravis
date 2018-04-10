@@ -4,4 +4,3 @@ Saint!
 Amazing!
 La Leyenda!
 Beautiful!
-Fantastic!
