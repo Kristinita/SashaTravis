@@ -1,4 +1,6 @@
-# Commitlint
+##############
+# Commitlint #
+##############
 # Lint commit messages:
 # http://marionebl.github.io/commitlint
 # [WARNING] Commitlint doesn't install globally:
@@ -8,7 +10,8 @@
 # [WARNING] Probot Commitlint doesn't work with commitlint configuration files:
 # https://github.com/ahmed-taj/commitlint-bot/pull/8
 # https://probot.github.io/apps/commitlint/
-# Config-conventional extends:
+# [NOTE] If contains “.commitlintrc.yml” file, config-conventional extends doesn't need;
+# You don't need install @commitlint/config-conventional:
 # http://marionebl.github.io/commitlint/#/guides-local-setup?id=install-commitlint
 # commitlint rules:
 # 0 — disable, 1 — warning, 2 — error:
@@ -112,6 +115,7 @@ rules:
       # Documentation only changes
       - docs
       # Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+      # Validation changes — this type.
       - style
       # A code change that neither fixes a bug nor adds a feature
       - refactor
@@ -148,9 +152,9 @@ rules:
     - 0
     - always
 
-  # sign-off commits:
+  # Sign-off commits:
   # https://stackoverflow.com/a/14044024/5951529
-  # I'm not use it im my projects:
+  # I'm not use it in my projects:
   # 1. gpg-sign more really certify commit author,
   # 2. unobfuscate e-mail push to GitHub,
   # 3. User needs add “Signed-off-by: Your Name <your.email@example.com>” each time,

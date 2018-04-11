@@ -1,0 +1,6 @@
+install:
+  - cinst node -y
+  - npm install --save-dev @commitlint/travis-cli
+
+test_script:
+  - commitlint-travis
