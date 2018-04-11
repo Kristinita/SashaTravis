@@ -1,12 +1,34 @@
 # EditorConfig
 # http://editorconfig.org/
 
+# Apply another .editorconfig for subfolder, that for root folder
+# http://editorconfig.org/#file-format-details
+# root = true
+
 # UNIX line endings in “.sh” files:
 # https://stackoverflow.com/a/49050430/5951529
-[*.sh]
-end_of_line = lf
-
 # Tabs = 4 spaces for CoffeeScript always
-[*.coffee]
+[*]
 indent_style = tab
 indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+# Ignore third-party folders:
+# https://stackoverflow.com/a/40348831/5951529
+[{.git,.venv,__pycache__,node_modules,pelican-plugins}/**]
+charset = none
+end_of_line = none
+insert_final_newline = none
+trim_trailing_whitespace = none
+indent_style = none
+indent_size = none
