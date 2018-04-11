@@ -16,3 +16,5 @@ install:
 
 test_script:
   - commitlint-travis
+
+build: off
