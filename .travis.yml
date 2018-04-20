@@ -4,7 +4,9 @@ node_js:
   - 'node'
 
 install:
-  - npm install -g eclint
+  - npm install -g markdownlint-cli
 
-script:
-  - eclint fix
+jobs:
+  include:
+    - script: echo "First script"
+    - script: markdownlint SashaMarkdownlint.md
