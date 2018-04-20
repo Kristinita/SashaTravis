@@ -3,9 +3,14 @@ language: node_js
 node_js:
   - 'node'
 
+env:
+  - GRUNT_COMMAND=sasha
+  - GRUNT_COMMAND=goddess
+
 install:
   - npm install -g markdownlint-cli
 
 script:
+  - echo "$GRUNT_COMMAND"
   - mv SashaMarkdownlint.md SashaNewMarkdownlint.md
   - markdownlint SashaNewMarkdownlint.md
