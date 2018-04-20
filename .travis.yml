@@ -8,5 +8,5 @@ install:
 
 jobs:
   include:
-    - script: echo "First script"
     - script: markdownlint SashaMarkdownlint.md
+    - script: echo "First script"
