@@ -9,7 +9,7 @@ install:
 jobs:
   include:
     - stage: compile
-    - script: mv SashaMarkdownlint.md SashaNewMarkdownlint.md
-    - script: mv SashaMarkdownlint.md SashaNewMarkdownlint2.md
+      script: mv SashaMarkdownlint.md SashaNewMarkdownlint.md
+      script: mv SashaMarkdownlint.md SashaNewMarkdownlint2.md
     - stage: test
-    - script: markdownlint SashaMarkdownlint.md
+      script: markdownlint SashaMarkdownlint.md
