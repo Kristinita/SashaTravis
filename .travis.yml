@@ -1,3 +1,9 @@
+sudo: false
+cache:
+  apt: true
+  directories:
+    - ~/.m2/
+
 addons:
   apt:
     packages:
@@ -14,3 +20,4 @@ install:
 
 script:
 - xml val SashaXML.xml
+- xmlstarlet val SashaXML.xml
