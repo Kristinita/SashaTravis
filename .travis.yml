@@ -1,10 +1,10 @@
-language: node_js
+addons:
+  apt:
+    packages:
+    - xmlstarlet
 
-node_js:
-- 'node'
-
-install:
--
+language: bash
 
 script:
 - xmlstarlet val SashaXML.xml
+- xml val SashaXML.xml
