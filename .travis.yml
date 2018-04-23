@@ -5,6 +5,7 @@ node_js:
 
 install:
 - sudo apt-get install xmlstarlet
+- rpm -i xmlstarlet-x.x.x-1.i386.rpm
 
 script:
 - xml val SashaXML.xml
