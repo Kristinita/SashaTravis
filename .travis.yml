@@ -1,13 +1,6 @@
-sudo: false
-cache:
-  apt: true
-  directories:
-    - ~/.m2/
-
 addons:
   apt:
     packages:
-      - xsltproc
       - xmlstarlet
 
 language: node_js
@@ -16,8 +9,7 @@ node_js:
 - 'node'
 
 install:
-- sudo apt-get install xmlstarlet
+-
 
 script:
-- xml val SashaXML.xml
 - xmlstarlet val SashaXML.xml
