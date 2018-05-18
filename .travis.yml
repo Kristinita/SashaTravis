@@ -3,8 +3,8 @@ language: python
 python: 3.6
 
 env:
-- PYTHON_COMMAND=-- version
-- PYTHON_COMMAND=-- version && pip --version
+- ECHO_COMMAND=Sasha
+- ECHO_COMMAND=Sasha && echo Goddess
 
 script:
-- python $PYTHON_COMMAND
+- echo $ECHO_COMMAND
