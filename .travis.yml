@@ -1,10 +1,6 @@
-language: python
-
-python: 3.6
-
 env:
 - ECHO_COMMAND=echo Sasha
-- ECHO_COMMAND="echo Sasha && echo Goddess"
+- ECHO_COMMAND=echo Sasha && echo Goddess
 
 script:
 - $ECHO_COMMAND
