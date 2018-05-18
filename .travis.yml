@@ -4,7 +4,7 @@ python: 3.6
 
 env:
 - ECHO_COMMAND=Sasha
-- ECHO_COMMAND=Sasha && echo Goddess
+- ECHO_COMMAND="Sasha && echo Goddess"
 
 script:
 - echo $ECHO_COMMAND
