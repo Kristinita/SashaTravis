@@ -1,6 +1,6 @@
 env:
 - ECHO_COMMAND=Sasha
-- ECHO_COMMAND=Sasha && echo Goddess
+- ECHO_COMMAND="Sasha && echo Goddess"
 
 script:
 - eval echo $ECHO_COMMAND
