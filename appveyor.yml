@@ -1,0 +1,7 @@
+environment:
+  matrix:
+  - ECHO_COMMAND: Sasha
+  - ECHO_COMMAND: Sasha && echo Goddess
+
+build_script:
+- echo %ECHO_COMMAND%

@@ -1,5 +1,0 @@
-<snippet><description>Hashes around selected words: https://forum.sublimetext.com/t/question-comments-comments-around-words/35978/4?u=sasha_chernykh http://docs.sublimetext.info/en/latest/extensibility/snippets.html#substitutions</description><tabTrigger>#</tabTrigger><scope>source.yaml</scope><content><![CDATA[
-##${0/./#/g}##
-# ${0:$SELECTION} #
-##${0/./#/g}##
-]]></content></snippet>
