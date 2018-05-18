@@ -1,10 +1,10 @@
-addons:
-  apt:
-    packages:
-    - xmlstarlet
+language: python
 
-language: bash
+python: 3.6
+
+env:
+- PYTHON_COMMAND=-- version
+- PYTHON_COMMAND=-- version && pip --version
 
 script:
-- xmlstarlet val SashaXML.xml
-- xml val SashaXML.xml
+- python $PYTHON_COMMAND
