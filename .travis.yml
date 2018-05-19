@@ -1,6 +1,7 @@
-env:
-- ECHO_COMMAND="echo Sasha"
-- ECHO_COMMAND="echo Sasha && echo Goddess"
+matrix:
+  include:
+    - script: echo Sasha
+    - script: echo Sasha && echo Goddess
 
 script:
-- $ECHO_COMMAND
+- echo Another
