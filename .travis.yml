@@ -8,7 +8,6 @@ matrix:
     	- echo Sasha && echo http-server
     	- echo Another
 
-# Comment
 deploy:
   provider: pages
   on:
