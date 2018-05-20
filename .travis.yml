@@ -1,14 +1,13 @@
 matrix:
   include:
     - script:
-    	- echo Sasha
+      - echo Sasha
       - echo Another
     - script:
       - DEPLOY=true
-    	- echo Sasha && echo http-server
-    	- echo Another
+      - echo Sasha && echo http-server
+      - echo Another
 
-# Comment
 deploy:
   provider: pages
   on:
