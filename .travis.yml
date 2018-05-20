@@ -1,7 +1,25 @@
 matrix:
   include:
-    - script: echo Sasha
-    - script: echo Sasha && echo http-server
+    - script:
+    	- echo Sasha
+      - echo Another
+    - script:
+      - DEPLOY=true
+    	- echo Sasha && echo http-server
+    	- echo Another
 
-script:
-- echo Another
+deploy:
+  provider: pages
+  on:
+    branch: master
+    condition: $DEPLOY=true
+  keep-history: true
+  skip-cleanup: true
+  target-branch: master
+  local-dir: output
+  repo: Kristinita/SashaTravis.github.io
+  github-token: $GITHUB_TOKEN
+  committer-from-gh: true
+  fqdn: Kristinita.ru
+  project-name: Поиск Кристиниты
+  verbose: true
