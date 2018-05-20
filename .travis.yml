@@ -4,7 +4,7 @@ matrix:
       - echo Sasha
       - echo Another
     - script:
-      - DEPLOY="1"
+      - DEPLOY=1
       - echo Sasha && echo http-server
       - echo Another
 
