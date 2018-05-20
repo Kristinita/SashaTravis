@@ -1,11 +1,11 @@
 matrix:
   include:
     - script:
-      - DEPLOY=true
+      - DEPLOY=false
       - echo Sasha
       - echo Another
     - script:
-      - DEPLOY=false
+      - DEPLOY=true
       - echo Sasha && echo http-server
       - echo Another
 
@@ -13,7 +13,11 @@ deploy:
   provider: pages
   on:
     branch: SashaMatrixDeploy
-    condition: $DEPLOY=true
+    condition:
+      - script:
+        - DEPLOY=true
+        - echo Sasha && echo http-server
+        - echo Another
   keep-history: true
   skip-cleanup: true
   target-branch: master
