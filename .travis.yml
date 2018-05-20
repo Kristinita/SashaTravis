@@ -1,7 +1,7 @@
 matrix:
   include:
     - script: echo Sasha
-    - script: echo Sasha && echo Goddess
+    - script: echo Sasha && echo http-server
 
 script:
 - echo Another
