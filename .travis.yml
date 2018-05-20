@@ -11,6 +11,7 @@ matrix:
 deploy:
   provider: pages
   on:
+    branch: SashaMatrixDeploy
     condition: $DEPLOY=true
   keep-history: true
   skip-cleanup: true
