@@ -8,6 +8,11 @@ machine:
   python:
     version: 3.6.5
 
+general:
+  branches:
+    only:
+     - SashaErichek
+
 dependencies:
 
   post:
