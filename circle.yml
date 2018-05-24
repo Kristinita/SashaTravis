@@ -6,19 +6,20 @@
 # https://github.com/Kristinita/Erichek/blob/master/circle.yml
 machine:
   python:
-    version: 3.6.5
+    version: 3.6.4
 
 general:
   branches:
     only:
-     - SashaErichek
+    - SashaErichek
 
 dependencies:
 
   post:
-   - pip install --upgrade pip
-   - pip install erichek
+  - pyenv install --list
+  - pip install --upgrade pip
+  - pip install erichek
 
 test:
   override:
-   - erichek
+  - erichek
