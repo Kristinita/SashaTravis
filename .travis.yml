@@ -1,25 +1,16 @@
-matrix:
-  include:
-    - script:
-      - echo Sasha
-      - echo Another
-    - script:
-      - DEPLOY=1
-      - echo Sasha && echo http-server
-      - echo Another
+#############
+# Travis CI #
+#############
+# Travis CI continuous integration
+# Comments:
+# https://github.com/Kristinita/KristinitaPelican/blob/master/.travis.yml
+language: python
 
-deploy:
-  provider: pages
-  on:
-    branch: SashaMatrixDeploy
-    condition: $DEPLOY
-  keep-history: true
-  skip-cleanup: true
-  target-branch: master
-  local-dir: output
-  repo: Kristinita/SashaTravis.github.io
-  github-token: $GITHUB_TOKEN
-  committer-from-gh: true
-  fqdn: Kristinita.ru
-  project-name: Поиск Кристиниты
-  verbose: true
+python: 3.6.5
+
+install:
+- pip install --upgrade pip
+- pip install erichek
+
+script:
+- erichek

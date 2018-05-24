@@ -1,0 +1,144 @@
+Описание пакета: в пакете представлены:
+
+1. Столицы и административные центры небольших государств (включая непризнанные) и зависимых территорий. Крупные государства, известные автору пакета и без дополнительной прокачки, не включены.
+2. Все оконечности материков.
+
+Процесс тренировки: вопросы двух типов:
+
+1. Задаётся страна — Вы должны назвать её столицу. В вопросах могут присутствовать уточнения.
+2. Задаётся континент и указание, какую крайнюю точку нужно назвать — назвать мыс.
+
+Условные обозначения:
+
++ зап — запад,
++ сев — север,
++ вост — восток,
++ о-в — назвать островную крайнюю точку, не континентальную,
++ конт — назвать континентальную крайнюю точку, не островную.
+
+Пример вопроса 1: Шри-Ланка
+
+Ответ к примеру вопроса 1: Шри-Джаяварденепура-Котте
+
+Пример вопроса 2: Монтсеррат (фактически)
+
+Ответ к примеру вопроса 2: Брейдас
+
+Пример вопроса 3: Европа о-в сев
+
+Ответ к примеру вопроса 3: Флигели
+
+Источник(и):
+
+1. Аванта +. Энциклопедия для детей. Том 13 — «Страны. Народы. Цивилизации.»
+2. География. Современная иллюстрированная энциклопедия.
+
+Автор(ы), редакторы и рецензенты (если есть) материалов источника(ов):
+
+1. Ведущий научный редактор тома — Г. Вильчек. Научные редакторы разделов тома Л. Минц, — географ населения, этнограф и историк, http://www.russ.ru/Mirovaya-povestka/Pamyati-L-va-Minca — Е. Ананьева, Д. Володихин.
+2. Под редакцией Александра Павловича Горкина — доктора географических наук, профессора географического факультета МГУ — https://istina.msu.ru/profile/apgorkin/
+
+Ссылка(и) на источник(и):
+
+1. https://rutracker.org/forum/viewtopic.php?t=4559222
+2. http://travel.niv.ru/journey/encyclopedia/geography/index.htm
+
+Постоянный адрес пакета: https://github.com/Kristinita/Erics-Green-Room/blob/master/Столицы,_административные_центры_и_крайние_точки_материков.txt
+
+<body>
+<!-- Европа -->
+Остров Мэн*Дуглас*-proof-http://dic.academic.ru/dic.nsf/enc_geo/3344/%D0%9C%D1%8D%D0%BD
+Аландские острова*Маарианхамина*-info-Населённая финскими шведами автономия в составе Финляндии.*-proof-http://dic.academic.ru/dic.nsf/enc_geo/10077/%D0%9C%D0%B0%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%85%D0%B0%D0%BC%D0%B8%D0%BD%D0%B0
+Гернси*Сен-Питер-Порт*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%93%D0%B5%D1%80%D0%BD%D1%81%D0%B8
+Джерси*Сент-Хелиер*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%94%D0%B6%D0%B5%D1%80%D1%81%D0%B8
+Фарерские острова*Торсхавн*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A4%D0%B0%D1%80%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0
+Косово*Приштина*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9F%D1%80%D0%B8%D1%88%D1%82%D0%B8%D0%BD%D0%B0
+<!-- Азия -->
+Китайская республика (в соответствии с Конституцией Китайской Республики)*Нанкин*-proof-http://www.taipeitimes.com/News/taiwan/archives/2013/12/05/2003578356
+Архипелаг Чагос (крупнейший атолл)*Диего-Гарсия*-proof-http://megabook.ru/article/%D0%94%D0%B8%D0%B5%D0%B3%D0%BE-%D0%93%D0%B0%D1%80%D1%81%D0%B8%D1%8F
+Мальдивская республика*Мале*-proof-380
+Шри-Ланка*Шри-Джаяварденепура-Котте*-proof-379
+Нагорный Карабах*Степанакерт*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0%D0%BA%D0%B5%D1%80%D1%82
+<!-- Африка -->
+Гвинея-Бисау*Бисау*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%93%D0%B2%D0%B8%D0%BD%D0%B5%D1%8F-%D0%91%D0%B8%D1%81%D0%B0%D1%83
+Лесото*Масеру*-info-Единственная страна в Африке, где есть сезон с минусовыми температурами. Населена одним народом.*-proof-569
+Свазиленд*Мбабане*-proof-568
+Коморские острова*Морони*-info-Коморские острова — главный производитель необходимого в парфюмерии масла иланг-иланг, извлекаемого из цветков орхидей.*-proof-553
+Сейшельские острова*Виктория*-proof-555
+Маврикий*Порт-Луи*-proof-556
+Кабо-Верде*Прая*-proof-487
+Сан-Томе и Принсипи*Сан-Томе*-proof-508
+Остров Святой Елены*Джеймстаун*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%95%D0%BB%D0%B5%D0%BD%D1%8B
+Реюньон*Сен-Дени*-proof-557
+Сахарская Арабская Демократическая Республика*Тифарити*-info-Территория, контролируемая ПОЛИСАРИО, столица территории, контролируемой Марокко — Эль-Аюн. Город Тифарити сменил Бир-Лилу в качестве столицы.*-proof-http://allafrica.com/stories/201603130166.html
+Западная Сахара*Эль-Аюн*-info-Территория, контролируемая марокканскими властями; столица «Свободной зоны», контролируемой ПОЛИСАРИО — Тифарити*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F_%D0%A1%D0%B0%D1%85%D0%B0%D1%80%D0%B0
+Азавад (официально)*Томбукту*-info-Фактически — город Гао.*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A2%D1%83%D0%B0%D1%80%D0%B5%D0%B3%D0%B8
+Экваториальная Гвинея@Малабо*-proof-507
+<!-- Северная Америка -->
+Сент-Китс и Невис*Бастер*-info-Не путать с Бас-Тер — административным центром французской Гваделупы*-proof-627
+Барбадос*Бриджтаун*-proof-620
+Сент-Люсия*Кастри*-proof-627
+Сент-Винсент и Гренадины*Кингстаун*-info-Страна является крупнейшим в мире производителем аррорута — крахмальной муки. Не путать с городом Кингстон — столицей Ямайки.*-proof-626
+Ямайка*Кингстон*-info-Не путать с городом Кингстаун — столицей Сент-Винсент и Гренадин. По добыче и переработке бокситов Ямайка занимает одно из ведущих мест в мире.*-proof-628
+Доминика*Розо*-info-Открыт в воскресенье Колумбом.*-proof-624
+Коста-Рика*Сан-Хосе*-info-Не путать с городом Сан-Хуан — столицей Пуэрто-Рико*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9A%D0%BE%D1%81%D1%82%D0%B0-%D0%A0%D0%B8%D0%BA%D0%B0
+Антигуа и Барбуда*Сент-Джонс*-info-Не путать с городом Сент-Джорджес — столицей Гренады*-proof-618
+Гренада*Сент-Джорджес*-info-Не путать с городом Сент-Джонс — столицей Антигуа и Барбуды. В 1983 США провели военную операцию против революционного правительства Гренады.*-proof-623
+Монтсеррат (фактически)*Брейдас*-info-Деревня, ставшая фактической столицей после того, как вулкан в 1995 году уничтожил фактическую столицу Плимут*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9C%D0%BE%D0%BD%D1%82%D1%81%D0%B5%D1%80%D1%80%D0%B0%D1%82
+Ангилья*Валли*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%90%D0%BD%D0%B3%D0%B8%D0%BB%D1%8C%D1%8F
+Бермудские острова*Гамильтон*-info-В честь губернатора островов*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%91%D0%B5%D1%80%D0%BC%D1%83%D0%B4%D1%81%D0%BA%D0%B8%D0%B5_%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0
+Сен-Бартельми*Густавия*-proof-http://www.comstbarth.fr/visiter_gustavia.aspx
+Каймановы острова*Джорджтаун*-info-Первоначально Колумб дал островам имя Тортугас, но оно не прижилось. С 1530 острова именуются Каймановыми — европейцы приняли за кайманов многочисленных игуан. Столица называется также, как и у Гайаны.*-proof-624
+Архипелаг Тёркс и Кайкос*Коберн-Таун*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A2%D1%91%D1%80%D0%BA%D1%81_%D0%B8_%D0%9A%D0%B0%D0%B9%D0%BA%D0%BE%D1%81
+Сен-Мартен*Мариго*-info- Самолёты на Сен-Мартене пролетают прямо над пляжами — https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/American_757_on_final_approach_at_St_Maarten_Airport.jpg/280px-American_757_on_final_approach_at_St_Maarten_Airport.jpg *-proof-https://www.cia.gov/library/publications/the-world-factbook/geos/rn.html
+Британские Виргинские острова*Род-Таун*-proof-621
+Пуэрто-Рико*Сан-Хуан*-info-Не путать с городом Сан-Хосе — столицей Коста-Рики*-proof-626
+Американские Виргинские острова*Шарлотта-Амалия*-proof-622
+Гваделупа*Бас-Тер*-info-Не путать с Бастер — столицей государства Сент-Китс и Невис. Песня Городницкого.*-proof-623
+Кюрасао*Виллемстад*-proof-618
+Аруба*Ораньестад*-info-Жители Арубы, Кюрасао и Бонэйр говорят на папьяменто — креольском языке, возникшем на основе испанского.*-proof-619
+Мартиника*Фор-де-Франс*-proof-625
+<!-- Австралия и Океания -->
+Кокосовые острова*Уэст-Айленд*-proof-http://countries.academic.ru/211/%D0%9A%D0%9E%D0%9A%D0%9E%D0%A1%D0%9E%D0%92%D0%AB%D0%95_%D0%9E%D0%A1%D0%A2%D0%A0%D0%9E%D0%92%D0%90
+Остров Рождества*Флайинг-Фиш-Коув*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B0%2C_%D0%98%D0%BD%D0%B4%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD
+Маршалловы острова*Маджуро*-info-Президент Венесуэлы — Мадуро*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2%D1%8B_%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0
+Палау*Нгерулмуд*-info-Прежняя столица — Корор*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9F%D0%B0%D0%BB%D0%B0%D1%83
+Федеративные Штаты Микронезии*Паликир*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%BD%D0%B5%D0%B7%D0%B8%D1%8F
+Вануату*Порт-Вила*-info-Один из официальных языков — бислама.*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%92%D0%B0%D0%BD%D1%83%D0%B0%D1%82%D1%83
+Тувалу*Фунафути*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A2%D1%83%D0%B2%D0%B0%D0%BB%D1%83
+Соломоновы Острова*Хониара*-info-Первооткрыватель решил, что нашёл легендарную страну Офир, откуда вывозил сокровища Соломон. На Соломоновых островах говорят на ток-писине — языке Папуа — Новой Гвинеи.*-proof-427
+Кирибати*Южная Тарава*-info-Город Баирики входит в администрацию Южной Таравы*-proof-http://megabook.ru/article/%D0%9A%D0%B8%D1%80%D0%B8%D0%B1%D0%B0%D1%82%D0%B8%20(%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%BE)
+Науру (неофициальная)*Ярен*-info-Науру — единственное независимое государство в мире, не имеющее официальной столицы*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%AF%D1%80%D0%B5%D0%BD
+Острова Кука*Аваруа*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9A%D1%83%D0%BA%D0%B0_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B0
+Питкэрн*Адамстаун*-info-Самая маленькая столица мира; близка к заливу Баунти*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9F%D0%B8%D1%82%D0%BA%D1%8D%D1%80%D0%BD
+Ниуэ*Алофи*-proof-http://countries.academic.ru/216/%D0%9D%D0%98%D0%A3%D0%AD
+Остров Норфолк*Кингстон*-info-Название такое же, как и у столицы Ямайки*-proof-http://enc.sci-lib.com/article0000810.html
+Острова Уоллис и Футуна*Мата-Уту*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A3%D0%BE%D0%BB%D0%BB%D0%B8%D1%81_%D0%B8_%D0%A4%D1%83%D1%82%D1%83%D0%BD%D0%B0
+Новая Каледония*Нумеа*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9A%D0%B0%D0%BB%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%8F
+Американское Самоа*Паго-Паго*-info-Ранее территория называлась Восточным Самоа*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D0%A1%D0%B0%D0%BC%D0%BE%D0%B0
+Французская Полинезия*Папеэте*-info-Город расположен на острове Таити*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D0%9F%D0%BE%D0%BB%D0%B8%D0%BD%D0%B5%D0%B7%D0%B8%D1%8F
+Марианские острова (Содружество Северных Марианских островов)*Сайпан*-proof-http://countries.academic.ru/227/%D0%A1%D0%95%D0%92%D0%95%D0%A0%D0%9D%D0%AB%D0%95_%D0%9C%D0%90%D0%A0%D0%98%D0%90%D0%9D%D0%A1%D0%9A%D0%98%D0%95_%D0%9E%D0%A1%D0%A2%D0%A0%D0%9E%D0%92%D0%90
+Гуам*Хагатна*-info-Почти как Хадакта — село Кати Голомидовой. Чаморро — официальный язык Гуама и Северных Марианских островов.*-proof-http://www.vokrugsveta.ru/encyclopedia/index.php?title=%D0%93%D1%83%D0%B0%D0%BC
+<!-- Мысы -->
+Северная Америка зап@Принца Уэльского*-info-На аляскинском полуострове Сьюард. Остаток крупного континентального моста, соединявшего Евразию с Америкой*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-207-5.htm#zag-1770
+Северная Америка сев@Мёрчисон*-info-Отделён от острова Сомерсет*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-204-3.htm#zag-1344
+Северная Америка вост@Сент-Чарльз*-info-На Лабрадоре*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-209-3.htm#zag-2015
+Южная Америка зап@Париньяс*-wrong-Гальинас*-npt-С Гальинасом*-info-На севере Перу*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-207-1.htm#zag-1606
+Южная Америка сев@Гальинас*-wrong-Париньяс*-npt-С Париньясом*-info-Колумбия, мыс на полуострове Гуахира — продолжении Анд*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-195-1.htm#zag-460
+Южная Америка вост@Кабу-Бранку*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-202-1.htm#zag-864
+Южная Америка юг@Фроуард@Фроуорд*-info-Находится в Чили. Мыс Горн южнее, но находится на острове*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-212.htm#zag-2374
+Африка зап@Альмади*-info-Восточнее на том же полуострове мыс Зелёный — открыт Динишем Диашем в 1445 или Динишем Фернандешем в 1446. Рядом Дакар.*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-192-2.htm#zag-62
+Африка сев@Эль-Абьяд@Энгела*-info-«Белый мыс» в Тунисе. В колониальное время использовалась французская калька «Кап-Блан».*-proof-http://travel.niv.ru/journey/dictionary/world-geographical-names/fc/slovar-221.htm
+Африка вост@Рас-Хафун*-info-На полуострове Сомали*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-208-1.htm#zag-1836
+Европа зап@Рока*-info-Португалия, близ Лиссабона*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-208-2.htm#zag-1879
+Европа конт сев@Нордкин@Киннаруцен*-wrong-Нордкап*-info-Нордкап севернее, но он на острове. Нордкап отличается самой бурной и ветреной погодой в Европе.*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-205-2.htm#zag-1488
+Европа о-в сев@Флигели*-info-А не Нордкап*-info-Открыт в 1874 году австро-венгерской экспедицией и назван в честь фельдмаршала Августа Флигели*-proof-http://travel.niv.ru/journey/dictionary/world-geographical-names/fc/slovar-212.htm#zag-6390 *-proof-http://travel.niv.ru/journey/encyclopedia/geography/articles/68/evropa.htm
+Европа юг@Марокки@Марроки*-proof-http://travel.niv.ru/journey/encyclopedia/geography/articles/68/evropa.htm
+Азия зап@Баба*-info-«Отец, старик» — название многих мысов и горных вершин в тюркоязычных странах*-proof-http://travel.niv.ru/journey/dictionary/world-geographical-names/fc/slovar-193-1.htm#zag-409
+Азия сев@Челюскин*-info-Семён Иванович — участник Великой Северной экспедиции XVIII века. На шлюпе «Якутск» под командой В. В. Прончищева в 1735 спустился к устью Лены.*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-215.htm#zag-2436
+Азия вост@Дежнёва*-info-Казак, участник экспедиции Ф. Попова, который погиб в ней. После экспедиции Дежнёв произведён в атаманы. Мыс в честь Дежнёва назвал Норденшельд. В районе мыса посёлок Уэлен.*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-196-1.htm#zag-647
+Азия юг@Пиай@Булус*-info-В Малайзии. В 10 километрах к востоку от мыса находится Сингапур.*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-207-2.htm#zag-1640
+Австралия зап@Стип-Пойнт*-info-Открыт в 1699 Уильямом Дампиром, назван «крутой мыс»*-proof-http://travel.niv.ru/journey/dictionary/world-geographical-names/fc/slovar-209-5.htm#zag-5727
+Австралия сев@Йорк*-info-На полуострове Кейп-Йорк*-proof-http://travel.niv.ru/journey/encyclopedia/geography/fc/slovar-201.htm#zag-859
+Австралия вост@Байрон*-info-Открыт в 1770 Джеймсом Куком, назван в честь английского адмирала, исследователя Тихого океана Джона Байрона*-proof-http://travel.niv.ru/journey/dictionary/world-geographical-names/fc/slovar-193-1.htm#zag-435
+Австралия юг@Юго-Восточный*-info-В 200 км от Мельбурна, вдаётся в Бассов пролив*-proof-http://travel.niv.ru/journey/dictionary/geographic-names/fc/slovar-222.htm#zag-5680

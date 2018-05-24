@@ -1,7 +1,1 @@
-Sasha Goddess!
-
-Saint!
-Amazing!
-La Leyenda!
-Beautiful!
-Greatest!
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Open_Access_logo_PLoS_white.svg/640px-Open_Access_logo_PLoS_white.svg.png"></p>

@@ -1,0 +1,19 @@
+#############
+# Circle CI #
+#############
+# Circle CI continuous integration
+# Comments:
+# https://github.com/Kristinita/Erichek/blob/master/circle.yml
+machine:
+  python:
+    version: 3.6.5
+
+dependencies:
+
+  post:
+   - pip install --upgrade pip
+   - pip install erichek
+
+test:
+  override:
+   - erichek

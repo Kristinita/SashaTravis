@@ -1,0 +1,148 @@
+Описание пакета: прокачка разменных денежных единиц стран мира. Отброшено:
+
+1. Наиболее простые случаи: Россия — копейка, евро — евроцент.
+2. Если разменная денежная единица для доллара — цент, для франка — сантим, а для песо — сентаво, она не указывается в данном пакете.
+
+Стоит учитывать, что многие из указанных разменных денежных единиц де-факто не используются на практике. Так, живя в России, я давно не видел, чтобы расплачивались копейками.
+
+Процесс тренировки: называется страна > необходимо назвать её разменную денежную единицу. 1/100 от основной денежной единицы, если не указано иначе.
+
+Пример вопроса 1: Оман 1/1000
+
+Ответ к примеру вопроса 1: Байза
+
+Пример вопроса 2: Кипр, 1/1000 фунта до евро
+
+Ответ к примеру вопроса 2: Миль
+
+Источник(и): «Монеты. Большая энциклопедия». Перевод книги, к сожалению, содержит некоторые неточности в именовании денежных единиц, поэтому названия денежных единиц были перепроверены в других источниках.
+
+Автор(ы), редакторы и рецензенты (если есть) материалов источника(ов): Джеймс Александр Маккей — https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BA%D0%BA%D0%B5%D0%B9,_%D0%94%D0%B6%D0%B5%D0%B9%D0%BC%D1%81_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80#.D0.9A.D0.BE.D0.BB.D0.BB.D0.B5.D0.BA.D1.86.D0.B8.D0.BE.D0.BD.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5 . Научный редактор — Сидорович Виталий Михайлович, заведующий учебной лабораторией музейного дела исторического факультета БГУ
+
+Ссылка(и) на источник(и): https://rutracker.org/forum/viewtopic.php?t=3173063
+
+Постоянный адрес пакета: https://github.com/Kristinita/Eric-s-Green-Room/blob/master/Разменные_денежные_единицы_стран_мира.txt
+
+<body>
+<!-- Северная Америка -->
+Гаити*Сантим*-proof-106
+Аруба*Цент*-proof-https://www.thespruce.com/money-systems-around-the-world-4071204#step-heading
+Коста-Рика*Сентимо*-wrong-Сентаво*-wrong-Сентесимо*-proof-112
+Панама*Сентесимо*-wrong-Сентимо*-wrong-Сентаво*-proof-113
+<!-- Южная Америка -->
+Венесуэла*Сентимо*-wrong-Сентесимо*-wrong-Сентаво*-proof-114
+Боливия*Сентесимо*-wrong-Сентаво*-wrong-Сентимо*-proof-118
+Перу*Сентимо*-wrong-Сентаво*-wrong-Сентесимо*-proof-http://www.bcrp.gob.pe/docs/Publicaciones/Revista-Moneda/Moneda-145/Moneda-145-10.pdf
+<!-- Европа -->
+Дания*Эре*-proof-124
+Швеция*Эре*-proof-126
+Норвегия*Эре*-proof-http://www.numizm.ru/html/6/6re.html
+Швейцария*Сантим*-info-1/100 франка*-proof-http://www.numizm.ru/html/f/frank_qveycarskiy.html
+Лихтенштейн*Раппен*-info-С 1921 Лихтенштейн состоит в валютном союзе со Швейцарией и принял её денежную систему. Раппен — 1/100 лихтенштейнского франка.*-proof-141
+Венгрия*Филлер*-info-Венгерское название геллера, вышли из употребления.*-proof-http://www.numizm.ru/html/f/filler.html
+Чехия*Геллер*-info-1/100 кроны, не выпускается с 2009. Серебряные копи в Иоахимстале давали сырьё для многих монет. Памятные чешские монеты были выпущены в 1937 по случаю смерти первого президента Томаша Масарика.*-proof-http://www.cnb.cz/en/banknotes_coins/coins/
+Польша*Грош*-proof-153
+Армения*Лума*-proof-158
+Азербайджан*Гяпик*-proof-https://www.cbar.az/pages/national-currency/coins/old-coins/
+Грузия*Тетри*-proof-https://www.nbg.gov.ge/index.php?m=194
+Украина*Копейка*-info-В 1992—6 денежной единицей был купоно-карбованец*-proof-159
+Молдова*Бань*-proof-http://www.numizm.ru/html/l/ley.html
+Хорватия*Липа*-proof-161
+Словения (до перехода на евро)*Стотин*-proof-http://www.bsi.si/en/banknotes-and-coins.asp?MapaId=951
+Македония*Дени*-proof-http://www.nbrm.mk/prebaruvanje.nspx?q=%D0%B4%D0%B5%D0%BD%D0%B8
+Босния и Герцеговина*Фенинг*-proof-http://www.cbbh.ba/Content/Read/1072
+Сербия*Пара*-proof-160
+Албания*Киндарка*-proof-162
+Болгария*Стотинка*-proof-163
+Румыния*Бань*-proof-http://www.numizm.ru/html/l/ley.html
+Финляндия до евро*Пенни*-proof-http://www.numizm.ru/html/m/marka_finl8ndska8.html
+Мальта до евро*Цент*-proof-http://www.bis-ans-ende-der-welt.net/Malta-B-En.htm
+Нидерланды до евро*Цент*-info-1/100 гульдена*-proof-http://www.numizm.ru/html/g/gul5den.html
+Австрия до евро*Грош*-proof-http://www.numizm.ru/html/q/qilling_avstriyskiy.html
+Словакия до евро*Геллер*-proof-151
+Литва до евро*Цент*-info-На монете 1938 года изображался президент Антанас Сметона*-proof-154
+Латвия до евро*Сантим*-proof-https://www.bank.lv/en/banknotes-and-coins/lats-banknotes-and-coins/circulation-coins
+Эстония до евро*Сент*-wrong-Цент*-proof-https://www.eestipank.ee/en/notes-and-coins/estonian-coins
+Греция до евро*Лепта*-info-Первый президент МОК — Деметриос Викелас*-proof-164
+Испания до евро*Сентимо*-wrong-Сентаво*-wrong-Сентесимо*-proof-http://www.numizm.ru/html/p/peseta.html
+Португалия до евро*Сентаво*-wrong-Сентимо*-proof-http://www.numizm.ru/html/6/6skudo.html
+Кипр, 1/1000 фунта до евро*Миль*-proof-136
+Мальта, 1/1000 лиры до евро*Миль*-proof-http://www.bis-ans-ende-der-welt.net/Malta-B-En.htm
+<!-- Африка -->
+Алжир*Сантим*-tao-Арабские страны*-proof-173
+Марокко*Сантим*-tao-Арабские страны*-info-173
+Египет*Пиастр*-tao-Арабские страны*-info-Ранее пиастры делились на 10 милльемов*-proof-http://www.numizm.ru/html/f/funt_egipetskiy.html
+Судан*Пиастр*-tao-Арабские страны*-proof-http://pjsymes.com.au/articles/NewSudan.htm
+Ливия 1/1000*Дихрам*-tao-Арабские страны*-kns-Не диРХам*-proof-http://www.numizm.ru/html/d/dinar_liviyskiy.html
+Тунис 1/1000*Миллим*-tao-Арабские страны*-proof-174
+Судан 1/1000*Милльем*-tao-Арабские страны*-proof-http://pjsymes.com.au/articles/NewSudan.htm
+ЮАР*Цент*-proof-177
+Ботсвана*Тхебе*Тебе*-proof-178
+Лесото*Лисенте*-proof-179
+Свазиленд*Цент*-proof-179
+Мозамбик*Сентаво*-wrong-Сентимо*-proof-182
+Ангола*Сентимо*-wrong-Сентаво*-info-Сентимо сменил лвею. Лвея — река, приток кванзы.*-proof-182
+Малави*Тамбала*-info-Бывшее название Малави — Ньясаленд*-proof-183
+Замбия*Нгве*-proof-183
+Кения, Сомали, Танзания, Уганда*Цент*-proof-184
+Южный Судан*Пиастр*-proof-http://bit.ly/2hZ5HAI
+Эфиопия*Цент*-proof-http://www.numizm.ru/html/b/b3r.html
+Эритрея*Цент*-proof-http://bit.ly/2fF8yOn
+Гана*Песева*-proof-188
+Гамбия*Бутут*-proof-188
+Нигерия*Кобо*-proof-189
+Сьерра-Леоне*Цент*-proof-189
+Кабо-Верде*Сентаво*-wrong-Сентимо*-proof-http://www.numizm.ru/html/6/6skudo.html
+Сейшельские острова*Цент*-proof-http://www.numizm.ru/html/r/rupi8_seyqel5ska8.html
+Маврикий*Цент*-proof-http://www.numizm.ru/html/r/rupi8_mavrikiyska8.html
+Сан-Томе и Принсипи*Сентимо*-wrong-Сентесимо*-wrong-Сентаво*-proof-http://www.numizm.ru/html/d/dobra.html
+Мадагаскар 1/5*Ираймбиланья*-info-Ираймбиланья — ранее допустимое название мальгашского франка, 5 которых составили 1 ариари*-info-На официальном сайте Банка Мадагаскара 1 ираймбиланья называется 0.2 ариари*-proof-http://www.banque-centrale.mg/index.php?id=m3_4
+Мавритания 1/5*Хумс*-proof-191
+<!-- Азия -->
+Кыргызстан*Тыйын*-proof-http://www.nbkr.kg/index1.jsp?item=146&lang=RUS
+Казахстан*Тиын*-proof-http://www.nationalbank.kz/?docid=59&switch=russian
+Туркменистан*Тенге*-proof-http://www.cbt.tm/ru/money/tm_tenne_93.html
+Узбекистан*Тийын*-proof-http://www.cbu.uz/ru/banknoty-i-monety/monety/
+Таджикистан*Дирам*-proof-http://www.nbt.tj/ru/banknotes_coins/coins.php
+Турция*Куруш*-info-До 2005 года 1 куруш — 40 пара.*-proof-193
+Израиль*Агора*Агор*Агорот*-info-Восстание Маккавея началось в 167 до н. э. против сирийца-селевкида Антиоха IV. Восстание Симона Бар-Кохбы против Рима в 132—5 гг. н. э., после подавления которого иудеев расселили по территории Римской империи. Династия Сасанидов правила с 224 по 651 годы.
+Иордания*Пиастр*-tao-Арабские страны*-info-До реформы 1996 года динар делился на 10 дирхемов и 1000 филсов*-proof-195
+Сирия*Пиастр*-tao-Арабские страны*-info-Омейяды правили после праведных халифов с 661 по 750 годы, когда их сместили Аббасиды. Кордовским эмиратом Омейяды правили до 1031 года. Аббасиды в 1055 году признали верховенство Сельджукидов.*-proof-http://www.numizm.ru/html/f/funt_siriyskiy.html
+Ливан*Пиастр*-tao-Арабские страны*-proof-http://www.numizm.ru/html/f/funt_livanskiy.html
+Саудовская Аравия*Халал*-tao-Арабские страны*-proof-199
+Йемен*Филс*-tao-Арабские страны*-proof-199
+Катар*Дирхам*-tao-Арабские страны*-proof-http://www.qcb.gov.qa/English/Banknotes/Pages/HistoryOfBanknotes.aspx
+ОАЭ*Филс*-tao-Арабские страны*-proof-http://www.krugosvet.ru/enc/strany_mira/OBEDINENNIE_ARABSKIE_EMIRATI_OAE.html?page=0,3
+Иордания*Пиастр*-tao-Арабские страны*-proof-195
+Иран*Динар*-proof-http://www.numizm.ru/html/r/rial.html
+Афганистан*Пул*-proof-http://www.numizm.ru/html/a/afgani.html
+Мьянма*Пья*-proof-204
+Пакистан*Пайса*-proof-205
+Бангладеш*Пойша*-proof-205
+Индия*Пайса*-info-В IV — VI веках на территории Индии правила империя Гуптов*-info-Шах Великих Моголов Джахангир выпустил 5 12-килограммовых золотых монет номиналом 1000 мохуров, которые сейчас стоят 500 000 долларов. В Индии имели колонии Дания (Пондишери), Португалия, Франция и Голландия.*-proof-211
+Шри-Ланка*Цент*-info-Шри-Ланка переводится как «благословенный остров»*-proof-http://www.numizm.ru/html/r/rupi8_qri_lanka.html
+Мальдивские острова*Лари*-proof-http://www.numizm.ru/html/r/rufi8.html
+Вьетнам*Су*-proof-http://www.numizm.ru/html/d/dong.html
+Камбоджа*Сен*-wrong-Цент*-proof-215
+Лаос*Ат*-proof-http://www.numizm.ru/html/k/kip.html
+Китай*Фынь*Фэнь*-proof-217
+Макао*Аво*-proof-220
+Монголия*Мунгу*-proof-221
+Бутан*Четрум*Чертум*-proof-http://www.numizm.ru/html/n/ngultrum.html
+КНДР и Южная Корея*Чон*-wrong-Чона*-info-На некоторых южнокорейских монетах изображён кобуксон — средневековый броненосец, корабль-черепаха*-proof-http://www.numizm.ru/html/v/vona.html
+Япония*Сен*-wrong-Цент*-wrong-Сена*-proof-http://www.numizm.ru/html/i/iena.html
+Индонезия*Сен*-wrong-Цент*-npt-Сначала Сукарно, а потом Сухарто. По алфавиту.*-proof-http://www.numizm.ru/html/r/rupi8_indoneziyska8.html
+Филиппины*Сентимо*-wrong-Сентаво*-wrong-Сентесимо*-proof-http://www.bsp.gov.ph/bspnotes/curr_bsp_coins.asp
+Малайзия*Сен*-wrong-Цент*-info-Малайзия состоит из Сабаха, который на северо-востоке Калимантана; Саравака — «страны белых раджей», что на севере Борнео; и Малайи*-proof-http://www.numizm.ru/html/r/ringgit.html
+Бруней*Сен*-wrong-Цент*-proof-http://www.numizm.ru/html/d/dollar_bruneyskiy.html
+Таиланд*Сатанг*-proof-233
+Ирак 1/1000*Филс*-proof-http://www.numizm.ru/html/d/dinar_irakskiy.html
+Бахрейн 1/1000*Филс*-tao-Арабские страны*-proof-200
+Кувейт 1/1000*Филс*-tao-Арабские страны*-proof-http://www.numizm.ru/html/d/dinar_kuveytskiy.html
+Оман 1/1000*Байза*-tao-Арабские страны*-proof-http://www.numizm.ru/html/b/bayza.html
+Вьетнам 1/10*Хао*-proof-http://www.numizm.ru/html/d/dong.html
+Китай 1/10*Цзяо*-info-Древняя китайская монета называлась цянь, на английском её название — cash*-proof-217
+<!-- Австралия и Океания -->
+Папуа — Новая Гвинея*Тойя*-info-Северной частью Новой Гвинеи владела Германия, Южная известна как Папуа. Объединение произошло в 1949.*-proof-http://www.numizm.ru/html/k/kina.html
+Тонга*Сенити*-wrong-Цент*-proof-248
+Самоа (Западное Самоа)*Сене*-wrong-Цент*-proof-249
