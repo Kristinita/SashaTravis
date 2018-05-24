@@ -6,7 +6,7 @@
 # https://github.com/Kristinita/Erichek/blob/master/circle.yml
 machine:
   python:
-    version: 3.6.4
+    version: 3.6.3
 
 general:
   branches:
