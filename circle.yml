@@ -1,6 +1,11 @@
+# Use CircleCI 2.0
+# https://circleci.com/docs/2.0/language-python/#config-walkthrough
+version: 2
+
 machine:
   python:
-    version: 3.6.3
+    # [WARNING] No higher Python versions at May 2018 in Circle CI
+    version: 3.7.0
 
 dependencies:
 
