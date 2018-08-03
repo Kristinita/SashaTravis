@@ -9,5 +9,6 @@
         "publish": false
     },
     "requireCleanWorkingDir": false,
+    "requireUpstream": false,
     "safeBump": false
 }
