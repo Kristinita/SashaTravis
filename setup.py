@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author: SashaChernykh
 # @Date: 2018-01-22 08:41:23
-# @Last Modified time: 2018-08-03 18:08:16
+# @Last Modified time: 2018-08-03 20:48:15
 """A setuptools based setup module.
 
 See:
@@ -16,7 +16,10 @@ from setuptools import setup
 # Install dependencies from requirements.txt
 # For pip >= 10
 # https://stackoverflow.com/a/49867265/5951529
-from pip._internal.req import parse_requirements
+try: # for pip >= 10
+    from pip._internal.req import parse_requirements
+except ImportError: # for pip <= 9.0.3
+    from pip.req import parse_requirements
 
 install_reqs = parse_requirements('requirements.txt', session='hack')
 
