@@ -8,5 +8,6 @@
     "npm": {
         "publish": false
     },
+    "requireCleanWorkingDir": false,
     "safeBump": false
 }
