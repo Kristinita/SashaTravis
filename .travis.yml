@@ -1,24 +1,15 @@
 language: python
-# Python 3.7 support:
-# https://github.com/travis-ci/travis-ci/issues/9815#issuecomment-401756442
 python: 3.7.0
-# Xenial
-# https://github.com/travis-ci/travis-yml/pull/16
-dist: xenial
-sudo: true
 install:
-- pip install --upgrade pip
-- pip install erichek
+  - python -m pip install --upgrade pip
+  - pip install flake8
+  - pip install pydocstyle
+  - pip install pyfancy
+  - pip install pyroma
+  - pip install -U setuptools
+  - pip install vulture
 script:
-- erichek
-deploy:
-  provider: pypi
-  user: Sasha_Chernykh
-  password:
-    # Get secret key on Windows:
-    # https://github.com/travis-ci/travis-ci/issues/7327
-    secure: yREvHtIM0quHp7tIZEfr3F7iqyoU72KwqCuy93bgoCM4CWMS5+bLHE8YvO/b0dKfcs8RMOYLqxFjQ6a8JaNK/dYdZG3MYcb2uHhR83CfJDVfMQirXJ1Of0RhSFhm7M+5z8jiiQnWUa7tlfV+TqKsN/1NNIQqSn9l7sgqNYDAPp/a+VZh89cqBTdE6mXsfLBrfrkINmiX3o66istRiEho2Y/rUEwSx43bLomTaml7xUlOBiU6QorSTpxnvd7JOcs2nVfE86pzhBPTMYwdOoI3GLNIAA8KstRcnV7GwcW6p2wCrp+dNjFiDeMjGywvEHXd8ue/+ph4leMWHX+hDBN7EnKhmS5FmGN+fGopKzp41FovxIrWClGyHGuI/LCrPdqVysSvzhxt4pppvtR+eFi/HoAOC964N0dUzhYZbawNouHCxj9+0Yv5s7q+YrZMS3ueMQIgbYcGzDQoFONNlmZOg/Rj6jAnKgZmRgfEOaawlA4eZi9qRH0aMp9gPiOhDCYhHBGnGMbenc5NRZ8IeO45x7zDONgFbgGEut6fOp1QKGfmTY4IvEsGLfs2tqwORBiAVWy2jXzJqsNIRnueUb/kczW6bcwJh2g6Wh3elH9g44ljRXeIvDzv3mEie/1ck7zPT2n1ROGvz3c1wSCz6LxA5m7+5VDoEcEiOxuNtBotA2I=
-  on:
-    tags: true
-    branch: SashaPypiDeploy
-  distributions: bdist_wheel
+  - flake8 .
+  - pydocstyle
+  - pyroma .
+  - vulture .
