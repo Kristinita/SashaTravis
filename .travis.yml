@@ -1,10 +1,11 @@
+sudo: enabled
+dist: xenial
+os:
+- linux
+- windows
 language: python
-# Python 3.7 support:
-# https://github.com/travis-ci/travis-ci/issues/9815#issuecomment-401756442
-python: 3.6.0
-# https://github.com/travis-ci/travis-yml/pull/16
-sudo: true
+python: 3.7
 install:
-- npm install eyo -g
+- pip install pipenv
 script:
-- eyo --lint Sasha__Testing--EYo.txt
+- pipenv install --dev
