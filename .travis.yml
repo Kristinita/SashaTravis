@@ -1,10 +1,11 @@
 sudo: enabled
 dist: xenial
-os:
-- linux
-- windows
 language: python
 python: 3.7
+env:
+  global:
+    - PIPENV_IGNORE_VIRTUALENVS=1
+    - PIPENV_VENV_IN_PROJECT=1
 install:
 - pip install pipenv
 script:
