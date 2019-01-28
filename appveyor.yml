@@ -1,17 +1,11 @@
-init:
-- setx PIPENV_VENV_IN_PROJECT 1
-- refreshenv
-- SET PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%
-- set PYTHONIOENCODING=utf-8
+clone_depth: 1
 
 environment:
-  matrix:
-  - PYTHON: C:\Python37-x64
-    PYTHON_VERSION: 3.7
-    PYTHON_ARCH: 64
+  APPVEYOR_API_KEY:
+    secure: +tAYCLWvKpNefBmIFHBZzSdFnN8mu71hBU1MqYbrjlY=
 
 install:
-- pip install pipenv
+- dotnet tool install -g localappveyor --version 0.5.0-alpha.10
 
 build_script:
-- pipenv install --dev
+- localappveyor lint --token %APPVEYOR_API_KEY%
