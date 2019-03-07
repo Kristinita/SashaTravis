@@ -1,3 +1,11 @@
+language: node_js
+node_js:
+- 11
+install:
+- npm install -g grunt-cli
+before_script:
+- npm install
+
 git:
   depth: 1
 
@@ -18,3 +26,6 @@ deploy:
   fqdn: Kristinita.ru
   project-name: Поиск Кристиниты
   verbose: true
+
+after_deploy:
+- grunt pagespeed --verbose

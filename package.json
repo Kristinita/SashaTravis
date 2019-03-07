@@ -1,0 +1,31 @@
+{
+    "name": "kristinitas-search",
+    "description": "Kristinita's Search site",
+    "version": "0.2.0",
+    "homepage": "https://Kristinita.github.io",
+    "author": "Sasha Chernykh (http://uid.me/sasha_chernykh)",
+    "repository": "github:Kristinita/KristinitaPelican",
+    "bugs": {
+        "url": "https://github.com/Kristinita/KristinitaPelican/issues"
+    },
+    "license": "MIT",
+    "files": [
+        "README.md"
+    ],
+    "engines": {
+        "node": ">=11"
+    },
+    "keywords": [
+        "Kristinita",
+        "Pelican",
+        "Grunt"
+    ],
+    "contributors": [
+        "Sasha Chernykh"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "^1.0.3",
+        "grunt-pagespeed": "^2.0.1"
+    }
+}
