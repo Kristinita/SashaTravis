@@ -27,5 +27,7 @@ deploy:
   project-name: Поиск Кристиниты
   verbose: true
 
-after_deploy:
-- if ! grunt pagespeed --verbose; then travis_terminate 1; fi
+after_deploy: >
+  if ! grunt pagespeed
+    then travis_terminate 1
+  fi
