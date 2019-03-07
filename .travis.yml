@@ -6,8 +6,11 @@ script:
 
 deploy:
   provider: pages
+  on:
+    branch: KiraPSIDeploy
   keep-history: true
   skip-cleanup: true
+  target-branch: master
   local-dir: output
   repo: Kristinita/SashaTravis.github.io
   github-token: $GITHUB_TOKEN
