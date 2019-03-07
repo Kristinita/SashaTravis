@@ -1,18 +1,8 @@
-matrix:
-  include:
-    - script:
-      - echo Sasha
-      - echo Another
-    - script:
-      - DEPLOY=1
-      - echo Sasha && echo http-server
-      - echo Another
+script:
+- echo "Kira Goddess!"
 
 deploy:
   provider: pages
-  on:
-    branch: SashaMatrixDeploy
-    condition: $DEPLOY
   keep-history: true
   skip-cleanup: true
   target-branch: master
