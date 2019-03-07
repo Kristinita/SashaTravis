@@ -28,4 +28,4 @@ deploy:
   verbose: true
 
 after_deploy:
-- grunt pagespeed --verbose
+- if ! grunt pagespeed --verbose; then travis_terminate 1; fi
