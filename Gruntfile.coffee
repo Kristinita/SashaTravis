@@ -10,7 +10,7 @@ module.exports = (grunt) ->
 					url: "https://developers.google.com/speed/docs/insights/v5/about#auth"
 					locale: "en_US"
 					strategy: "mobile"
-					threshold: 100
+					threshold: 10
 
 	grunt.loadNpmTasks 'grunt-pagespeed'
 	return
