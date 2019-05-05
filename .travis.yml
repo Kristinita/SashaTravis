@@ -15,7 +15,17 @@ deploy:
   password:
     # Get secret key on Windows:
     # https://github.com/travis-ci/travis-ci/issues/7327
-    secure: yREvHtIM0quHp7tIZEfr3F7iqyoU72KwqCuy93bgoCM4CWMS5+bLHE8YvO/b0dKfcs8RMOYLqxFjQ6a8JaNK/dYdZG3MYcb2uHhR83CfJDVfMQirXJ1Of0RhSFhm7M+5z8jiiQnWUa7tlfV+TqKsN/1NNIQqSn9l7sgqNYDAPp/a+VZh89cqBTdE6mXsfLBrfrkINmiX3o66istRiEho2Y/rUEwSx43bLomTaml7xUlOBiU6QorSTpxnvd7JOcs2nVfE86pzhBPTMYwdOoI3GLNIAA8KstRcnV7GwcW6p2wCrp+dNjFiDeMjGywvEHXd8ue/+ph4leMWHX+hDBN7EnKhmS5FmGN+fGopKzp41FovxIrWClGyHGuI/LCrPdqVysSvzhxt4pppvtR+eFi/HoAOC964N0dUzhYZbawNouHCxj9+0Yv5s7q+YrZMS3ueMQIgbYcGzDQoFONNlmZOg/Rj6jAnKgZmRgfEOaawlA4eZi9qRH0aMp9gPiOhDCYhHBGnGMbenc5NRZ8IeO45x7zDONgFbgGEut6fOp1QKGfmTY4IvEsGLfs2tqwORBiAVWy2jXzJqsNIRnueUb/kczW6bcwJh2g6Wh3elH9g44ljRXeIvDzv3mEie/1ck7zPT2n1ROGvz3c1wSCz6LxA5m7+5VDoEcEiOxuNtBotA2I=
+    secure: >
+      "bRgmByTirSWUdOW4RmuueP+
+      BlEYxZfdxzz1vZOVDqMzYmDVW91GjfdWxaa2yM8upuBxfoWe+qwuCmn24KjusL6md1Bbf2ftTxbFJR6Pag+
+      4X7UiYYZyL7JBiLHKFFlQA99zNi766pF9uNb7GGmcl4Ki6NUZv6YiERVUxbKhXzuDVZE0mNX3sUgFp0
+      jgrcUjfgA70TBdAhMYCozmamJ06EutobJLz/
+      8AKPaRHk2uKoNGV5jCAHu5srxO4dcmAZ62hTwj34X4TT3gdIwBBkSyqjLeIt9KDfu54t90mW3r+
+      hB0R+ntJPWUwc9mDcTt3Xfcojis1R2S055/fRLcuCm427JtUHt5MRsHJL3p0mQPewmEcbmYK7M7Pdusc72qYAjzpnhSKuFanwIdrJUVJnvkuMK2x/
+      5Y1xY+qOe5fjlFtY9Hjr2gOlV1Oa3nNq7vncARKxw8oXXwxlUh+qvkH02dA/
+      eQjgFqTsiXAZaNF7siXLXIwexX4fvnHEDjCGG/
+      g5y1i46W6IXrItrX6FlhRhPVwVGl8PUOcmT5rqu4idIb5GGMMVKjRLC6GBc51nhZ5MQOFzUjsxzaWhQwt2ro+
+      y7Aong805AgReqMx/BCRAm9USRoFhBkhYStwRdBPZox1bdqcNyQPGzEGXzn8p4NgUKXUC13lttuWcfqeNmqaxKD+4JY="
   on:
     tags: true
     branch: SashaPypiDeploy
