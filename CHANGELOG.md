@@ -1,3 +1,9 @@
+#### 0.4.0 (2019-05-05)
+
+##### Continuous Integration
+
+* **travis:**  try new release-it format ([ca0aae4e](https://github.com/Kristinita/SashaTravis/commit/ca0aae4e09f8245ad90fa0c9bdafc1c511369b86))
+
 #### 0.1.9 (2019-05-05)
 
 ##### Continuous Integration

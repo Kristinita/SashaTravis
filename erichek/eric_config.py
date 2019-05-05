@@ -37,7 +37,7 @@ import sys
 # «glob.glob('../*.txt')» in parent folder, not «glob.glob('../*.txt')»!
 ALL_TXT_IN_ERIC_ROOM_WIHTOUT_SUBFOLDERS = glob.glob('./*.txt')
 
-VERSION = "0.1.9"
+VERSION = "0.5.0"
 
 
 def version():
