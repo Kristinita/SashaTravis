@@ -5,6 +5,9 @@ version: 2
 
 jobs:
   build:
+    filters:
+      branches:
+        only: SashaPypiDeploy
     steps:
     - run:
       command: |
