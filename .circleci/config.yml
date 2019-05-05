@@ -5,19 +5,20 @@ version: 2
 
 jobs:
   build:
-    filters:
-      branches:
-        only: SashaPypiDeploy
-    steps:
-    - run:
-      command: |
-        pip install flake8 pydocstyle pyfancy pyroma vulture
-    - run:
-      command: |
-        flake8 .
-        pydocstyle
-        pyroma .
-        vulture .
+    machine:
+      filters:
+        branches:
+          only: SashaPypiDeploy
+      steps:
+        - run:
+          command: |
+            pip install flake8 pydocstyle pyfancy pyroma vulture
+        - run:
+          command: |
+            flake8 .
+            pydocstyle
+            pyroma .
+            vulture .
 
 # machine:
 #   python:
