@@ -1,3 +1,12 @@
+#### 0.1.9 (2019-05-05)
+
+##### Continuous Integration
+
+* **travis:**
+  *  try simple deploy script ([5596b99b](https://github.com/Kristinita/SashaTravis/commit/5596b99b7fa0685fc64e48375dbe7edd64454344))
+  *  try simple script ([d948a7c8](https://github.com/Kristinita/SashaTravis/commit/d948a7c840dd60aa8cb84e6903b093f2e5ce235c))
+  *  add requirements.txt ([8719d96b](https://github.com/Kristinita/SashaTravis/commit/8719d96b8a9302889a7651e163eaa451d31f3e48))
+
 #### 0.1.8 (2019-05-05)
 
 ##### Continuous Integration
