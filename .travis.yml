@@ -1,15 +1,14 @@
 language: python
 # Python 3.7 support:
 # https://github.com/travis-ci/travis-ci/issues/9815#issuecomment-401756442
-python: 3.7.0
+python: 3.7
 # https://github.com/travis-ci/travis-yml/pull/16
 dist: xenial
 sudo: true
 install:
 - pip install --upgrade pip
-- pip install erichek
 script:
-- erichek
+- python --version
 deploy:
   provider: pypi
   user: Sasha_Chernykh
