@@ -6,4 +6,4 @@ La Leyenda!
 Beautiful!
 Fantastic!
 
-.commitlintrc.yml
+Cat
