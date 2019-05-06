@@ -1,15 +1,32 @@
 language: python
-
+# Python 3.7 support:
+# https://github.com/travis-ci/travis-ci/issues/9815#issuecomment-401756442
+python: 3.7
+# https://github.com/travis-ci/travis-yml/pull/16
+dist: xenial
+sudo: true
+install:
+- pip install --upgrade pip
 script:
-  - cp -a SashaSrc SashaDest
-
+- python --version
 deploy:
-  provider: pages
-  skip-cleanup: true
-  local-dir: SashaDest
-  github-token: $GITHUB_API_KEY
-  keep-history: true
+  provider: pypi
+  user: Sasha_Chernykh
+  password:
+    # Get secret key on Windows:
+    # https://github.com/travis-ci/travis-ci/issues/7327
+    secure: >
+      "bRgmByTirSWUdOW4RmuueP+
+      BlEYxZfdxzz1vZOVDqMzYmDVW91GjfdWxaa2yM8upuBxfoWe+qwuCmn24KjusL6md1Bbf2ftTxbFJR6Pag+
+      4X7UiYYZyL7JBiLHKFFlQA99zNi766pF9uNb7GGmcl4Ki6NUZv6YiERVUxbKhXzuDVZE0mNX3sUgFp0
+      jgrcUjfgA70TBdAhMYCozmamJ06EutobJLz/
+      8AKPaRHk2uKoNGV5jCAHu5srxO4dcmAZ62hTwj34X4TT3gdIwBBkSyqjLeIt9KDfu54t90mW3r+
+      hB0R+ntJPWUwc9mDcTt3Xfcojis1R2S055/fRLcuCm427JtUHt5MRsHJL3p0mQPewmEcbmYK7M7Pdusc72qYAjzpnhSKuFanwIdrJUVJnvkuMK2x/
+      5Y1xY+qOe5fjlFtY9Hjr2gOlV1Oa3nNq7vncARKxw8oXXwxlUh+qvkH02dA/
+      eQjgFqTsiXAZaNF7siXLXIwexX4fvnHEDjCGG/
+      g5y1i46W6IXrItrX6FlhRhPVwVGl8PUOcmT5rqu4idIb5GGMMVKjRLC6GBc51nhZ5MQOFzUjsxzaWhQwt2ro+
+      y7Aong805AgReqMx/BCRAm9USRoFhBkhYStwRdBPZox1bdqcNyQPGzEGXzn8p4NgUKXUC13lttuWcfqeNmqaxKD+4JY="
   on:
-    branch: master
-  project-name: Kristinita\\\'s Search
-  verbose: true
+    tags: true
+    branch: SashaPypiDeploy
+  distributions: bdist_wheel
