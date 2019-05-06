@@ -1,12 +1,7 @@
-# EditorConfig
-# http://editorconfig.org/
-
-# UNIX line endings in “.sh” files:
-# https://stackoverflow.com/a/49050430/5951529
-[*.sh]
-end_of_line = lf
-
-# Tabs = 4 spaces for CoffeeScript always
-[*.coffee]
-indent_style = tab
-indent_size = 4
+[SashaEclintCharset.txt]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
