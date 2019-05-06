@@ -1,9 +1,6 @@
-Sasha Goddess!
+Kira Goddess!
 
 Saint!
 Amazing!
 La Leyenda!
 Beautiful!
-Fantastic!
-
-Cat
