@@ -13,3 +13,4 @@ deploy:
     branch: master
   project-name: Kristinita\\\'s Search
   verbose: true
+  commit_message: bash "KiraDeploy.sh"
