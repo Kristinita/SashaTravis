@@ -3,26 +3,6 @@ git:
 
 language: python
 
-env:
-  global:
-  # [INFO] Needs get GitHub token with “public_repo” scope:
-  # https://docs.travis-ci.com/user/deployment/pages/#setting-the-github-token
-  # [INFO] YAML multiline strings:
-  # https://stackoverflow.com/a/21699210/5951529
-  # https://yaml-multiline.info/
-  # [INFO] Equivalent: TOKEN_GITHUB_FOR_TRAVIS_DEPLOY = my real token
-  - secure: >
-      "EXm44fDtI7y2hCnp6uK3gIFMWUMUink3dO9qCXXfd5LwoK53fcXhoDtF+/
-      xve7jKFLsUSm5EAJxPiGiNILyOymJkOthTmz+Bohnd1B27jaZepCbh10wxalj7Aw405hBux+z0l2pq21YlbFZl+QyvU/
-      8KMms7VVeBDYSCQTFQEmHb5BmA+U2lxJ1hQLJmYK8oV96hKSD/
-      kxgL80EfshoNELXvquC16GwNceJNNeb5cYPMUgb6hdDWEez3mtD9htJO8aFx4XV1/5a7Wu55UOHO/i79o8aT/
-      O94/bDrtOgHBT3btTmQteeZ1ThAWoHf42mfLxNLxLkAO4YgEOXifkCRp56klfRQ6lwg0fe1/nufiPXuxQDKq/OKqWXgYDQ3Jip5u/
-      hcqyQQXnruSszFJT8vW6Ggd0Rr9yRNzATfxgjDEQ15tx/gIWLrLrofbUfcmOn/
-      fO4zDWyH4fcs+HJ10qY42UH0OanZe2eOCheC6eYkUOS1RlmY0CDH43c6xJ1SWVnhj6ybuopoJImcaEkk/
-      OfjHmtWltGi71IPcyccfji6Uy41wg37D4DUq4cs3T0WX0tD3WfmKc98WtI9/
-      iIUEWZhNleS6lCjGIapFdso23hwzKILzCx+tO9KGAenhTGbarq+Fyqfa/
-      TmzyHNAk1KwZGgaOrGgCLNPZx3aT7bibx+6JI="
-
 script:
 - echo "Kira Goddess!"
 
@@ -30,7 +10,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   local-dir: SashaDest
-  github-token: $TOKEN_GITHUB_FOR_TRAVIS_DEPLOY
+  github-token: 8be371f0e94d052951db0d0c401e24600cf3c2f4
   keep-history: true
   on:
     branch: KiraCustomDeployMessage
