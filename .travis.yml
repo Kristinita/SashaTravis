@@ -1,7 +1,10 @@
+git:
+  depth: 1
+
 language: python
 
 script:
-  - cp -a SashaSrc SashaDest
+- echo "Kira Goddess!"
 
 deploy:
   provider: pages
