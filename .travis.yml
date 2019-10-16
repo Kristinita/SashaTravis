@@ -1,19 +1,19 @@
 git:
   depth: 1
-
 language: python
-
 script:
 - echo "Kira Goddess!"
-
 deploy:
   provider: pages
   skip-cleanup: true
   local-dir: SashaDest
-  github-token: 8be371f0e94d052951db0d0c401e24600cf3c2f4
+  github-token: $TOKEN_GITHUB_FOR_TRAVIS_DEPLOY
   keep-history: true
   on:
     branch: KiraCustomDeployMessage
   project-name: Kristinita\\\'s Search
   verbose: true
   commit_message: bash "KiraDeploy.sh"
+env:
+  global:
+    secure: yXBpkzW4GOlQo+0F6CN8bHd8pSvuaDL3ToJRPfBp4SrHbk2skGNguQLUUEB/da/g9reTf8xdA4E2/V6SCoIze/azPK9Gea48v3y9bQVoVveXTvJD5mE6MaaWRaxLScli4/5ldtj/ptu/fQJ2afnHM2J/839PEkU9K3EAh7RClimep3JyVm8mOlc7Axmavgvu+BFRFudWGsHDBOCNxQ07GjPPWqDAuqRj8tJiHIccwYcGv2t4ZqVA3axVdR9Gq0f7G0XIl9zolA2e2SGDrBIGjuhd5r8yAm8bZ+xXN9Xy8MKyAYfN0dqls+2pk9vaTzlznFUaRg80NBQ9mQAwHrXojlCrSJ4X0a8vl2aBC7BA3R0PQfvePNlKvSviXOzbzZh4DvHzj5v144hmGPw4K0ujSCalKWb/9CGcIAahH6Udqi5DhQVNRdAO2B5aUScMeTHKljuNA+SuKFejCLrZdTc3ZXiSJl0qa049lWN/MGS5MPMTCazOc7cVeZHBcRigx5XxWlFIbHoGOJyASFkv92b/+Dy6hZQv8f1LjJgC72CCqCupg/fp7pSL4gTHvqEYDsBdmhV4GzQsUtEAuNBNj1G17qFwjJ73s5kfgBaBX3j3G32Fn48a/gWpeXYWDQY+TV3V7IaodrYQvrcshnpdjssdLlo0JIM/exZM9mUxdxc6d1w=
