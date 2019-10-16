@@ -13,7 +13,7 @@ deploy:
   github-token: $GITHUB_API_KEY
   keep-history: true
   on:
-    branch: master
+    branch: KiraCustomDeployMessage
   project-name: Kristinita\\\'s Search
   verbose: true
   commit_message: bash "KiraDeploy.sh"
