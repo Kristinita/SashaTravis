@@ -13,7 +13,9 @@ deploy:
     branch: KiraCustomDeployMessage
   verbose: true
   local-dir: KiraDir
-  commit_message: $TRAVIS_COMMIT
+  commit_message: >
+    Commit https://%{url}/%{project_name}/commit/$TRAVIS_COMMIT builded and checked by build $TRAVIS_BUILD_NUMBER./
+    See https://travis-ci.org/%{url}/%{project_name}/builds/$TRAVIS_BUILD_ID for details.
 env:
   global:
     # [INFO] Encrypted value of $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING — my active GitHub token
