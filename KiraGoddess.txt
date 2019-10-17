@@ -1,1 +1,3 @@
 Kira Goddess!
+
+Amazing!
