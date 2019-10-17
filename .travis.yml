@@ -15,7 +15,7 @@ deploy:
   verbose: true
   local-dir: KiraDir
   repo: Kristinita/SashaTravis.github.io
-  commit_message: $TRAVIS_COMMIT_MESSAGE
+  commit_message: "$TRAVIS_COMMIT_MESSAGE"
   target-branch: master
 env:
   global:
