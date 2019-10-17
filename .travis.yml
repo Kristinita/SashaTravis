@@ -6,7 +6,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  local-dir: SashaDest
+  # local-dir: SashaDest
   github-token: "$TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING"
   keep-history: true
   on:
