@@ -13,7 +13,6 @@ deploy:
   project-name: Kristinita\\\'s Search
   verbose: true
   local-dir: KiraDir
-  repo: Kristinita/SashaTravis.github.io
   commit_message: "$TRAVIS_BUILD_NUMBER"
   target-branch: master
 env:
