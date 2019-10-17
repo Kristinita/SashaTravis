@@ -7,8 +7,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   local-dir: SashaDest
-  # Kira Goddess!
-  github-token: $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING
+  github-token: "$TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING"
   keep-history: true
   on:
     branch: KiraCustomDeployMessage
@@ -17,4 +16,4 @@ deploy:
   commit_message: bash "KiraDeploy.sh"
 env:
   global:
-    secure: "V/L1eBVjwv6EQCaOtI84bUXQk2BfGKd/hrkMTlFtpAXg9wVktpr4vuKsFh69KtM+sBe1nv9KxPRfOT0h0fglB4RvMaEOmqzj1JcBr+lvG0sgqpiv1RPsmeRB+UN1bBj7TzUSTz4ickYgvnCgCRMOxA+btlb2Quq+ONp9t4mMd6Nwuy3ECFrkVnw42fFL56ULNxxp+YhAV0S9PNpNat39kw3Up335jKeVjc/leTuX9WO9ax3wbFQrVMkmuB1SKuQW6Gy6qgWK5TlgdUtq/SQTtSmEMFAwx1vs7/ouknD6lmYpxsOUsrNpBSHI1FfpuN18/Yx3Z3Ubl1JW2YBQj74ss0Q3J+bEa0PH3OABwc1RgkduAPIw82vAPfAlojcDkyY3y3ES2CtqfniOdXoYkKfp0yJnpZm1ogq/2Wv5EhxWWwGB+0b2JTbB1qHBLJr9mqZUpYrEqqFwrx+RUrzw+wqfsxt6wUlMKnU0Cuqp2jtHLa9NT4B98fWpe6/7ZdLSQ/wn31+ckxbIrEouvLuZPX/6Fr/vQ9WnnKlMI66CQrdMio/8SMjBwiR0htlckYt48IZpT2m5RXBSJQkfgAhyj2sqxrrvUZ+Q1m3K4uXq0qH0bQ2jCcP14MoU5nTet58qGal9q9j30QjTUuG4ZnzMltm1AXcT6aQPzHti5QP3m3/GTro="
+    secure: Wbd/xIWT+HjQl+3cNEtMs8+6Y0Ov/ambNwLqDFwgs4avNoCo3Yfdv96kVs4RRNOyJwBkkAp+UccCbt8xL+vbNacFi/wMXZP+6//+Clz8aJ/wKB4k2HhVIMK6SjYsBWr+/2Ri+Y4yozjT1dUKFhcqL1Xhg/CSEKSAL3EHg30EBndbzK2ejXLffQgCknX5Lg+rsJQ/StlvpqOb1aw1IBx9ZfPwtYMdlJCNqPvMdG1jZiJf9YIs+mOqzY9Jp3PYr0b6X/2KgHIaBN81ksndwcOfauXnD6GXsTlizy0x/hgsCfyoRq4yHgMUPuNYgUjROXRdeBsRH34mVWyD0hqE3sFEnzxdIV1ai1iod0kNYf/75wACdNyis8E8D7M2UHma89kGbXyJSOAOuG5Vk8dbmlsc/2C6JiRfQK2cFTI6HIpFZ4WBBDaqV4txnwKZKwhcH7nGodsNMyVliIQt6/07Yk7x2TdZsUlWDCMQgQX4Lg9FU2MwtRdrdX1CToHq7Yfnp6FZFsPmGNMHzsbsTkqb4CMWXHR1RwRdzUP4QUJ+Hi+dmb/FxoAxKweerDft1+XoBZWBqlAiVpLD1j6HCbVwEc0JwcsrScIo5OHoFQlDG4LScKeJ3J/fCH0IQr1B2/9aeAUVhtUiYZtl4f4FnELLAFGww8h6ojLPV00+Nelpw1KWnFQ=
