@@ -12,8 +12,8 @@ deploy:
     branch: KiraCustomDeployMessage
   verbose: true
   local-dir: KiraDir
-  commit_message: Kira
+  commit_message: "KiraGoddess"
 env:
   global:
-    # [INFO] $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING value
+    # [INFO] Encrypted value of $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING — my active GitHub token
     secure: Wbd/xIWT+HjQl+3cNEtMs8+6Y0Ov/ambNwLqDFwgs4avNoCo3Yfdv96kVs4RRNOyJwBkkAp+UccCbt8xL+vbNacFi/wMXZP+6//+Clz8aJ/wKB4k2HhVIMK6SjYsBWr+/2Ri+Y4yozjT1dUKFhcqL1Xhg/CSEKSAL3EHg30EBndbzK2ejXLffQgCknX5Lg+rsJQ/StlvpqOb1aw1IBx9ZfPwtYMdlJCNqPvMdG1jZiJf9YIs+mOqzY9Jp3PYr0b6X/2KgHIaBN81ksndwcOfauXnD6GXsTlizy0x/hgsCfyoRq4yHgMUPuNYgUjROXRdeBsRH34mVWyD0hqE3sFEnzxdIV1ai1iod0kNYf/75wACdNyis8E8D7M2UHma89kGbXyJSOAOuG5Vk8dbmlsc/2C6JiRfQK2cFTI6HIpFZ4WBBDaqV4txnwKZKwhcH7nGodsNMyVliIQt6/07Yk7x2TdZsUlWDCMQgQX4Lg9FU2MwtRdrdX1CToHq7Yfnp6FZFsPmGNMHzsbsTkqb4CMWXHR1RwRdzUP4QUJ+Hi+dmb/FxoAxKweerDft1+XoBZWBqlAiVpLD1j6HCbVwEc0JwcsrScIo5OHoFQlDG4LScKeJ3J/fCH0IQr1B2/9aeAUVhtUiYZtl4f4FnELLAFGww8h6ojLPV00+Nelpw1KWnFQ=
