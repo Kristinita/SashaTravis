@@ -6,7 +6,6 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  # local-dir: SashaDest
   github-token: "$TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING"
   keep-history: true
   on:
@@ -15,7 +14,7 @@ deploy:
   verbose: true
   local-dir: KiraDir
   repo: Kristinita/SashaTravis.github.io
-  commit_message: "$TRAVIS_COMMIT_MESSAGE"
+  commit_message: "$TRAVIS_BUILD_NUMBER"
   target-branch: master
 env:
   global:
