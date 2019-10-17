@@ -14,8 +14,7 @@ deploy:
   repo: Kristinita/SashaTravis.github.io
   target-branch: master
   commit_message: >
-    Commit https://github.com/%{project_name}/commit/$TRAVIS_COMMIT successfully builded
-    and passed tests by Travis CI build $TRAVIS_BUILD_NUMBER.
+    Commit $TRAVIS_COMMIT successfully builded and passed tests by Travis CI build $TRAVIS_BUILD_NUMBER.
     See https://travis-ci.org/%{project_name}/builds/$TRAVIS_BUILD_ID for details.
 env:
   global:

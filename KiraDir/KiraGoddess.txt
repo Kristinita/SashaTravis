@@ -1,1 +1,1 @@
-Kira Goddess! Amazing!
+Kira Goddess!
