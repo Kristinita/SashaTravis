@@ -7,6 +7,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   local-dir: SashaDest
+  # Kira Goddess!
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
