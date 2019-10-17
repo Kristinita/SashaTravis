@@ -6,9 +6,7 @@ script:
 deploy:
   provider: pages
   edge: true
-  skip-cleanup: true
   token: $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING
-  # keep-history: true
   on:
     branch: KiraCustomDeployMessage
   verbose: true
