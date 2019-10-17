@@ -12,7 +12,8 @@ deploy:
   verbose: true
   local-dir: KiraDir
   commit_message: >
-    Commit https://%{project_name}/commit/$TRAVIS_COMMIT builded and checked by build $TRAVIS_BUILD_NUMBER.
+    Commit https://github.com/%{project_name}/commit/$TRAVIS_COMMIT successfully builded
+    and passed tests by Travis CI build $TRAVIS_BUILD_NUMBER.
     See https://travis-ci.org/%{project_name}/builds/$TRAVIS_BUILD_ID for details.
 env:
   global:
