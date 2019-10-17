@@ -8,7 +8,7 @@ deploy:
   skip-cleanup: true
   local-dir: SashaDest
   # Kira Goddess!
-  github-token: $GITHUB_TOKEN
+  github-token: $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING
   keep-history: true
   on:
     branch: KiraCustomDeployMessage
