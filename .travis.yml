@@ -5,14 +5,15 @@ script:
 - echo "Kira Goddess!"
 deploy:
   provider: pages
+  edge: true
   skip-cleanup: true
   github-token: $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING
-  keep-history: true
+  # keep-history: true
   on:
     branch: KiraCustomDeployMessage
   verbose: true
   local-dir: KiraDir
-  commit_message: "KiraGoddess"
+  commit_message: KiraGoddess
 env:
   global:
     # [INFO] Encrypted value of $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING — my active GitHub token
