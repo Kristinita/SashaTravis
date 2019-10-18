@@ -1,1 +1,1 @@
-Kira Goddess! "" + \n
+Kira Goddess! "" + line breaks
