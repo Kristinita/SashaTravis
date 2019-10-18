@@ -1,1 +1,1 @@
-Kira Goddess! Replace newlines with spaces — 2.
+Kira Goddess! Double quotes + leading spaces.

@@ -13,10 +13,9 @@ deploy:
   local-dir: KiraDir
   repo: Kristinita/SashaTravis.github.io
   target-branch: master
-  commit_message: >
-    Commit https://github.com/%{project_name}/commit/$TRAVIS_COMMIT successfully
-    builded and checked by Travis CI build $TRAVIS_BUILD_NUMBER.
-    See https://travis-ci.org/%{project_name}/builds/$TRAVIS_BUILD_ID for details.
+  commit_message: "Commit https://github.com/%{project_name}/commit/$TRAVIS_COMMIT successfully
+     builded + checked by Travis CI build $TRAVIS_BUILD_NUMBER.
+     See https://travis-ci.org/%{project_name}/builds/$TRAVIS_BUILD_ID for details."
 env:
   global:
     # [INFO] Encrypted value of $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING — my active GitHub token
