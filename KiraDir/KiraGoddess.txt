@@ -1,1 +1,1 @@
-Kira Goddess! Keep newlines + no newline at end.
+Kira Goddess! Replace newlines with spaces + keep newlines.
