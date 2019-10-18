@@ -1,1 +1,1 @@
-Kira Goddess! Replace newlines with spaces + keep newlines.
+Kira Goddess! Literal style block scalar
