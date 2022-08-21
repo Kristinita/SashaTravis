@@ -16,4 +16,5 @@ install:
 - chmod +x stork-ubuntu-20-04
 
 script:
+- stork-ubuntu-20-04 --help
 - stork --help
