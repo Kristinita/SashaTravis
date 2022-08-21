@@ -12,8 +12,8 @@ language: python
 python: 3.10
 
 install:
-- sudo snap install rustup --classic
-- cargo install stork-search --locked
+- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 script:
+- cargo install stork-search --locked
 - stork --help
