@@ -13,7 +13,7 @@ init:
 
 install:
 - ps: iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-- scoop install rustup
+- scoop install rust
 
 build_script:
 - cargo install stork-search --locked
