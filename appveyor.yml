@@ -1,0 +1,20 @@
+platform: x64
+
+image: Visual Studio 2022
+
+clone_depth: 1
+
+environment:
+  PYTHON: C:\Python310-x64
+
+init:
+- SETX PYTHONIOENCODING utf-8
+- "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+
+install:
+- "%PYTHON%\\python -m pip install --upgrade pip pipenv"
+- pipenv install -e git+https://github.com/Kristinita/md_mermaid.git@KiraMermaidWorking#egg=md-mermaid --dev --verbose
+
+build_script:
+- pipenv install pylint --dev --verbose
+- pipenv install pytest --dev --verbose
