@@ -6,6 +6,7 @@ clone_depth: 1
 
 install:
 - choco install rust
+- cargo update
 
 build_script:
 - cargo install stork-search --locked
