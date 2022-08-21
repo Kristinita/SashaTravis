@@ -5,8 +5,9 @@ image: Visual Studio 2022
 clone_depth: 1
 
 install:
-- choco install rust
+- ps: iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+- scoop install nodejs rust
 
 build_script:
 - cargo install stork-search --locked
-- stork --help
+- stork --version

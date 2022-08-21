@@ -17,4 +17,4 @@ install:
 
 script:
 - cargo install stork-search --locked
-- stork --help
+- stork --version
