@@ -12,7 +12,7 @@ language: python
 python: 3.10
 
 install:
-- sudo snap install rustup
+- sudo snap install rustup --classic
 - cargo install stork-search --locked
 
 script:
