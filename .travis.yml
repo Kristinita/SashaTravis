@@ -1,32 +1,18 @@
+os: linux
+
+dist: jammy
+
 git:
   depth: 1
+
+cache: false
+
 language: python
+
+python: 3.10
+
+install:
+- cargo install stork-search --locked
+
 script:
-- echo "Kira Goddess!"
-deploy:
-  provider: pages
-  edge: true
-  token: $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING
-  on:
-    branch: KiraCustomDeployMessage
-  verbose: true
-  local-dir: KiraDir
-  repo: Kristinita/SashaTravis.github.io
-  target-branch: master
-  commit_message: Commit https://github.com/$TRAVIS_REPO_SLUG/commit/$TRAVIS_COMMIT successfully
-     builded & checked by Travis CI build $TRAVIS_BUILD_NUMBER.
-     See https://travis-ci.org/%{project_name}/builds/$TRAVIS_BUILD_ID for details.
-env:
-  global:
-    # [INFO] Encrypted value of $TOKEN_GITHUB_TRAVIS_DEPLOY_DEBUGGING — my active GitHub token
-    secure: >
-      Wbd/xIWT+HjQl+3cNEtMs8+6Y0Ov/ambNwLqDFwgs4avNoCo3Yfdv96kVs4RRNOyJwBkkAp+UccCbt8xL+
-      vbNacFi/wMXZP+6//+Clz8aJ/wKB4k2HhVIMK6SjYsBWr+/2Ri+Y4yozjT1dUKFhcqL1Xhg/
-      CSEKSAL3EHg30EBndbzK2ejXLffQgCknX5Lg+rsJQ/StlvpqOb1aw1IBx9ZfPwtYMdlJCNqPvMdG1jZiJf9YIs+
-      mOqzY9Jp3PYr0b6X/2KgHIaBN81ksndwcOfauXnD6GXsTlizy0x/
-      hgsCfyoRq4yHgMUPuNYgUjROXRdeBsRH34mVWyD0hqE3sFEnzxdIV1ai1iod0kNYf/
-      75wACdNyis8E8D7M2UHma89kGbXyJSOAOuG5Vk8dbmlsc/
-      2C6JiRfQK2cFTI6HIpFZ4WBBDaqV4txnwKZKwhcH7nGodsNMyVliIQt6/
-      07Yk7x2TdZsUlWDCMQgQX4Lg9FU2MwtRdrdX1CToHq7Yfnp6FZFsPmGNMHzsbsTkqb4CMWXHR1RwRdzUP4QUJ+
-      Hi+dmb/FxoAxKweerDft1+XoBZWBqlAiVpLD1j6HCbVwEc0JwcsrScIo5OHoFQlDG4LScKeJ3J/
-      fCH0IQr1B2/9aeAUVhtUiYZtl4f4FnELLAFGww8h6ojLPV00+Nelpw1KWnFQ=
+- stork --help
