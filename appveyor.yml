@@ -12,9 +12,9 @@ init:
 - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
 
 install:
-- "%PYTHON%\\python -m pip install --upgrade pip pipenv"
-- pipenv install -e git+https://github.com/Kristinita/md_mermaid.git@KiraMermaidWorking#egg=md-mermaid --dev --verbose
+- ps: iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+- scoop install rustup
+- cargo install stork-search --locked
 
 build_script:
-- pipenv install pylint --dev --verbose
-- pipenv install pytest --dev --verbose
+- stork --help
