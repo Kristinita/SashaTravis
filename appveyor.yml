@@ -8,6 +8,5 @@ install:
 - choco install rust
 
 build_script:
-- cargo update
 - cargo install stork-search --locked
 - stork --help
