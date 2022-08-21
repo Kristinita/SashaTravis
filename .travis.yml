@@ -12,7 +12,8 @@ language: python
 python: 3.10
 
 install:
-- cargo install stork-search --locked
+- wget https://files.stork-search.net/releases/v1.5.0/stork-ubuntu-20-04
+- chmod +x stork-ubuntu-20-04
 
 script:
 - stork --help
