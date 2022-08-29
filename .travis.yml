@@ -5,16 +5,11 @@ dist: jammy
 git:
   depth: 1
 
-cache: false
-
 language: python
 
-python: 3.10
-
 install:
-- curl https://sh.rustup.rs -sSf | sh -s -- -y
-- source "$HOME/.cargo/env"
+- snap install tidy
 
 script:
-- cargo install stork-search --locked
-- stork --version
+- tidy --help
+- snap run tidy --help
