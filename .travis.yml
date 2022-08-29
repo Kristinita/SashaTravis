@@ -10,7 +10,7 @@ language: python
 python: 3.10
 
 install:
-- sudo snap install tidy
+- sudo apt-get install tidy
 
 script:
 - tidy --version
