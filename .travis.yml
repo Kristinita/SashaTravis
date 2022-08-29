@@ -9,6 +9,9 @@ language: python
 
 python: 3.10
 
+before_install:
+- export PATH="$PATH:/home/travis/.dotnet/tools"
+
 install:
 - sudo apt-get install -y dotnet6
 - dotnet tool install -g localappveyor
