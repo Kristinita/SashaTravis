@@ -5,14 +5,12 @@ dist: jammy
 git:
   depth: 1
 
-sudo: enabled
-
 language: python
 
 python: 3.10
 
 install:
-- snap install tidy
+- sudo snap install tidy
 
 script:
 - tidy --help
