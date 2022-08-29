@@ -13,5 +13,5 @@ install:
 - sudo snap install tidy
 
 script:
-- tidy --help
-- snap run tidy --help
+- tidy --version
+- tidy -config tidy.conf --markup no KiraExample.html
