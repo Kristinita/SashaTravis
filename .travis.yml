@@ -10,8 +10,9 @@ language: python
 python: 3.10
 
 install:
-- sudo apt-get install tidy
+- sudo snap install dotnet-sdk --classic
+- sudo snap alias dotnet-runtime-60.dotnet dotnet
+- dotnet tool install -g localappveyor
 
 script:
-- tidy --version
-- tidy -config tidy.conf --markup no KiraExample.html
+- LocalAppVeyor --version
