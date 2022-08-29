@@ -13,7 +13,7 @@ before_install:
 - export PATH="$PATH:/home/travis/.dotnet/tools"
 
 install:
-- sudo apt-get install -y dotnet6 aspnetcore-runtime-6.0
+- sudo apt-get install -y dotnet6 dotnet-runtime-6.0
 - dotnet tool install -g localappveyor
 
 script:
