@@ -16,7 +16,5 @@ install:
 - npm install
 
 script:
-- pwd
-- echo $TRAVIS_BUILD_DIR
 - node KiraPenthousePassed.js
 - node KiraPenthouseFailed.js

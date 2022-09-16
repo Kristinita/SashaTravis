@@ -3,7 +3,7 @@ const fs = require('fs');
 
 penthouse({
 	// [INFO] “url: 'file:///D:/SashaDemoRepositories/SashaTravis/KiraExampleFailed.html',” for my Windows
-	url: 'file:///home/Travis/Kristinita/SashaTravis/KiraExampleFailed.html',
+	url: 'file:///home/Travis/build/Kristinita/SashaTravis/KiraExampleFailed.html',
 	cssString: 'body { color: red }'
 })
 	.then(criticalCss => {
