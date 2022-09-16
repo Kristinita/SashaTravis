@@ -5,24 +5,18 @@ dist: jammy
 git:
   depth: 1
 
-language: python
+language: node_js
 
-python: 3.10
+node: node
 
-addons:
-  apt:
-    packages:
-    - apt-transport-https
-
-before_install:
-- export PATH="$PATH:/home/travis/.dotnet/tools"
+cache:
+  npm: false
 
 install:
-# - wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-# - sudo dpkg -i packages-microsoft-prod.deb
-# - rm packages-microsoft-prod.deb
-- sudo apt-get install -y dotnet6 dotnet-runtime-6.0
-- dotnet tool install -g localappveyor
+- npm install
 
 script:
-- LocalAppVeyor --version
+- pwd
+- echo $TRAVIS_BUILD_DIR
+- node KiraPenthousePassed.js
+- node KiraPenthouseFailed.js
