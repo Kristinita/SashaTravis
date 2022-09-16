@@ -16,5 +16,5 @@ install:
 - npm install
 
 script:
-- node KiraPenthousePassed.js
-- node KiraPenthouseFailed.js
+- env DEBUG="penthouse,penthouse:*" node KiraPenthousePassed.js
+- env DEBUG="penthouse,penthouse:*" node KiraPenthouseFailed.js
