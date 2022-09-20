@@ -12,9 +12,12 @@ node: node
 cache:
   npm: false
 
+before_install:
+- export NPM_CHECK_INSTALLER=pnpm npm-check -y
+
 install:
-- npm install
+- npm install -g pnpm
+- pnpm install
 
 script:
-- env DEBUG="penthouse,penthouse:*" node KiraPenthousePassed.js
-- env DEBUG="penthouse,penthouse:*" node KiraPenthouseFailed.js
+- pnpm exec npm-check -y -i imagemin-webp
