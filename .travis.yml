@@ -18,6 +18,7 @@ before_install:
 install:
 - npm install -g pnpm
 - pnpm install -D
+- pnpm add npm-check -D
 
 script:
 - pnpm exec npm-check -y -i imagemin-webp

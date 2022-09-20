@@ -1,8 +1,7 @@
 {
 	"devDependencies": {
-		"coffeescript": "^1.5.0",
+		"coffeescript": "^1.0.0",
 		"imagemin-webp": "^6.0.0",
-		"npm-check": "^6.0.1",
 		"postcss": "^6.0.0"
 	}
 }
