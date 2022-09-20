@@ -13,7 +13,7 @@ cache:
   npm: false
 
 before_install:
-- export NPM_CHECK_INSTALLER=pnpm npm-check -y
+- export NPM_CHECK_INSTALLER="pnpm npm-check -y"
 
 install:
 - npm install -g pnpm
