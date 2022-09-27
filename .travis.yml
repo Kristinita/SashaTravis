@@ -17,4 +17,4 @@ install:
 - npm install
 
 script:
-- remark **/*.md --silently-ignore --frail
+- npx remark **/*.md --silently-ignore --frail
