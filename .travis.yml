@@ -12,13 +12,9 @@ node: node
 cache:
   npm: false
 
-before_install:
-- export NPM_CHECK_INSTALLER="pnpm npm-check -y"
-
 install:
-- npm install -g pnpm
-- pnpm install -D
-- pnpm add npm-check -D
+- npm install -g remark-cli
+- npm install
 
 script:
-- pnpm exec npm-check -y -i imagemin-webp
+- remark **/*.md --silently-ignore --frail

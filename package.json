@@ -1,7 +1,5 @@
 {
 	"devDependencies": {
-		"coffeescript": "^1.0.0",
-		"imagemin-webp": "^6.0.0",
-		"postcss": "^6.0.0"
+		"remark-preset-lint-recommended": "^6.1.2"
 	}
 }

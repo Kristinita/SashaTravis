@@ -1,0 +1,31 @@
+##########
+# remark #
+##########
+# [OVERVIEW] remark — Markdown linter:
+# https://remark.js.org/
+#
+# [INFO] Example file:
+# https://github.com/zemanlx/container-structure-test-image/blob/master/.remarkrc.yaml
+#
+# [INFO] CLI usage:
+# https://github.com/remarkjs/remark/tree/master/packages/remark-cli#cli
+#
+# [INFO] Inline ignoring rules:
+# https://github.com/remarkjs/remark-lint#configuring-remark-lint
+#
+# [WARNING] Ignoring specific rules as “lint disable no-duplicate-headings” doesn't work;
+# use “lint disnable” and “lint enable”
+# No issue, because remark author close my previous issues, but not solve them:
+# https://github.com/remarkjs/remark-validate-links/issues/33
+# https://github.com/remarkjs/remark-validate-links/issues/32
+
+
+###########
+# Presets #
+###########
+# [INFO] Preset usage:
+# https://github.com/remarkjs/remark-lint#list-of-presets
+# [NOTE] I don't use “consistent” preset; these aren’t strict rules
+# https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-consistent
+plugins:
+  preset-lint-recommended:
