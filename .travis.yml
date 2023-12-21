@@ -13,4 +13,4 @@ install:
 - pip install crtime
 
 script:
-- python KiraCrtime.py
+- sudo python KiraCrtime.py
