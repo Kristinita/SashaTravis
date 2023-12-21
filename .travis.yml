@@ -10,4 +10,4 @@ language: python
 python: nightly
 
 script:
-- python KiraCrTime.py
+- python KiraCrtime.py
