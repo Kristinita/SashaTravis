@@ -9,7 +9,7 @@ arch: ppc64le
 
 language: python
 
-python: 3.12
+python: 3.12.0
 
 script:
 - python KiraGetFileCreationTime.py
