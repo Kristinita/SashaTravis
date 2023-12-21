@@ -5,8 +5,6 @@ dist: jammy
 git:
   depth: 1
 
-arch: ppc64le
-
 language: python
 
 python: nightly
