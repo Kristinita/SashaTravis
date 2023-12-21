@@ -7,5 +7,7 @@ git:
 
 language: python
 
+python: nightly
+
 script:
 - python KiraCrTime.py
