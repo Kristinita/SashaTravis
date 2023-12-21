@@ -9,5 +9,8 @@ language: python
 
 python: nightly
 
+install:
+- pip install crtime
+
 script:
 - python KiraCrtime.py
