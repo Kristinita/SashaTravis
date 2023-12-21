@@ -1,3 +1,0 @@
-# Kira
-
-Goddess!

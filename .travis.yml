@@ -5,16 +5,11 @@ dist: jammy
 git:
   depth: 1
 
-language: node_js
+arch: ppc64le
 
-node: node
+language: python
 
-cache:
-  npm: false
-
-install:
-- npm install -g remark-cli
-- npm install
+python: 3.12
 
 script:
-- npx remark **/*.md --silently-ignore --frail
+- python KiraGetFileCreationTime.py
