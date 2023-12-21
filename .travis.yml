@@ -7,7 +7,5 @@ git:
 
 language: python
 
-python: nightly
-
 script:
-- python KiraGetFileCreationTime.py
+- python KiraCrTime.py
