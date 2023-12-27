@@ -1,21 +1,16 @@
-os: linux
+platform: x64
 
-dist: jammy
+image: Visual Studio 2022
 
-git:
-  depth: 1
+clone_depth: 1
 
-language: python
+environment:
 
-arch: arm64-graviton2
-
-virt: lxd
-
-python: 3.12
+  PYTHON: C:\Python312-x64
 
 install:
 - pip install djlint
 
-script:
+build_script:
 - djlint --profile=jinja --lint KiraTemplates
 - djlint --profile=jinja --lint KiraTemplates/**/*.html
