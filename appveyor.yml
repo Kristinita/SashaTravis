@@ -11,6 +11,6 @@ environment:
 install:
 - pip install djlint
 
-build_script:
+test_script:
 - djlint --profile=jinja --lint KiraTemplates
 - djlint --profile=jinja --lint KiraTemplates/**/*.html

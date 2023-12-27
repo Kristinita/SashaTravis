@@ -9,8 +9,6 @@ language: python
 
 arch: arm64-graviton2
 
-virt: lxd
-
 python: 3.12
 
 install:
