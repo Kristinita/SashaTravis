@@ -12,4 +12,4 @@ install:
 - npm install
 
 build_script:
-- git log -1 --pretty=format:"%s" | npx commitlint --verbose
+- 'git log -1 --pretty=format:"%s" | npx commitlint --verbose'
