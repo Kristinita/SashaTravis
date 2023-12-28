@@ -9,11 +9,8 @@ language: python
 
 arch: arm64-graviton2
 
-python: 3.12
-
 install:
-- pip install djlint
+- npm install
 
 script:
-- djlint --profile=jinja --lint KiraTemplates
-- djlint --profile=jinja --lint KiraTemplates/**/*.html
+- npx commitlint --from HEAD~1 --to HEAD --verbose
