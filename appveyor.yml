@@ -11,7 +11,7 @@ environment:
 install:
 - npm install
 
-# [INFO] Try with private e-mail:
+# [INFO] Try with private e-mail. Test:
 # https://stackoverflow.com/a/71542189/5951529
 build_script:
 - git log -1 | npx commitlint --verbose
