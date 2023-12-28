@@ -15,4 +15,4 @@ install:
 - npm install
 
 script:
-- npx commitlint --from HEAD~1 --verbose
+- git log -1 --pretty=format:"%s" | npx commitlint --verbose
