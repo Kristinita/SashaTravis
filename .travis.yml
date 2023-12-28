@@ -13,8 +13,8 @@ arch: arm64-graviton2
 
 install:
 - npm install
+- npx simple-git-hooks
 
 script:
 - git log -1
 - "git log -1 --pretty=format:\"%s%n%n%b\" | npx commitlint --verbose"
-- "git log -1 --pretty=format:\"%s%n%b\" | npx commitlint --verbose"

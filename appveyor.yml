@@ -10,11 +10,11 @@ environment:
 
 install:
 - npm install
+- npx simple-git-hooks
 
 # [INFO] Try with private e-mail. Test:
 # https://stackoverflow.com/a/71542189/5951529
 build_script:
 script:
 - git log -1
-- "git log -1 --pretty=format:\"%s%n%n%b\" | npx commitlint --verbose"
 - "git log -1 --pretty=format:\"%s%n%n%b\" | npx commitlint --verbose"
