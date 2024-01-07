@@ -9,7 +9,7 @@ git:
 
 # python: 3.12
 
-arch: arm64-graviton2
+# arch: arm64-graviton2
 
 cache:
 - npm
@@ -22,7 +22,7 @@ install:
 - npm install --global @coffeelint/cli
 
 script:
-# - echo $PATH
+- echo $PATH
 # - export PATH="$HOME/.local/bin:$PATH"
 # - echo $PATH
 - cd /usr/local/bin && ls -d */
