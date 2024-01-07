@@ -25,7 +25,7 @@ script:
 - echo $PATH
 # - export PATH="$HOME/.local/bin:$PATH"
 # - echo $PATH
-- "cd /usr/local/bin && ls -d */"
+- ls /usr/local/bin -d */
 - sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
 - alias fd=fdfind
 - whereis xargs
