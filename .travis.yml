@@ -18,7 +18,7 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- apt install fd-find
+- sudo apt install fd-find
 - npm install --global @coffeelint/cli
 
 script:
@@ -26,7 +26,7 @@ script:
 # - export PATH="$HOME/.local/bin:$PATH"
 # - echo $PATH
 # - ls /usr/local/bin -d */
-- sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
+- sudo ln -s $(which fdfind) $HOME/.local/bin/fd
 # - alias fd=fdfind
 # - whereis xargs
 - whereis coffeelint
