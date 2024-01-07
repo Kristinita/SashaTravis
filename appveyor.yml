@@ -4,16 +4,17 @@ image: Visual Studio 2022
 
 clone_depth: 1
 
-environment:
-
-  PYTHON: C:\Python312-x64
+cache:
+- C:\ProgramData\chocolatey\bin
+- C:\ProgramData\chocolatey\lib
+- "%USERPROFILE%\\AppData\\Roaming\\npm\\node_modules"
 
 install:
-- npm install
-- npx simple-git-hooks
+- choco install nodejs fd -y
+- npm install --global @coffeelint/cli
 
-# [INFO] Test:
-# https://stackoverflow.com/a/71542189/5951529
 build_script:
-- git log -1
-- git log -1 --pretty=format:"%s%n%n%b" | npx commitlint --verbose
+- where xargs
+- where coffeelint
+- fd -0 -e coffee | xargs -0 coffeelint
+- fd -e coffee -x coffeelint
