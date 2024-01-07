@@ -14,12 +14,17 @@ arch: arm64-graviton2
 cache:
 - npm
 - pip
+- /usr/local/lib/node_modules
+- /usr/lib/node_modules
 
 install:
 - sudo apt install fd-find
 - npm install --global @coffeelint/cli
 
 script:
+- echo $PATH
+- export PATH="/$HOME/.local/bin:$PATH"
+- echo $PATH
 - ln -s $(which fdfind) $HOME/.local/bin/fd
 - whereis xargs
 - whereis coffeelint
