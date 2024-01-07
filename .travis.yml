@@ -18,7 +18,7 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- sudo apt install fd-find
+- apt install fd-find
 - npm install --global @coffeelint/cli
 
 script:
