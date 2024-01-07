@@ -26,9 +26,9 @@ script:
 # - export PATH="$HOME/.local/bin:$PATH"
 # - echo $PATH
 # - ls /usr/local/bin -d */
-- sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
+- ln -s /usr/bin/fdfind /usr/local/bin/fd
 - alias fd=fdfind
-- whereis xargs
+# - whereis xargs
 - whereis coffeelint
 - whereis fd
 - whereis fdfind
