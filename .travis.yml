@@ -25,9 +25,12 @@ script:
 - echo $PATH
 - export PATH="$HOME/.local/bin:$PATH"
 - echo $PATH
-- ln -s $(which fdfind) home/.local/bin/fd
+- ln -s $(which fdfind) ~/.local/bin/fd
 - whereis xargs
 - whereis coffeelint
 - whereis fd
+- whereis fdfind
+- fdfind -0 -e coffee | xargs -0 coffeelint
+- fdfind -e coffee -x coffeelint
 - fd -0 -e coffee | xargs -0 coffeelint
 - fd -e coffee -x coffeelint
