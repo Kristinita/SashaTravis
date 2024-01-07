@@ -23,9 +23,9 @@ install:
 
 script:
 - echo $PATH
-- export PATH="/$HOME/.local/bin:$PATH"
+- export PATH="$HOME/.local/bin:$PATH"
 - echo $PATH
-- ln -s $(which fdfind) $HOME/.local/bin/fd
+- ln -s $(which fdfind) home/.local/bin/fd
 - whereis xargs
 - whereis coffeelint
 - whereis fd
