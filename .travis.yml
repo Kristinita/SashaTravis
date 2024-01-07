@@ -14,8 +14,8 @@ arch: arm64-graviton2
 cache:
 - npm
 - pip
-- /usr/local/lib/node_modules
-- /usr/lib/node_modules
+# - /usr/local/lib/node_modules
+# - /usr/lib/node_modules
 
 install:
 - sudo apt install fd-find
