@@ -20,7 +20,9 @@ install:
 - npm install --global @coffeelint/cli
 
 script:
+- ln -s $(which fdfind) ~/.local/bin/fd
 - whereis xargs
 - whereis coffeelint
+- whereis fd
 - fd -0 -e coffee | xargs -0 coffeelint
 - fd -e coffee -x coffeelint
