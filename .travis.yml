@@ -19,8 +19,8 @@ cache:
 
 install:
 - sudo apt update
-- sudo apt install tidy
-# - sudo apt-get install $(cat snappackageslist)
+# - sudo apt install tidy
+- sudo apt-get install $(grep -v "^#" snappackageslist)
 
 script:
 - tidy --version
