@@ -17,10 +17,17 @@ cache:
 # - /usr/local/lib/node_modules
 # - /usr/lib/node_modules
 
+addons:
+  apt:
+    packages:
+    - parallel
+
 install:
-- sudo apt update
+- bash travis-install.sh
+# - sudo apt update
 # - sudo apt install tidy
-- sudo apt-get install $(grep -v "^#" snappackageslist)
+# - sudo apt-get install $(egrep -v "^(#|$)" snappackageslist)
 
 script:
+- fd --version
 - tidy --version
