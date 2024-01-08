@@ -18,7 +18,9 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- sudo apt-get install $(cat snappackageslist)
+- sudo apt update
+- sudo apt install tidy
+# - sudo apt-get install $(cat snappackageslist)
 
 script:
 - tidy --version
