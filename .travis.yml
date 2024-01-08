@@ -18,8 +18,6 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- sudo apt-get install tidy
-- sudo apt-get install fd-find
 - sudo apt-get install $(cat snappackageslist)
 
 script:
