@@ -18,21 +18,7 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- sudo apt install fd-find
-- npm install --global @coffeelint/cli
+- sudo snap refresh tidy channel=5.6.0/stable
 
 script:
-- echo $PATH
-# - export PATH="$HOME/.local/bin:$PATH"
-# - echo $PATH
-# - ls /usr/local/bin -d */
-- sudo ln -s $(which fdfind) /usr/local/bin/fd
-# - alias fd=fdfind
-# - whereis xargs
-- whereis coffeelint
-- whereis fd
-- whereis fdfind
-- fdfind -0 -e coffee | xargs -0 coffeelint
-- fdfind -e coffee -x coffeelint
-- fd -0 -e coffee | xargs -0 coffeelint
-- fd -e coffee -x coffeelint
+- tidy --version
