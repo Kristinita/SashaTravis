@@ -18,7 +18,7 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- xargs sudo snap install < snappackageslist
+- xargs -a snappackageslist sudo snap install
 
 script:
 - tidy --version
