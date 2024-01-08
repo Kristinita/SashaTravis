@@ -18,7 +18,7 @@ cache:
 # - /usr/lib/node_modules
 
 install:
-- xargs -a snappackageslist sudo apt install
+- sudo apt install tidy-html5
 
 script:
 - tidy --version
