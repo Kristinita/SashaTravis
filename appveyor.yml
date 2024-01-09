@@ -21,6 +21,7 @@ before_build:
 - coffeelint --version
 - npx --version
 - npx coffeelint --version
+- where npx
 - where xargs
 - fd -0 --extension coffee
 
