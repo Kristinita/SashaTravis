@@ -1,3 +1,3 @@
 #!/bin/bash
-parallel ::: 'gem install travis' \
-	'sudo apt update && sudo apt-get install $(egrep -v "^(#|$)" aptpackages) && sudo ln -s $(which fdfind) /usr/local/bin/fd'
+parallel ::: "gem install travis" \
+	"sudo apt update && sudo apt install $(grep --extended-regexp --invert-match "^(#|$)" aptpackages) && sudo ln --symbolic $(which fdfind) /usr/local/bin/fd"

@@ -29,5 +29,6 @@ install:
 # - sudo apt-get install $(egrep -v "^(#|$)" snappackageslist)
 
 script:
+- travis --version
 - fd --version
 - tidy --version
