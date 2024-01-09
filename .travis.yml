@@ -12,22 +12,29 @@ git:
 # arch: arm64-graviton2
 
 cache:
-- npm
-- pip
-# - /usr/local/lib/node_modules
-# - /usr/lib/node_modules
-
-addons:
-  apt:
-    packages:
-    - parallel
+  directories:
+  - node_modules
+  - /usr/local/lib/node_modules
+  - /usr/lib/node_modules
 
 install:
-- bash travis-install.sh
-# - sudo apt update
-# - sudo apt install tidy
-# - sudo apt-get install $(egrep -v "^(#|$)" snappackageslist)
+- sudo apt update
+- sudo apt install fd-find
+- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
+- npm install --global @coffeelint/cli
+- npm install --save-dev @coffeelint/cli
+
+before_script:
+- fd --version
+- xargs --version
+- coffeelint --version
+- npx --version
+- npx coffeelint --version
+- where xargs
+- fd -0 --extension coffee
 
 script:
-- fd --version
-- tidy --version
+- fd -0 --extension coffee --exec coffeelint
+- fd -0 --extension coffee | xargs -0 coffeelint
+- fd -0 --extension coffee --exec npx coffeelint
+- fd -0 --extension coffee | xargs -0 npx coffeelint

@@ -8,13 +8,26 @@ cache:
 - C:\ProgramData\chocolatey\bin
 - C:\ProgramData\chocolatey\lib
 - "%USERPROFILE%\\AppData\\Roaming\\npm\\node_modules"
+- "%APPVEYOR_BUILD_FOLDER%/node_modules"
 
 install:
 - choco install nodejs fd -y
 - npm install --global @coffeelint/cli
+- npm install --save-dev @coffeelint/cli
+
+before_build:
+- fd --version
+- xargs --version
+- coffeelint --version
+- npx --version
+- npx coffeelint --version
+- where xargs
+- fd -0 --extension coffee
 
 build_script:
-- where xargs
-- where coffeelint
-- fd -0 -e coffee | xargs -0 coffeelint
-- fd -e coffee -x coffeelint
+- fd -0 --extension coffee --exec coffeelint
+
+on_failure:
+- fd -0 --extension coffee | xargs -0 coffeelint
+- fd -0 --extension coffee --exec npx coffeelint
+- fd -0 --extension coffee | xargs -0 npx coffeelint
