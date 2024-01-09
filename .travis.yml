@@ -5,17 +5,15 @@ dist: jammy
 git:
   depth: 1
 
-# language: python
+language: node_js
 
-# python: 3.12
-
-# arch: arm64-graviton2
+node_js: node
 
 cache:
   directories:
   - node_modules
-  - /usr/local/lib/node_modules
-  - /usr/lib/node_modules
+  - $(npm config get prefix)/bin
+  - $(npm config get prefix)/lib/node_modules
 
 install:
 - sudo apt update
@@ -30,7 +28,6 @@ before_script:
 - coffeelint --version
 - npx --version
 - npx coffeelint --version
-- where xargs
 - fd -0 --extension coffee
 
 script:

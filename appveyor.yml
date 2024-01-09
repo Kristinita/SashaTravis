@@ -29,5 +29,5 @@ build_script:
 
 on_failure:
 - fd -0 --extension coffee | xargs -0 coffeelint
-- fd -0 --extension coffee --exec npx coffeelint
 - fd -0 --extension coffee | xargs -0 npx coffeelint
+- fd -0 --extension coffee --exec npx coffeelint
