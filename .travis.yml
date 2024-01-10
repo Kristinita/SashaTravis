@@ -28,10 +28,10 @@ before_script:
 - coffeelint --version
 - npx --version
 - npx coffeelint --version
-- fd -0 --extension coffee
+- fd --print0 --extension coffee
 
 script:
-- fd -0 --extension coffee --exec coffeelint
-- fd -0 --extension coffee | xargs -0 coffeelint
-- fd -0 --extension coffee --exec npx coffeelint
-- fd -0 --extension coffee | xargs -0 npx coffeelint
+- fd --print0 --extension coffee --exec coffeelint
+- fd --print0 --extension coffee --exec npx coffeelint
+- fd --print0 --extension coffee | xargs --null coffeelint
+- fd --print0 --extension coffee | xargs --null npx coffeelint
