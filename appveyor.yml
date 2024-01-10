@@ -28,12 +28,12 @@ before_build:
 - npx --version
 - coffeelint --version
 - npx coffeelint --version
-- fd --print0 --extension coffee
+- fd --extension coffee
 
 build_script:
-- fd --print0 --extension coffee --exec coffeelint
+- fd --extension coffee --exec coffeelint
 
 on_failure:
-- fd --print0 --extension coffee --exec npx coffeelint
 - fd --print0 --extension coffee | xargs --null coffeelint
 - fd --print0 --extension coffee | xargs --null npx coffeelint
+- fd --extension coffee --exec npx coffeelint
