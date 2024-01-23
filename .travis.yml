@@ -12,6 +12,11 @@ python: 3.12
 addons:
   chrome: stable
 
+install:
+- nvm install node
+- npm install --global fkill-cli http-server pa11y-ci
+- pip install linkchecker
+
 cache:
   directories:
   - node_modules
@@ -22,11 +27,6 @@ cache:
   # - .venv/Lib/site-packages
   # - .venv/Scripts
 
-install:
-- nvm install node
-- npm install --global fkill-cli http-server pa11y-ci
-- pip install linkchecker
-
 before_script:
 - pa11y-ci --version
 - linkchecker --version
@@ -35,7 +35,7 @@ before_script:
 # - nohup http-server --port 4147 &
 
 script:
-- pa11y-ci http://localhost:4147/KiraTestedHTML.html
+- pa11y-ci --config .pa11yci-linux.js http://localhost:4147/KiraTestedHTML.html
 - linkchecker http://localhost:4147/KiraTestedHTML.html
 - fkill :4147 --force --verbose
 # - linkchecker http://localhost:4147/KiraTestedHTML.html
