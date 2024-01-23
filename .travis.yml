@@ -5,33 +5,32 @@ dist: jammy
 git:
   depth: 1
 
-language: node_js
+language: python
 
-node_js: node
+node_js: 3.12
 
 cache:
   directories:
   - node_modules
   - $(npm config get prefix)/bin
   - $(npm config get prefix)/lib/node_modules
+  - $HOME/.cache/pip
+  # - .venv/Lib/site-packages
+  # - .venv/Scripts
 
 install:
-- sudo apt update
-- sudo apt install fd-find
-- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
-- npm install --global @coffeelint/cli
-- npm install --save-dev @coffeelint/cli
+- nvm install node
+- npm install --global fkill-cli http-server pa11y-ci
+- pip install linkchecker
 
 before_script:
-- fd --version
-- xargs --version
-- coffeelint --version
-- npx --version
-- npx coffeelint --version
-- fd --extension coffee
+- pa11y-ci --version
+- linkchecker --version
+- python -m site
+- http-server --port 4147 &
 
 script:
-- fd --extension coffee --exec coffeelint
-- fd --extension coffee --exec npx coffeelint
-- fd --print0 --extension coffee | xargs --null coffeelint
-- fd --print0 --extension coffee | xargs --null npx coffeelint
+- pa11y-ci http://localhost:4147/KiraTestedHTML.html
+- linkchecker http://localhost:4147/KiraTestedHTML.html
+- fkill :4147 --force
+- linkchecker http://localhost:4147/KiraTestedHTML.html

@@ -15,7 +15,7 @@ cache:
 
 install:
 - ps: Install-Product node $env:nodejs_version
-- choco install fd -y
+- choco install fd --yes
 - npm install --global @coffeelint/cli
 - npm install --save-dev @coffeelint/cli
 
