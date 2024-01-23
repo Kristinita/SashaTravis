@@ -9,13 +9,16 @@ language: python
 
 python: 3.12
 
+addons:
+  chrome: stable
+
 cache:
   directories:
   - node_modules
   - $(npm config get prefix)/bin
   - $(npm config get prefix)/lib/node_modules
   - $HOME/.cache/pip
-  - $HOME/virtualenv/python3.12.0/lib/python3.12/site-packages
+  # - $HOME/virtualenv/python3.12.0/lib/python3.12/site-packages
   # - .venv/Lib/site-packages
   # - .venv/Scripts
 
@@ -28,11 +31,11 @@ before_script:
 - pa11y-ci --version
 - linkchecker --version
 - python -m site
-# - http-server --port 4147 &
-- nohup http-server --port 4147 &
+- http-server --port 4147 &
+# - nohup http-server --port 4147 &
 
 script:
 - pa11y-ci http://localhost:4147/KiraTestedHTML.html
 - linkchecker http://localhost:4147/KiraTestedHTML.html
-- fkill :4147 --force
-- linkchecker http://localhost:4147/KiraTestedHTML.html
+- fkill :4147 --force --verbose
+# - linkchecker http://localhost:4147/KiraTestedHTML.html
