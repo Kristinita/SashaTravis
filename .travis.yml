@@ -33,5 +33,5 @@ before_script:
 
 script:
 - http-server --port 4147 &
-- linkchecker --config linkcheckerrc http://localhost:4147/KiraNonValidCSS.html
+- linkchecker --config linkcheckerrc --verbose --debug=all http://localhost:4147/KiraNonValidCSS.html
 # - fkill :4147 --force --verbose
