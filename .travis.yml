@@ -16,15 +16,18 @@ install:
 
 cache:
   directories:
-  - node_modules
-  - $(npm config get prefix)/bin
-  - $(npm config get prefix)/lib/node_modules
+  # - node_modules
+  # - $(npm config get prefix)/bin
+  # - $(npm config get prefix)/lib/node_modules
+  - $HOME/.npm
   - $HOME/.cache/pip
   # - $HOME/virtualenv/python3.12.0/lib/python3.12/site-packages
   # - .venv/Lib/site-packages
   # - .venv/Scripts
 
 before_script:
+- python --version
+- node --version
 - linkchecker --version
 - http-server --version
 
