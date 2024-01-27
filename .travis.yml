@@ -5,14 +5,13 @@ dist: jammy
 git:
   depth: 1
 
-language: python
+language: node_js
 
-python: 3.12
+node_js: node
 
 install:
 - nvm install node
-- npm install --global http-server
-- pip install linkchecker
+- npm install --global browser-sync
 
 cache:
   directories:
@@ -26,12 +25,9 @@ cache:
   # - .venv/Scripts
 
 before_script:
-- python --version
 - node --version
-- linkchecker --version
-- http-server --version
+- browser-sync --version
 
 script:
-- http-server --port 4147 &
-- linkchecker --config linkcheckerrc --verbose --debug=all http://localhost:4147/KiraNonValidCSS.html
+- browser-sync --logLevel debug --no-open .
 # - fkill :4147 --force --verbose

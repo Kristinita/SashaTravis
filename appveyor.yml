@@ -5,35 +5,25 @@ image: Visual Studio 2022
 clone_depth: 1
 
 environment:
-  nodejs_version: "21"
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
 
 cache:
 - C:\ProgramData\chocolatey\bin
 - C:\ProgramData\chocolatey\lib
-- "%USERPROFILE%\\AppData\\Roaming\\npm\\node_modules"
-- "%APPVEYOR_BUILD_FOLDER%/node_modules"
+- "%USERPROFILE%\\AppData\\Roaming\\npm"
+# - "%APPVEYOR_BUILD_FOLDER%\\node_modules"
+# - "%PYTHON%\\Lib\\site-packages"
+# - "%PYTHON%\\Scripts"
+# - "%APPVEYOR_BUILD_FOLDER%\\.venv\\Lib\\site-packages"
+# - "%APPVEYOR_BUILD_FOLDER%\\.venv\\Scripts"
 
 install:
-- ps: Install-Product node $env:nodejs_version
-- choco install fd --yes
-- npm install --global @coffeelint/cli
-- npm install --save-dev @coffeelint/cli
+- choco install nodejs --yes
+- npm install --global browser-sync
 
 before_build:
-- where npx
-- where xargs
-- fd --version
-- xargs --version
 - node --version
-- npx --version
-- coffeelint --version
-- npx coffeelint --version
-- fd --extension coffee
+- browser-sync --version
 
 build_script:
-- fd --extension coffee --exec coffeelint
-
-on_failure:
-- fd --print0 --extension coffee | xargs --null coffeelint
-- fd --print0 --extension coffee | xargs --null npx coffeelint
-- fd --extension coffee --exec npx coffeelint
+- browser-sync --logLevel debug --no-open .
