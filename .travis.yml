@@ -21,6 +21,11 @@ cache:
   # - .venv/Lib/site-packages
   # - .venv/Scripts
 
+before_install:
+- export PIPENV_VENV_IN_PROJECT=1
+- export PIPENV_IGNORE_VIRTUALENVS=1
+- export PIPENV_SKIP_LOCK=1
+
 install:
 - pip install pipenv
 - pipenv install --dev --verbose
