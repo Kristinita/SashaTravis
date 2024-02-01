@@ -9,9 +9,6 @@ language: python
 
 python: 3.12
 
-# addons:
-#   chrome: stable
-
 cache:
   directories:
   # - node_modules
