@@ -31,6 +31,7 @@ install:
 - pipenv install --dev --verbose
 
 before_script:
+- ls $HOME/.cache/pipenv
 - which python
 - python --version
 - which pip
