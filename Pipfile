@@ -1,21 +1,2 @@
 [dev-packages]
 bashate = "*"
-beautifulsoup4 = "*"
-djlint = "*"
-linkchecker = "*"
-markdown = "*"
-markdown-headdown = {editable = true, ref = "master", git = "git+https://github.com/fancsali/markdown-headdown.git"}
-markdown-link-attr-modifier = "*"
-md-mermaid = {editable = true, ref = "KiraMermaidWorking", git = "https://github.com/Kristinita/md_mermaid.git"}
-pelican = "*"
-pelican-search = {editable = true, ref = "KiraFixWindowsPath", git = "https://github.com/Kristinita/search.git"}
-pelican-sitemap = "*"
-peru = "*"
-pip-licenses = "*"
-pydocstyle = "*"
-pygments-csv-lexer = "*"
-pylint = "*"
-pymdown-extensions = "*"
-python-markdown-comments = "*"
-"ruamel.yaml" = "*"
-toml-lint = {editable = true, ref = "master", git = "git+https://github.com/yaegassy/toml-lint.git"}

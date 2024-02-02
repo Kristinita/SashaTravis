@@ -16,10 +16,10 @@ cache:
   # - $(npm config get prefix)/lib/node_modules
   # - $HOME/.npm
   - $HOME/.cache/pip
-  - $HOME/.cache/pipenv
+  # - $HOME/.cache/pipenv
   # - $HOME/virtualenv/python3.12.0/lib/python3.12/site-packages
-  # - .venv/Lib/site-packages
-  # - .venv/Scripts
+  - .venv/Lib/site-packages
+  - .venv/Scripts
 
 before_install:
 - ls $HOME/.cache/pipenv
