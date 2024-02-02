@@ -14,7 +14,7 @@ cache:
   # - node_modules
   # - $(npm config get prefix)/bin
   # - $(npm config get prefix)/lib/node_modules
-  - $HOME/.npm
+  # - $HOME/.npm
   # - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
   # - .venv/Lib/site-packages
