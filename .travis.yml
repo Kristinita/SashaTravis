@@ -23,9 +23,9 @@ cache:
 
 before_install:
 # - ls $HOME/.cache/pipenv
-- export PIPENV_VENV_IN_PROJECT=1
 - export PIPENV_IGNORE_VIRTUALENVS=1
 - export PIPENV_SKIP_LOCK=1
+- export PIPENV_VENV_IN_PROJECT=1
 
 install:
 - pip install pipenv
