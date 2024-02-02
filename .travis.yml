@@ -22,7 +22,7 @@ cache:
   - .venv/Scripts
 
 before_install:
-- ls $HOME/.cache/pipenv
+# - ls $HOME/.cache/pipenv
 - export PIPENV_VENV_IN_PROJECT=1
 - export PIPENV_IGNORE_VIRTUALENVS=1
 - export PIPENV_SKIP_LOCK=1
@@ -32,7 +32,7 @@ install:
 - pipenv install --dev --verbose
 
 before_script:
-- ls $HOME/.cache/pipenv
+# - ls $HOME/.cache/pipenv
 - which python
 - python --version
 - which pip
