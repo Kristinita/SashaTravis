@@ -35,7 +35,6 @@ install:
 - npm ci --loglevel=error
 
 before_script:
-# - ls $HOME/.cache/pipenv
 # - which python
 # - python --version
 # - which pip
