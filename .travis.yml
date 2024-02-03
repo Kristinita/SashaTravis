@@ -9,12 +9,12 @@ language: python
 
 python: 3.12
 
-cache:
-  directories:
+# cache:
+  # directories:
   # - $HOME/.npm
-  - $HOME/.cache/pip
+  # - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
-  - .peru/cache
+  # - .peru/cache
 
 # before_install:
 # - ls $HOME/.cache/pipenv
