@@ -1,0 +1,86 @@
+########
+# Peru #
+########
+# [OVERVIEW] Package manager for including other peoples code to project:
+# It helps add to project third-party files and folders
+# including from resources such as GitLab, BitBucket and GitHub
+# https://github.com/buildinspace/peru
+#
+# [CONFIGURATION]:
+# https://github.com/buildinspace/peru#getting-fancy
+# https://github.com/buildinspace/peru#rules
+#
+# [INFO] I use Peru for downloading Pelican plugins:
+# https://iranzo.github.io/blog/2018/09/25/peru/
+#
+# [NOTE] Duplicate values with “site_variables.yaml” file:
+# https://github.com/buildinspace/peru/issues/206
+#
+# [FIXED] After enabling unicode on AppVeyor
+# [WARNING] Use solely ASCII symbols in this file that use Peru in AppVeyor:
+# https://github.com/appveyor/ci/issues/2129#issuecomment-728945083
+
+
+git module just-table:
+  url: https://github.com/burakkose/just_table
+
+  # [LEARN][PERU] Specific branch, tag or commit:
+  # https://github.com/buildinspace/peru#git-hg-svn
+  # rev: KiraPatchAllGenerators
+
+  # [LEARN][PERU] Rename original folder name to required:
+  # https://github.com/buildinspace/peru/issues/205#issuecomment-528948901
+  # [INFO] “move” not needed after moving “__init__.py” and “just_table.py” to root folder:
+  # https://github.com/burakkose/just_table/commit/ab91fead10bf1ad2c8af6ca976de8a12f552d9d6
+  # move:
+    # pelican_just_table: just_table
+
+  # [REQUIRED] Moved, not original folder name
+  # https://github.com/buildinspace/peru/commit/9258b573100c8efc208668741151be621567707b
+  # [INFO] “pick” not needed after moving “__init__.py” and “just_table.py” to root folder:
+  # pick: just_table
+
+
+git module open-graph:
+  url: https://github.com/whiskyechobravo/pelican-open_graph/
+
+
+git module pelican-plugins:
+  # [LEARN][PERU] Folders for downloading:
+  # https://github.com/buildinspace/peru#rules
+  pick:
+  - interlinks
+  - neighbors
+  - section_number
+
+  # [INFO] sitemap migrated to Pelican Plugins organization and now can installed via pip:
+  # https://github.com/pelican-plugins/sitemap
+  #
+  # [LEARN][PELICAN] It “namespace plugin” in the Pelican terminology:
+  # https://docs.getpelican.com/en/stable/plugins.html#how-to-use-plugins
+  # - sitemap
+
+  # [LEARN][PERU] Don’t download pelican-plugins submodules
+  # [PURPOSE] This significantly reduces the time:
+  # https://github.com/buildinspace/peru#module-types
+  # https://github.com/buildinspace/peru/issues/204
+  #
+  # [NOTE] Don’t install submodules from "getpelican/pelican-plugins".
+  # You can’t do it if “submodules: false”.
+  # Install submodules for GitHub repositories directly
+  submodules: false
+
+  url: https://github.com/getpelican/pelican-plugins
+
+
+# [LEARN][PERU] Directories where files will be uploaded
+imports:
+  # [LEARN][YAML][NOTE] I can’t concatenate variable and string in YAML
+  # as “*plugins_path/open_graph”:
+  # https://stackoverflow.com/a/5954748/5951529
+  just-table: pelican-plugins/just_table
+
+  # [INFO] Here I replaced original repository name
+  # “pelican-open_graph” to “open_graph”
+  open-graph: pelican-plugins/open_graph
+  pelican-plugins: &plugins_path pelican-plugins
