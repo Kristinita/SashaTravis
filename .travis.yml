@@ -9,18 +9,15 @@ language: python
 
 python: 3.12
 
-# cache:
-#   directories:
-  # - node_modules
-  # - $(npm config get prefix)/bin
-  # - $(npm config get prefix)/lib/node_modules
+cache:
+  apt: true
+  directories:
   # - $HOME/.npm
   # - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
-  # - .venv/Lib/site-packages
-  # - .venv/Scripts
+  - /var/cache/apt/archives/
 
-before_install:
+# before_install:
 # - ls $HOME/.cache/pipenv
 # - export PIPENV_IGNORE_VIRTUALENVS=1
 # - export PIPENV_SKIP_LOCK=1
@@ -29,10 +26,9 @@ before_install:
 install:
 # - pip install pipenv
 # - pipenv install --dev --verbose
-- nvm install node
-- npm config get cache
-- npm install --global grunt-cli
-- npm ci --loglevel=error
+- sudo apt update
+- sudo apt install $(grep --extended-regexp --invert-match "^(#|$)" aptpackages)
+- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 
 before_script:
 # - which python
@@ -40,13 +36,17 @@ before_script:
 # - which pip
 # - pip --version
 # - which pipenv
-- which node
-- which npm
-- which npx
-- which grunt
+# - which node
+# - which npm
+# - which npx
+# - which grunt
+- which fd
+- which tidy
 
 script:
-- node --version
-- npm --version
-- npx --version
-- grunt --version
+- fd --version
+- tidy --version
+# - node --version
+# - npm --version
+# - npx --version
+# - grunt --version
