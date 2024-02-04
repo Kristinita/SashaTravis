@@ -9,12 +9,12 @@ language: python
 
 python: 3.12
 
-# cache:
-  # directories:
+cache:
+  directories:
   # - $HOME/.npm
-  # - $HOME/.cache/pip
+  - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
-  # - .peru/cache
+  - $TRAVIS_BUILD_DIR/.peru/cache
 
 # before_install:
 # - ls $HOME/.cache/pipenv
@@ -32,6 +32,7 @@ install:
 # - npm ci --loglevel=error
 
 before_script:
+- echo $TRAVIS_BUILD_DIR
 - which python
 - python --version
 - which pip
