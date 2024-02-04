@@ -11,11 +11,11 @@ python: 3.12
 
 cache:
   apt: true
-  directories:
+  # directories:
   # - $HOME/.npm
   # - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
-  - /var/cache/apt/archives/
+  # - /var/cache/apt/archives/
 
 # before_install:
 # - ls $HOME/.cache/pipenv
