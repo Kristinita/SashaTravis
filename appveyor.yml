@@ -8,16 +8,15 @@ environment:
   nodejs_version: "21"
 
 cache:
-- C:\ProgramData\chocolatey\bin
-- C:\ProgramData\chocolatey\lib
-- "%USERPROFILE%\\AppData\\Roaming\\npm\\node_modules"
-- "%APPVEYOR_BUILD_FOLDER%/node_modules"
+- "%LOCALAPPDATA%\\npm-cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 install:
 - ps: Install-Product node $env:nodejs_version
-- choco install fd -y
+- choco install --yes fd
 - npm install --global @coffeelint/cli
-- npm install --save-dev @coffeelint/cli
+- npm ci
 
 before_build:
 - where npx
@@ -29,8 +28,11 @@ before_build:
 - coffeelint --version
 - npx coffeelint --version
 - fd --extension coffee
+- npx foreach --version
 
 build_script:
+- npx foreach --execute "npx coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
+- npx foreach --execute "coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
 - fd --extension coffee --exec coffeelint
 
 on_failure:

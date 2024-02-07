@@ -1,4 +1,8 @@
 {
   "name": "sashatravis",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "devDependencies": {
+    "@coffeelint/cli": "^5.2.11",
+    "@goenning/foreach-cli": "^1.9.0"
+  }
 }

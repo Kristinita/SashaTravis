@@ -11,16 +11,16 @@ node_js: node
 
 cache:
   directories:
-  - node_modules
-  - $(npm config get prefix)/bin
-  - $(npm config get prefix)/lib/node_modules
+  - $HOME/.npm
+  # - $HOME/.cache/pip
+  # - $HOME/.cache/pipenv
 
 install:
 - sudo apt update
 - sudo apt install fd-find
 - sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 - npm install --global @coffeelint/cli
-- npm install --save-dev @coffeelint/cli
+- npm ci
 
 before_script:
 - fd --version
@@ -29,8 +29,11 @@ before_script:
 - npx --version
 - npx coffeelint --version
 - fd --extension coffee
+- npx foreach --version
 
 script:
+- npx foreach --execute "npx coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
+- npx foreach --execute "coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
 - fd --extension coffee --exec coffeelint
 - fd --extension coffee --exec npx coffeelint
 - fd --print0 --extension coffee | xargs --null coffeelint
