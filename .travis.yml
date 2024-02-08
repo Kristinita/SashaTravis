@@ -49,5 +49,5 @@ script:
   --tls &
 - check-pages https://localhost:8080/KiraTestedHTML.html
 - linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
-- pa11y-ci --config .pa11y-ci.js https://localhost:8080/KiraTestedHTML.html
+- pa11y-ci --config .pa11yci-linux.js https://localhost:8080/KiraTestedHTML.html
 - fkill :8080 --force --verbose
