@@ -5,37 +5,52 @@ image: Visual Studio 2022
 clone_depth: 1
 
 environment:
-  nodejs_version: "21"
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+  PYTHON: C:\Python312-x64
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
-# - "%LOCALAPPDATA%\\pip\\cache"
+- "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
+init:
+- SETX NODE_TLS_REJECT_UNAUTHORIZED 0
+
 install:
-- ps: Install-Product node $env:nodejs_version
-- choco install --yes fd
-- npm install --global @coffeelint/cli
-- npm ci
+- choco install --yes googlechrome gtools nodejs
+- refreshenv
+- pathed /MACHINE /ADD %PYTHON%
+- pathed /MACHINE /ADD %PYTHON%\Scripts
+- refreshenv
+- npm install --global check-pages-cli fkill-cli http-server mkcert pa11y-ci
+- pip install linkchecker
 
 before_build:
-- where npx
-- where xargs
-- fd --version
-- xargs --version
+- check-pages --version
+- fkill --version
+- http-server --version
+- linkchecker --version
+- mkcert --version
 - node --version
-- npx --version
-- coffeelint --version
-- npx coffeelint --version
-- fd --extension coffee
-- npx foreach --version
+- npm --version
+- pa11y-ci --version
+- pip --version
+- python --version
+- where node
+- where npm
+- where pip
+- where python
 
 build_script:
-- npx foreach --execute "npx coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
-- npx foreach --execute "coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
-- fd --extension coffee --exec coffeelint
-
-on_failure:
-- fd --print0 --extension coffee | xargs --null coffeelint
-- fd --print0 --extension coffee | xargs --null npx coffeelint
-- fd --extension coffee --exec npx coffeelint
+- mkcert create-ca
+- mkcert create-cert
+- >
+  powershell -Command "Start-Process cmd
+  -ArgumentList '/c http-server
+  --cert cert.crt
+  --key cert.key
+  --tls'"
+- check-pages https://localhost:8080/KiraTestedHTML.html
+- linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
+- pa11y-ci --config .pa11y-ci.js https://localhost:8080/KiraTestedHTML.html
+- fkill :8080 --force --verbose

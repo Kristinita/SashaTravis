@@ -5,36 +5,49 @@ dist: jammy
 git:
   depth: 1
 
-language: node_js
+language: python
 
-node_js: node
+python: 3.12
 
 cache:
   directories:
   - $HOME/.npm
-  # - $HOME/.cache/pip
+  - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
 
+before_install:
+- export NODE_TLS_REJECT_UNAUTHORIZED=0
+
 install:
-- sudo apt update
-- sudo apt install fd-find
-- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
-- npm install --global @coffeelint/cli
-- npm ci
+- nvm install node
+- npm install --global check-pages-cli fkill-cli http-server mkcert pa11y-ci
+- pip install linkchecker
 
 before_script:
-- fd --version
-- xargs --version
-- coffeelint --version
-- npx --version
-- npx coffeelint --version
-- fd --extension coffee
-- npx foreach --version
+- check-pages --version
+- fkill --version
+- http-server --version
+- linkchecker --version
+- mkcert --version
+- node --version
+- npm --version
+- pa11y-ci --version
+- pip --version
+- python --version
+- which node
+- which npm
+- which pip
+- which python
 
 script:
-- npx foreach --execute "npx coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
-- npx foreach --execute "coffeelint {{path}}" --glob "**/*.coffee" --ignore "node_modules/**"
-- fd --extension coffee --exec coffeelint
-- fd --extension coffee --exec npx coffeelint
-- fd --print0 --extension coffee | xargs --null coffeelint
-- fd --print0 --extension coffee | xargs --null npx coffeelint
+- mkcert create-ca
+- mkcert create-cert
+- >
+  nohup http-server
+  --cert cert.crt
+  --key cert.key
+  --tls &"
+- check-pages https://localhost:8080/KiraTestedHTML.html
+- linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
+- pa11y-ci --config .pa11y-ci.js https://localhost:8080/KiraTestedHTML.html
+- fkill :8080 --force --verbose
