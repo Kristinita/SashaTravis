@@ -46,7 +46,7 @@ script:
   nohup http-server
   --cert cert.crt
   --key cert.key
-  --tls &"
+  --tls &
 - check-pages https://localhost:8080/KiraTestedHTML.html
 - linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
 - pa11y-ci --config .pa11y-ci.js https://localhost:8080/KiraTestedHTML.html
