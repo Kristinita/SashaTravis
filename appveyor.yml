@@ -6,51 +6,27 @@ clone_depth: 1
 
 environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
-  PYTHON: C:\Python312-x64
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
-- "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
-init:
-- SETX NODE_TLS_REJECT_UNAUTHORIZED 0
-
 install:
-- choco install --yes googlechrome gtools nodejs
-- refreshenv
-- pathed /MACHINE /ADD %PYTHON%
-- pathed /MACHINE /ADD %PYTHON%\Scripts
-- refreshenv
-- npm install --global check-pages-cli fkill-cli http-server mkcert pa11y-ci
-- pip install linkchecker
+- choco install --yes nodejs
+- npm install --global MohamedLamineAllal/foreach-cli#fix_reldir stylus
 
 before_build:
-- check-pages --version
-- fkill --version
-- http-server --version
-- linkchecker --version
-- mkcert --version
 - node --version
 - npm --version
-- pa11y-ci --version
-- pip --version
-- python --version
-- where node
-- where npm
-- where pip
-- where python
+- stylus --version
+- foreach --version
 
 build_script:
-- mkcert create-ca
-- mkcert create-cert
-- >
-  powershell -Command "Start-Process cmd
-  -ArgumentList '/c http-server
-  --cert cert.crt
-  --key cert.key
-  --tls'"
-- check-pages https://localhost:8080/KiraTestedHTML.html
-- linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
-- pa11y-ci --config .pa11yci.js https://localhost:8080/KiraTestedHTML.html
-- fkill :8080 --force --verbose
+- 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
+
+on_failure:
+- stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
+- stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
+- stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
+- tree output /f

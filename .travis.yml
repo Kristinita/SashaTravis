@@ -5,49 +5,30 @@ dist: jammy
 git:
   depth: 1
 
-language: python
+language: node_js
 
-python: 3.12
+node_js: node
 
 cache:
   directories:
   - $HOME/.npm
-  - $HOME/.cache/pip
+  # - $HOME/.cache/pip
   # - $HOME/.cache/pipenv
 
-before_install:
-- export NODE_TLS_REJECT_UNAUTHORIZED=0
-
 install:
-- nvm install node
-- npm install --global check-pages-cli fkill-cli http-server mkcert pa11y-ci
-- pip install linkchecker
+- npm install --global MohamedLamineAllal/foreach-cli#fix_reldir stylus
 
 before_script:
-- check-pages --version
-- fkill --version
-- http-server --version
-- linkchecker --version
-- mkcert --version
 - node --version
 - npm --version
-- pa11y-ci --version
-- pip --version
-- python --version
-- which node
-- which npm
-- which pip
-- which python
+- stylus --version
+- foreach --version
 
 script:
-- mkcert create-ca
-- mkcert create-cert
-- >
-  nohup http-server
-  --cert cert.crt
-  --key cert.key
-  --tls &
-- check-pages https://localhost:8080/KiraTestedHTML.html
-- linkchecker --config linkcheckerrc https://localhost:8080/KiraTestedHTML.html
-- pa11y-ci --config .pa11yci-linux.js https://localhost:8080/KiraTestedHTML.html
-- fkill :8080 --force --verbose
+- 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
+
+after_failure:
+- stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
+- stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
+- stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
+- tree output
