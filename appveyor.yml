@@ -23,5 +23,5 @@ build_script:
 - fd --extension html --exec tidy -config tidy.conf --markup no
 
 on_failure:
-- fd --extension html --exec tidy -config tidy.conf -modify --show-errors 0 --show-warnings 0 || exit 0
+- fd --extension html --exec tidy -config tidy.conf -modify --show-errors 0 --show-warnings 0 || true
 - fd --extension html --exec tidy -config tidy.conf --markup no
