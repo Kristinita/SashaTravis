@@ -1,33 +1,27 @@
-os: linux
-
 dist: jammy
 
 git:
   depth: 1
 
-language: node_js
+language: bash
 
-node_js: node
+os: linux
 
-cache:
-  directories:
-  - $HOME/.npm
-  # - $HOME/.cache/pip
-  # - $HOME/.cache/pipenv
+# cache:
+#   directories:
+#   - $HOME/.npm
+# - $HOME/.cache/pip
+# - $HOME/.cache/pipenv
 
 install:
-- npm install --global MohamedLamineAllal/foreach-cli#fix_reldir stylus
+- sudo apt update
+- sudo apt install fd-find
+- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 
 before_script:
-- node --version
-- npm --version
-- stylus --version
-- foreach --version
+- fd --version
+- shellcheck --version
 
 script:
-- 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
-# - tree output
-# after_failure:
-# - stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
+- fd --extension sh --exec echo ; --exec shellcheck
+- fd --extension sh --exec echo \; --exec shellcheck
