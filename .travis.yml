@@ -7,15 +7,15 @@ language: bash
 
 os: linux
 
-# cache:
-#   directories:
-#   - $HOME/.npm
+cache:
+  directories:
+  - $HOME/.npm
 # - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
 install:
-- sudo apt update
-- sudo apt install fd-find
+- nvm install node
+- npm install --global fd-find
 - sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 
 before_script:
