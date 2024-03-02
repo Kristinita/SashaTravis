@@ -14,14 +14,17 @@ cache:
 # - $HOME/.cache/pipenv
 
 install:
+- sudo apt update
+- sudo apt install $(grep --extended-regexp --invert-match "^(#|$)" aptpackages)
 - nvm install node
 - npm install --global fd-find
 - sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 
 before_script:
 - fd --version
-- shellcheck --version
+- tidy --version
 
 script:
-- fd --extension sh --exec echo ; --exec shellcheck
-- fd --extension sh --exec echo \; --exec shellcheck
+- fd --extension html --exec tidy -config tidy.conf --markup no
+- fd --extension html --exec tidy -config tidy.conf -modify --show-errors 0 --show-warnings 0 || exit 0
+- fd --extension html --exec tidy -config tidy.conf --markup no

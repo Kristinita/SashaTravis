@@ -1,0 +1,96 @@
+#######
+# apt #
+#######
+# [OVERVIEW] "apt" is a more modern Ubuntu package manager than "apt-get":
+# https://askubuntu.com/a/446484/582218
+# https://losst.pro/apt-vs-apt-get-v-chem-raznitsa
+#
+# [INFO] apt packages list for Travis CI building in this configuration file:
+#
+# [INFO] Line endings in this file must be in UNIX format:
+# https://askubuntu.com/posts/comments/2627089
+#
+# [NOTE] In Ubuntu, the user must select an installation package that matches the processor architecture.
+# AMD64 is default Travis CI architecture:
+# https://docs.travis-ci.com/user/multi-cpu-architectures/#default-cpu-architecture
+#
+# For another architectures AMD64 packages may not work.
+# On the Ubuntu packages site selection a version for specific processor architecture may be required.
+
+
+######
+# fd #
+######
+# [OVERVIEW] "fd" — user-friendly alternative to Linux command "find":
+# https://github.com/sharkdp/fd
+#
+# [INFO] I use "fd" for command-line apps that doesn’t support
+# glob and ignoring files.
+#
+# [INFO] I selected "fd" instead of "find", because fd supports by default
+# files from ".gitignore":
+# https://github.com/sharkdp/fd#features
+#
+# [INFO] "fd" by default search files recursively in current working directory:
+# https://github.com/sharkdp/fd#list-all-files-recursively
+#
+# [NOTE][REQUIRED] Symlink for Ubuntu installation:
+# https://github.com/sharkdp/fd#on-ubuntu
+#
+#
+# [LEARN][UNIX] "xargs" — utility for running the second command for each element
+# of the first command:
+# https://losst.pro/komanda-xargs-linux
+#
+# [INFO] I use "xargs" in cases where first command is a list of required files,
+# second command — command-line utility without glob and ignoring support.
+#
+# [NOTE] Native command execution syntax doesn’t work on Windows:
+# "fd --extension coffee --exec coffeelint"
+# https://github.com/sharkdp/fd#command-execution
+# https://ci.appveyor.com/project/Kristinita/sashatravis/builds/48897625#L57
+#
+# [INFO] Use xargs syntax. It works for both: Linux and Windows:
+# "fd -0 --extension coffee | xargs -0 coffeelint"
+# https://github.com/sharkdp/fd#using-fd-with-xargs-or-parallel
+# https://ci.appveyor.com/project/Kristinita/sashatravis/builds/48897625#L51
+# https://app.travis-ci.com/github/Kristinita/SashaTravis/builds/268175013#L244
+#
+# [REQUIRED] "-0" in "fd" and "xargs" commands
+#
+#
+# [NOTE] No easy way to install the latest version of fd-find on Ubuntu:
+# https://github.com/sharkdp/fd/issues/174#issuecomment-1882819764
+#
+# [NOTE] 8.3.1-1 is the latest apt fd-find version for Ubuntu Jammy Jellyfish:
+# https://packages.ubuntu.com/jammy/fd-find
+#
+# [NOTE] No snap fd package:
+# https://snapcraft.io/search?q=fd
+# fd-find
+
+
+#############
+# Tidy HTML #
+#############
+# [NOTE][BUG] The latest HTML Tidy versions remove line breaks inside a “pre” element.
+# It’s a critical bug; downgrading HTML Tidy required.
+# https://github.com/htacg/tidy-html5/issues/1006
+#
+# [INFO] Install specific version via apt:
+# https://askubuntu.com/a/92021/582218
+#
+# [REQUIRED] Indication in the file “aptpackages” the full version “2:5.6.0-11ubuntu0.22.04.1”
+# from Ubuntu packages site:
+# https://packages.ubuntu.com/jammy/tidy
+# https://i.imgur.com/RQfZpgS.png
+#
+# [NOTE] The latest apt version of HTML Tidy for Ubuntu Jammy Jellyfish is 5.6.0 (it without “pre” bug):
+# https://answers.launchpad.net/ubuntu/+source/tidy-html5/+question/703158
+# https://launchpad.net/ubuntu/+source/tidy-html5
+# https://packages.ubuntu.com/jammy/tidy
+#
+# [NOTE] The latest snap version of HTML Tidy as of January 2024 it is 5.6.0 (it without “pre” bug):
+# https://snapcraft.io/tidy
+# https://github.com/brlin-tw/tidy-snap/issues/3
+tidy=2:5.6.0-11ubuntu0.22.04.1

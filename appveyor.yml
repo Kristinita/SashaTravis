@@ -13,14 +13,15 @@ platform: x64
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 install:
-- choco install --yes fd shellcheck
+- choco install --yes chocolatey.config
 
 before_build:
 - fd --version
-- shellcheck --version
+- tidy --version
 
 build_script:
-- fd --extension sh --exec echo ; --exec shellcheck
+- fd --extension html --exec tidy -config tidy.conf --markup no
 
 on_failure:
-- fd --extension sh --exec echo \; --exec shellcheck
+- fd --extension html --exec tidy -config tidy.conf -modify --show-errors 0 --show-warnings 0 || exit 0
+- fd --extension html --exec tidy -config tidy.conf --markup no
