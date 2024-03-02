@@ -1,0 +1,1 @@
+#!/bin/Kira Goddess!

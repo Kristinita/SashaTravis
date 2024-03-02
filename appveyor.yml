@@ -21,4 +21,6 @@ before_build:
 
 build_script:
 - fd --extension sh --exec echo ; --exec shellcheck
+
+on_failure:
 - fd --extension sh --exec echo \; --exec shellcheck

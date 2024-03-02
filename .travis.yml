@@ -3,7 +3,7 @@ dist: jammy
 git:
   depth: 1
 
-language: bash
+language: shell
 
 os: linux
 
