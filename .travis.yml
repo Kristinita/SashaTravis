@@ -28,5 +28,7 @@ script:
 - fd --extension html --exec tidy -config tidy.conf --markup no
 
 after_failure:
+- cat KiraNonValidHTML.html
 - fd --extension html --exec tidy -config tidy.conf -modify --show-errors 0 --show-warnings 0 || true
+- cat KiraNonValidHTML.html
 - fd --extension html --exec tidy -config tidy.conf --markup no
