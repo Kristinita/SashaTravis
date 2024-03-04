@@ -20,7 +20,4 @@ before_build:
 - shellcheck --version
 
 build_script:
-- fd --extension sh --exec echo ; --exec shellcheck
-
-on_failure:
-- fd --extension sh --exec echo \; --exec shellcheck
+- fd --extension sh | xargs --replace=% echo "echo %; shellcheck %" | sh
