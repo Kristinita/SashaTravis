@@ -1,11 +1,5 @@
-dist: jammy
-
-git:
-  depth: 1
-
-language: shell
-
-os: linux
+before_script:
+- node --version
 
 cache:
   directories:
@@ -13,14 +7,19 @@ cache:
 # - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
-install:
-- nvm install node
-- npm install --global fd-find
-- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
+dist: jammy
 
-before_script:
-- fd --version
-- shellcheck --version
+git:
+  depth: 1
+
+install:
+- npm ci --loglevel=error
+
+language: node_js
+
+node_js: node
+
+os: linux
 
 script:
-- fd --extension sh | xargs --replace=% echo "echo %; shellcheck %" | sh
+- npx fetch-github-release --version

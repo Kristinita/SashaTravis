@@ -1,23 +1,22 @@
-clone_depth: 1
+before_build:
+- node --version
 
-# environment:
-#   APPVEYOR_SAVE_CACHE_ON_ERROR: true
+build_script:
+- npx fetch-github-release --version
 
-image: Visual Studio 2022
-
-platform: x64
-
-# cache:
-# - "%LOCALAPPDATA%\\npm-cache"
+cache:
+- "%LOCALAPPDATA%\\npm-cache"
 # - "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
+clone_depth: 1
+
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+image: Visual Studio 2022
+
 install:
-- choco install --yes fd shellcheck
+- npm ci --loglevel=error
 
-before_build:
-- fd --version
-- shellcheck --version
-
-build_script:
-- fd --extension sh | xargs --replace=% echo "echo %; shellcheck %" | sh
+platform: x64
