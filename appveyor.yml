@@ -17,6 +17,6 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm ci --loglevel=error
+- npm install --save-dev @terascope/fetch-github-release
 
 platform: x64

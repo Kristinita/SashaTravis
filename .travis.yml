@@ -13,7 +13,7 @@ git:
   depth: 1
 
 install:
-- npm ci --loglevel=error
+- npm install --save-dev @terascope/fetch-github-release
 
 language: node_js
 
