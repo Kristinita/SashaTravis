@@ -1,5 +1,4 @@
 before_build:
-- ajv --version
 - node --version
 - v8r --version
 
@@ -20,6 +19,6 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm install --global ajv v8r
+- npm install --global ajv-cli v8r
 
 platform: x64
