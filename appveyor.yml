@@ -3,7 +3,8 @@ before_build:
 - v8r --version
 
 build_script:
-- v8r .htmlhintrc --verbose
+- v8r pyproject.toml
+- v8r pyproject.toml -vvv
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -19,8 +20,5 @@ image: Visual Studio 2022
 
 install:
 - npm install --global v8r
-
-on_failure:
-- v8r .yamllint --verbose
 
 platform: x64

@@ -1,0 +1,101 @@
+##########
+# djLint #
+##########
+# [OVERVIEW] djLint — lint files of template engines:
+# https://djlint.com/
+[tool.djlint]
+
+# [INFO] djLint configuration for Jinja:
+# https://www.djlint.com/docs/languages/jinja/
+profile="jinja"
+
+# [NOTE] T003 — is a bad practice in my opinion, see 4.1 item:
+# https://github.com/djlint/djLint/issues/345#issue-1345158405
+#
+# [NOTE] H014 — bad practice in my opinion:
+# https://github.com/djlint/djLint/issues/341#issuecomment-1225671131
+#
+# [NOTE] H016 — I use “includes” and blocks,
+# and may not use “title” in the one page with “html lang”
+#
+# [NOTE] H017 — bad practice in my opinion, see 4.2 item:
+# https://github.com/Riverside-Healthcare/djLint/issues/345#issue-1345158405
+# Google HTML/CSS Style Guide doesn’t recommend close void elements:
+# https://google.github.io/styleguide/htmlcssguide.html#Document_Type
+#
+# [NOTE] H025 — too strange rule without a single positive inclusion for me
+#
+# [NOTE] H030 — I use “includes” and blocks,
+# and may not use meta tags in the one page with “html lang”
+#
+# [NOTE] H031 — “until 2009 for Google to publicly confirm
+# that the meta keyword tag is no longer relevant for the ranking”,
+# “Today, in contrast to the Meta Description and Meta Title,
+# the meta keywords are often no longer filled with terms.”
+# https://en.ryte.com/wiki/Meta_Keyword#General_information
+ignore="T003,H014,H016,H017,H025,H030,H031"
+
+
+###########
+# Vulture #
+###########
+# [OVERVIEW] Find dead unused Python code:
+# https://github.com/jendrikseipp/vulture
+#
+# [CONFIGURATION]
+# https://github.com/jendrikseipp/vulture#configuration
+#
+# [INFO] Handling false positives:
+# https://github.com/jendrikseipp/vulture#handling-false-positives
+#
+#
+# [NOTE] I don’t use local whitelist, because I need constantly update it:
+# https://github.com/jendrikseipp/vulture#whitelists
+#
+# [NOTE] “# noqa: F841” works solely for variables, but not, for example, for functions and attributes:
+# https://github.com/jendrikseipp/vulture#flake8-noqa-comments
+#
+#
+# [NOTE][FIXME] I can’t disable errors for default functions/statements of the specific environments.
+#
+# [EXAMPLE] I get error “unused function 'register'” for default function “register” of Pelican.
+# If I create the file “pelican_whitelist.py” in the directory “whitelists”
+# (https://github.com/jendrikseipp/vulture/tree/main/vulture/whitelists)
+# with the content:
+#
+# ```python
+# from pelican import signals
+#
+# register
+# ```
+#
+# Vulture still will not ignore “register()” function
+[tool.vulture]
+
+# [REQUIRED] Vulture doesn’t support ignoring from “.gitignore” by default,
+# manual adding of “.venv/” and “node_modules/” required.
+#
+# [INFO] I ignore third-party, not my own Python files
+exclude = [".venv/", "node_modules/", "pelican-plugins/"]
+
+# [INFO] Ignoring names:
+# https://github.com/jendrikseipp/vulture#ignoring-names
+#
+#
+# [INFO] “CURRENTYEAR” — add current year to templates:
+# https://web.archive.org/web/20170707233534/https://bernhard.scheirle.de/posts/2016/February/29/how-to-keep-your-copyright-year-up-to-date-using-jinja-filters/
+#
+# [INFO] “JINJA_FILTERS” — default Pelican variable for adding custom filters:
+# https://docs.getpelican.com/en/latest/settings.html#basic-settings
+#
+# [INFO] “register()” is the entry point for Pelican plugins:
+# https://blog.geographer.fr/pelican-plugins#toy-module
+#
+#
+# [FIXME] “override_save_as” and “override_url” is attributes from my Pelican plugin “putkiry”.
+# I need to remove them from values of “ignore_names” option, when I place my plugin to separate repository.
+ignore_names = ["CURRENTYEAR", "JINJA_FILTERS", "register",
+				"override_save_as", "override_url"]
+
+# [INFO] Verbose of Vulture is too detailed for everyday usage
+verbose = false

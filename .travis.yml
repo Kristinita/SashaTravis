@@ -23,5 +23,5 @@ node_js: node
 os: linux
 
 script:
-- v8r .htmlhintrc --verbose
-- v8r .yamllint --verbose
+- v8r pyproject.toml
+- v8r pyproject.toml -vvv
