@@ -1,8 +1,11 @@
 before_build:
+- ajv --version
 - node --version
+- v8r --version
 
 build_script:
-- npx fetch-github-release --version
+- ajv --all-errors -d .commitlintrc.yaml -s commitlintrc.json --verbose
+- v8r .commitlintrc.yaml --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -17,6 +20,6 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm install --save-dev @terascope/fetch-github-release
+- npm install --global ajv v8r
 
 platform: x64

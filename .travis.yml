@@ -1,5 +1,7 @@
 before_script:
+- ajv --version
 - node --version
+- v8r --version
 
 cache:
   directories:
@@ -13,7 +15,7 @@ git:
   depth: 1
 
 install:
-- npm install --save-dev @terascope/fetch-github-release
+- npm install --global ajv v8r
 
 language: node_js
 
@@ -22,4 +24,5 @@ node_js: node
 os: linux
 
 script:
-- npx fetch-github-release --version
+- ajv --all-errors -d .commitlintrc.yaml -s commitlintrc.json --verbose
+- v8r .commitlintrc.yaml --verbose
