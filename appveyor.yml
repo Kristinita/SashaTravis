@@ -4,7 +4,6 @@ before_build:
 
 build_script:
 - v8r .htmlhintrc --verbose
-- v8r .yamllint --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -20,5 +19,8 @@ image: Visual Studio 2022
 
 install:
 - npm install --global v8r
+
+on_failure:
+- v8r .yamllint --verbose
 
 platform: x64
