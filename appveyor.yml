@@ -3,8 +3,8 @@ before_build:
 - v8r --version
 
 build_script:
-- ajv --all-errors -d .commitlintrc.yaml -s commitlintrc.json --verbose
-- v8r .commitlintrc.yaml --verbose
+- v8r .htmlhintrc --verbose
+- v8r .yamllint --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -19,6 +19,6 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm install --global ajv-cli v8r
+- npm install --global v8r
 
 platform: x64

@@ -14,7 +14,7 @@ git:
   depth: 1
 
 install:
-- npm install --global ajv-cli v8r
+- npm install --global v8r
 
 language: node_js
 
@@ -23,5 +23,5 @@ node_js: node
 os: linux
 
 script:
-- ajv --all-errors -d .commitlintrc.yaml -s commitlintrc.json --verbose
-- v8r .commitlintrc.yaml --verbose
+- v8r .htmlhintrc --verbose
+- v8r .yamllint --verbose
