@@ -178,7 +178,7 @@ rules:
   footer-max-length:
   - 2
   - always
-  - 120
+  - 250
 
   # [NOTE] 120 as in Python
   header-max-length:
