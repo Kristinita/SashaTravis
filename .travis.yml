@@ -1,3 +1,6 @@
+before_script:
+- git log -1 --pretty=format:"%B"
+
 cache:
   directories:
   - $HOME/.npm

@@ -1,3 +1,6 @@
+before_build:
+- git log -1 --pretty=format:"%B"
+
 build_script:
 - git log -1 --pretty=format:"%B" | npx commitlint --verbose
 
