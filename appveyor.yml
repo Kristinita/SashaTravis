@@ -1,10 +1,5 @@
-before_build:
-- node --version
-- v8r --version
-
 build_script:
-- v8r pyproject.toml
-- v8r pyproject.toml -vvv
+- git log -1 --pretty=format:"%B" | npx commitlint --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -19,6 +14,6 @@ environment:
 image: Visual Studio 2022
 
 install:
-- npm install --global v8r
+- npm ci --loglevel=error
 
 platform: x64
