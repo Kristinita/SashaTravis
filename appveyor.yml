@@ -1,8 +1,10 @@
 before_build:
-- git log -1 --pretty=format:"%B"
+- where git
+- git --version
+- git log -1 --pretty="format:%B"
 
 build_script:
-- git log -1 --pretty=format:"%B" | npx commitlint --verbose
+- git log -1 --pretty="format:%B" | npx commitlint --verbose
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"

@@ -1,5 +1,7 @@
 before_script:
-- git log -1 --pretty=format:"%B"
+- which git
+- git --version
+- git log -1 --pretty="format:%B"
 
 cache:
   directories:
@@ -22,4 +24,4 @@ node_js: node
 os: linux
 
 script:
-- git log -1 --pretty=format:"%B" | npx commitlint --verbose
+- git log -1 --pretty="format:%B" | npx commitlint --verbose
