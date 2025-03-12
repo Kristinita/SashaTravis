@@ -20,6 +20,6 @@ image: Visual Studio 2022
 
 install:
 - npm ci --loglevel=error
-- git update-git-for-windows
+- git update-git-for-windows --yes
 
 platform: x64
