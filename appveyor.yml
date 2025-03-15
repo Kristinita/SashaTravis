@@ -1,15 +1,11 @@
-before_build:
-- where git
-- git --version
-- git log -1 --pretty=%B
-
 build_script:
-- git log -1 --pretty=%B | npx commitlint --verbose
+- "%APPVEYOR_BUILD_FOLDER%/batch/gh-release-install.bat"
+- echo "Kira Goddess!"
 
 cache:
-- "%LOCALAPPDATA%\\npm-cache"
-# - "%LOCALAPPDATA%\\pip\\cache"
-# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
+# - "%LOCALAPPDATA%\\npm-cache"
+- "%LOCALAPPDATA%\\pip\\cache"
+- "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
 
@@ -18,8 +14,17 @@ environment:
 
 image: Visual Studio 2022
 
+init:
+- SETX PIPENV_IGNORE_VIRTUALENVS 1
+- SETX PIPENV_SKIP_LOCK 1
+- SETX PIPENV_VENV_IN_PROJECT 1
+
 install:
-- npm ci --loglevel=error
-- choco install git --yes
+- pip install pipenv
+- pipenv install --dev
+
+on_success:
+- pipenv run fd --version
+- pipenv run tidy --version
 
 platform: x64
