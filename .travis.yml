@@ -32,5 +32,4 @@ script:
 - bash $TRAVIS_BUILD_DIR/github-releases-install.sh
 - ls .venv
 - ls .venv/bin
-- ls .venv/Scripts
 - echo "Kira Goddess!"
