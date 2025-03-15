@@ -1,5 +1,5 @@
 build_script:
-- "%APPVEYOR_BUILD_FOLDER%/github-releases-install.bat"
+- "%APPVEYOR_BUILD_FOLDER%/batch/github-releases-install.bat"
 - echo "Kira Goddess!"
 
 cache:
