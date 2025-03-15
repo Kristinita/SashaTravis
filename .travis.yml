@@ -29,5 +29,5 @@ os: linux
 python: 3.13
 
 script:
-- bash $TRAVIS_BUILD_DIR/bash/gh-release-install.sh
+- bash $TRAVIS_BUILD_DIR/gh-release-install.sh
 - echo "Kira Goddess!"
