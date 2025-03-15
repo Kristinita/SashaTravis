@@ -30,4 +30,6 @@ python: 3.13
 
 script:
 - bash $TRAVIS_BUILD_DIR/github-releases-install.sh
+- ls .venv/Scripts
+- ls .venv
 - echo "Kira Goddess!"
