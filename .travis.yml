@@ -26,5 +26,6 @@ python: 3.13
 
 script:
 - bash $TRAVIS_BUILD_DIR/bash/github-releases-install.sh
-- tidy --version
+- pipenv run fd --version
+- pipenv run tidy --version
 - pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
