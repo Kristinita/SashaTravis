@@ -1,7 +1,3 @@
-after_success:
-- tidy --version
-- tidy -config tidy.conf --markup no KiraNonValidHTML.html
-
 before_install:
 - export PIPENV_IGNORE_VIRTUALENVS=1
 - export PIPENV_SKIP_LOCK=1
@@ -30,3 +26,5 @@ python: 3.13
 
 script:
 - bash $TRAVIS_BUILD_DIR/bash/github-releases-install.sh
+- tidy --version
+- pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
