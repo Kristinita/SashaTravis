@@ -1,6 +1,7 @@
 after_success:
 - pipenv run fd --version
 - pipenv run tidy --version
+- pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
 
 before_install:
 - export PIPENV_IGNORE_VIRTUALENVS=1

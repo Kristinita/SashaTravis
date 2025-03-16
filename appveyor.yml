@@ -26,5 +26,6 @@ install:
 on_success:
 - pipenv run fd --version
 - pipenv run tidy --version
+- pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
 
 platform: x64
