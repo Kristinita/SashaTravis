@@ -19,6 +19,7 @@ init:
 - SETX PIPENV_VENV_IN_PROJECT 1
 
 install:
+- refreshenv
 - pip install pipenv
 - pipenv install --dev
 

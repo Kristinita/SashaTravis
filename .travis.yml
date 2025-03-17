@@ -15,6 +15,7 @@ git:
   depth: 1
 
 install:
+- refreshenv
 - pip install pipenv
 - pipenv install --dev
 
