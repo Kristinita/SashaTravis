@@ -19,4 +19,4 @@ os: linux
 python: 3.13
 
 script:
-- gh-release-install KiraNonexistentUser/KiraNonexistentRepository KiraNonexistentBinary KiraNonexistentFolder --verbose
+- gh-release-install Kristinita/tidy-html5 tidy.exe KiraNonexistentDirectory/KiraNonexistentSubdirectory --verbose
