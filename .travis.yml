@@ -2,7 +2,7 @@ cache:
   directories:
   # - $HOME/.npm
   - $HOME/.cache/pip
-  # - $HOME/.cache/pipenv
+  - $HOME/.cache/pipenv
 
 dist: jammy
 
@@ -10,7 +10,8 @@ git:
   depth: 1
 
 install:
-- pip install gh-release-install
+- pip install pipenv
+- pipenv install --dev
 
 language: python
 
@@ -19,4 +20,6 @@ os: linux
 python: 3.13
 
 script:
-- bash $TRAVIS_BUILD_DIR/bash/github-releases-install.sh
+- python installation/github-release-install.py
+- pipenv run fd --version
+- pipenv run tidy --version
