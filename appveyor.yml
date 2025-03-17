@@ -1,5 +1,5 @@
 build_script:
-- gh-release-install Kristinita/tidy-html5 tidy.exe KiraNonexistentDirectory/KiraNonexistentSubdirectory --verbose
+- "%APPVEYOR_BUILD_FOLDER%/batch/github-releases-install.bat"
 
 cache:
 # - "%LOCALAPPDATA%\\npm-cache"
