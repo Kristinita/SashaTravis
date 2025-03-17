@@ -1,3 +1,8 @@
+before_install:
+- export PIPENV_IGNORE_VIRTUALENVS=1
+- export PIPENV_SKIP_LOCK=1
+- export PIPENV_VENV_IN_PROJECT=1
+
 cache:
   directories:
   # - $HOME/.npm
