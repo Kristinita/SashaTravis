@@ -1,10 +1,10 @@
 build_script:
-- "%APPVEYOR_BUILD_FOLDER%/batch/github-releases-install.bat"
+- gh-release-install KiraNonexistentUser/KiraNonexistentRepository KiraNonexistentBinary KiraNonexistentFolder --verbose
 
 cache:
 # - "%LOCALAPPDATA%\\npm-cache"
 - "%LOCALAPPDATA%\\pip\\cache"
-- "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
 
@@ -13,19 +13,7 @@ environment:
 
 image: Visual Studio 2022
 
-init:
-- SETX PIPENV_IGNORE_VIRTUALENVS 1
-- SETX PIPENV_SKIP_LOCK 1
-- SETX PIPENV_VENV_IN_PROJECT 1
-
 install:
-- refreshenv
-- pip install pipenv
-- pipenv install --dev
-
-on_success:
-- pipenv run fd --version
-- pipenv run tidy --version
-- pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
+- pip install gh-release-install
 
 platform: x64

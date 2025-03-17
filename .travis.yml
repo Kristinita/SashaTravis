@@ -1,13 +1,8 @@
-before_install:
-- export PIPENV_IGNORE_VIRTUALENVS=1
-- export PIPENV_SKIP_LOCK=1
-- export PIPENV_VENV_IN_PROJECT=1
-
 cache:
   directories:
   # - $HOME/.npm
   - $HOME/.cache/pip
-  - $HOME/.cache/pipenv
+  # - $HOME/.cache/pipenv
 
 dist: jammy
 
@@ -15,8 +10,7 @@ git:
   depth: 1
 
 install:
-- pip install pipenv
-- pipenv install --dev
+- pip install gh-release-install
 
 language: python
 
@@ -25,7 +19,4 @@ os: linux
 python: 3.13
 
 script:
-- bash $TRAVIS_BUILD_DIR/bash/github-releases-install.sh
-- pipenv run fd --version
-- pipenv run tidy --version
-- pipenv run fd . --extension html --exec pipenv run tidy -config tidy.conf --markup no
+- gh-release-install KiraNonexistentUser/KiraNonexistentRepository KiraNonexistentBinary KiraNonexistentFolder --verbose
