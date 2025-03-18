@@ -16,7 +16,7 @@ def main():
     # Configure parameters for the tidy-html5 installation command
     tidy_repository = "Kristinita/tidy-html5"
     tidy_output_filename = "tidy.exe" if is_windows else "tidy"
-    tidy_output_directory = ".venv/Scripts" if is_windows else ".venv/bin"
+    tidy_output_directory = ".venv/Script" if is_windows else ".venv/bi"
 
     # Build the command for installing tidy-html5
     command_tidy = [
