@@ -2,7 +2,7 @@
 # @Author: SashaChernykh
 # @Date: 2025-03-17 20:26:53
 # @Last Modified by: SashaChernykh
-# @Last Modified time: 2025-03-17 20:28:58
+# @Last Modified time: 2025-03-18 07:39:36
 import subprocess
 import sys
 import os
@@ -15,7 +15,7 @@ def main():
     # Configure parameters for the tidy-html5 installation command
     tidy_repository = "Kristinita/tidy-html5"
     tidy_output_filename = "tidy.exe" if is_windows else "tidy"
-    tidy_output_directory = ".venv/Scripts" if is_windows else ".venv/bin"
+    tidy_output_directory = ".venv/Script" if is_windows else ".venv/bi"
 
     # Build the command for installing tidy-html5
     command_tidy = [
@@ -57,6 +57,21 @@ def main():
     # Wait for both processes to complete
     process_tidy.wait()
     process_fd.wait()
+
+    # Check return codes and handle errors
+    tidy_return_code = process_tidy.returncode
+    fd_return_code = process_fd.returncode
+
+    if tidy_return_code != 0:
+        print(f"Error: Tidy installation failed with exit code {tidy_return_code}")
+    if fd_return_code != 0:
+        print(f"Error: Fd installation failed with exit code {fd_return_code}")
+
+    # Exit with non-zero if any command failed
+    if tidy_return_code != 0 or fd_return_code != 0:
+        sys.exit(1)
+    else:
+        sys.exit(0)
 
 
 if __name__ == "__main__":
