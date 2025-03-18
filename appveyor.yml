@@ -1,5 +1,5 @@
 build_script:
-- python installation/github-release-install.py
+- python installation/github_release_install.py
 
 cache:
 # - "%LOCALAPPDATA%\\npm-cache"

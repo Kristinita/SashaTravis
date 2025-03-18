@@ -25,6 +25,6 @@ os: linux
 python: 3.13
 
 script:
-- python installation/github-release-install.py
+- python installation/github_release_install.py
 - pipenv run fd --version
 - pipenv run tidy --version
