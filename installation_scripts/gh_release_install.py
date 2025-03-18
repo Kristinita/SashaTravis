@@ -1,7 +1,7 @@
 # @Author: Kristinita
 # @Date: 2025-03-17 20:26:53
 # @Last Modified by: SashaChernykh
-# @Last Modified time: 2025-03-18 21:41:28
+# @Last Modified time: 2025-03-18 21:43:38
 """[OVERVIEW] Install non-Node and non-Python binaries from GitHub releases.
 
 ######################
@@ -57,7 +57,7 @@ def kira_save_binaries_from_github_releases():
 
     # [NOTE] Pipenv has different paths for executable binaries for Linux/macOS and Windows.
     # “.venv/bin” — is the path for Linux and macOS, “.venv/Scripts” — the path for Windows.
-    kira_destination_path = ".venv/Script" if kira_current_os_is_windows else ".venv/bi"
+    kira_destination_path = ".venv/Scripts" if kira_current_os_is_windows else ".venv/bin"
 
     # [PURPOSE] Save binaries from unofficial HTML Tidy 5.9.20 release:
     # https://github.com/Kristinita/tidy-html5/releases/tag/5.9.20
