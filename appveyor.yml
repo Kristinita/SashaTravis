@@ -1,10 +1,10 @@
 before_build:
 - fd --version
 - shellcheck --version
-- fd --extension sh --format {}
+- fd --extension sh --format '{/}'
 
 build_script:
-- fd --extension sh --format {} --exec shellcheck
+- fd --extension sh --format '{/}' --exec shellcheck
 
 # cache:
 # - "%LOCALAPPDATA%\\npm-cache"

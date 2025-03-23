@@ -1,7 +1,7 @@
 before_script:
 - fd --version
 - shellcheck --version
-- fd --extension sh --format {}
+- fd --extension sh --format '{/}'
 
 cache:
   directories:
@@ -24,4 +24,4 @@ language: shell
 os: linux
 
 script:
-- fd --extension sh --format {} --exec shellcheck
+- fd --extension sh --format '{/}' --exec shellcheck
