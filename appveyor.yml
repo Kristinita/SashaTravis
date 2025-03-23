@@ -1,23 +1,24 @@
-clone_depth: 1
+before_build:
+- fd --version
+- shellcheck --version
+- fd --extension sh --format {}
 
-# environment:
-#   APPVEYOR_SAVE_CACHE_ON_ERROR: true
-
-image: Visual Studio 2022
-
-platform: x64
+build_script:
+- fd --extension sh --format {} --exec shellcheck
 
 # cache:
 # - "%LOCALAPPDATA%\\npm-cache"
 # - "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
+clone_depth: 1
+
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+image: Visual Studio 2022
+
 install:
 - choco install --yes fd shellcheck
 
-before_build:
-- fd --version
-- shellcheck --version
-
-build_script:
-- fd --extension sh | xargs --replace=% echo "echo %; shellcheck %" | sh
+platform: x64

@@ -1,11 +1,7 @@
-dist: jammy
-
-git:
-  depth: 1
-
-language: shell
-
-os: linux
+before_script:
+- fd --version
+- shellcheck --version
+- fd --extension sh --format {}
 
 cache:
   directories:
@@ -13,14 +9,19 @@ cache:
 # - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
+dist: noble
+
+git:
+  depth: 1
+
 install:
 - nvm install node
 - npm install --global fd-find
 - sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
 
-before_script:
-- fd --version
-- shellcheck --version
+language: shell
+
+os: linux
 
 script:
-- fd --extension sh | xargs --replace=% echo "echo %; shellcheck %" | sh
+- fd --extension sh --format {} --exec shellcheck
