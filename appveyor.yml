@@ -1,14 +1,15 @@
 before_build:
-- fd --version
-- shellcheck --version
-- fd --extension sh --format '{/}'
+- ver
+- python --version
+- bandit --version
 
 build_script:
-- fd --extension sh --format '{/}' --exec shellcheck
+- bandit --configfile bandit.yaml --silent kira_valid_file.py
+- bandit --ini .bandit --silent kira_valid_file.py
 
-# cache:
+cache:
 # - "%LOCALAPPDATA%\\npm-cache"
-# - "%LOCALAPPDATA%\\pip\\cache"
+- "%LOCALAPPDATA%\\pip\\cache"
 # - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
@@ -19,6 +20,7 @@ environment:
 image: Visual Studio 2022
 
 install:
-- choco install --yes fd shellcheck
+- python -m pip install --upgrade pip
+- pip install bandit
 
 platform: x64

@@ -1,13 +1,13 @@
 before_script:
-- fd --version
-- shellcheck --version
-- fd --extension sh --format '{/}'
+- lsb_release --all
+- python --version
+- bandit --version
 
 cache:
   directories:
-  - $HOME/.npm
-# - $HOME/.cache/pip
-# - $HOME/.cache/pipenv
+  # - $HOME/.npm
+  - $HOME/.cache/pip
+  # - $HOME/.cache/pipenv
 
 dist: noble
 
@@ -15,13 +15,15 @@ git:
   depth: 1
 
 install:
-- nvm install node
-- npm install --global fd-find
-- sudo ln --symbolic $(which fdfind) /usr/local/bin/fd
+- python -m pip install --upgrade pip
+- pip install bandit
 
-language: shell
+language: python
 
 os: linux
 
+python: 3.13
+
 script:
-- fd --extension sh --format '{/}' --exec shellcheck
+- bandit --configfile bandit.yaml --silent kira_valid_file.py
+- bandit --ini .bandit --silent kira_valid_file.py

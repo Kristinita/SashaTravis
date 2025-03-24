@@ -1,0 +1,1 @@
+print("Kira Goddess!")
