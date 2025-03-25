@@ -1,5 +1,0 @@
-[bandit]
-
-exclude = ./.venv
-
-skips: B404

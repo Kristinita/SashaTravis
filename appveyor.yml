@@ -1,11 +1,11 @@
 before_build:
 - ver
 - python --version
-- bandit --version
+- codespell --version
 
 build_script:
-- bandit --configfile bandit.yaml --silent kira_valid_file.py
-- bandit --ini .bandit --silent kira_valid_file.py
+- codespell --config codespell.cfg KiraURLs.txt
+- codespell KiraURLs.txt
 
 cache:
 # - "%LOCALAPPDATA%\\npm-cache"
@@ -21,6 +21,6 @@ image: Visual Studio 2022
 
 install:
 - python -m pip install --upgrade pip
-- pip install bandit
+- pip install codespell
 
 platform: x64
