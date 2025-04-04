@@ -1,7 +1,7 @@
 before_script:
 - lsb_release --all
 - python --version
-- codespell --version
+- tryceratops --version
 
 cache:
   directories:
@@ -16,7 +16,7 @@ git:
 
 install:
 - python -m pip install --upgrade pip
-- pip install codespell
+- pip install tryceratops
 
 language: python
 
@@ -25,5 +25,5 @@ os: linux
 python: 3.13
 
 script:
-- codespell --config codespell.cfg KiraURLs.txt
-- codespell KiraURLs.txt
+- tryceratops kira_example_file.py --verbose
+- tryceratops kira_example_file.py --verbose --experimental
