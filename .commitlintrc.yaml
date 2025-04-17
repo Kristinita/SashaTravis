@@ -85,7 +85,7 @@
 # https://bit.ly/commitlint-for-every-ci
 #
 # ```shell
-# git log -1 --pretty=format:\"%B\" | npx commitlint --verbose
+# git log -1 --pretty=%B | npx commitlint --verbose
 # ```
 #
 # [INFO] “--pretty-format” — format commit messages from log for using them in Commitlint:
@@ -101,9 +101,15 @@
 #
 # [INFO] “%B” — correct formatting, that Commitlint successfully works
 #
-# [NOTE] This command works for me for AppVeyor and Travis.
+# [FIXME][ISSUE] This command works for me for AppVeyor and Travis.
 # Special settings and/or plugins for each CI, as described in the documentation, aren’t required:
 # https://commitlint.js.org/guides/ci-setup.html
+#
+# [NOTE][BUG] AppVeyor incorrectly processes commands with percent symbol.
+# “git log -1 --pretty=%B” in appveyor.yml doesn’t work correctly,
+# but “grunt shell:commitlint” runs without bugs:
+# https://github.com/appveyor/ci/issues/246#issuecomment-2717301993
+# https://github.com/git-for-windows/git/issues/4244#issuecomment-2717322716
 #
 # [INFO] This method works for local and CI usage, but not for git hooks
 #
@@ -111,7 +117,7 @@
 # [INFO] 3. Git hooks:
 # https://commitlint.js.org/#/guides-local-setup?id=add-hook
 #
-# ```
+# ```js
 # module.exports = {
 #   "commit-msg": "npx commitlint --edit \"$1\" --verbose"
 # };
@@ -145,6 +151,21 @@
 # [NOTE] Probot Commitlint doesn’t work with commitlint configuration files:
 # https://github.com/ahmed-taj/commitlint-bot/pull/8
 # https://probot.github.io/apps/commitlint/
+#
+# -------
+#
+# [INFO] If the previous commit isn’t valid:
+# 1. “git commit --amend --message="your valid commit" --signoff”
+# 2. “git push --force-with-lease”
+# https://stackoverflow.com/a/8981216/5951529
+#
+# [GIT][LEARN] “--amend” — modify the last commit:
+# https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend
+# https://docs.github.com/ru/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message#commit-has-not-been-pushed-online
+#
+# [GIT][LEARN] “--force-with-lease” — safe force push;
+# If someone else pushed changes to the same branch, this argument prevents pushing:
+# https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lease
 
 
 ##################################
@@ -167,20 +188,30 @@ extends:
 # [INFO] I prefer errors rather than warnings so that CI build exits at every warning
 rules:
 
-  # [NOTE] “body” is the long commit description, which may contain long URL’s.
+  # [OPTION] “body” is the long commit description, which may contain long URL’s.
   # I think it makes sense to set it to a high value.
   body-max-length:
   - 2
   - always
   - 250
 
-  # [NOTE] 120 as in Python
+  # [OPTION] 120 as Python line length
+  #
+  # [NOTE][BUG] Commitlint recognizes body with URLs as footer:
+  # https://github.com/conventional-changelog/commitlint/issues/4101
+  # So, I increased footer-max-length from 120 to 250
   footer-max-length:
   - 2
   - always
   - 250
 
-  # [NOTE] 120 as in Python
+  # [NOTE][BUG] See the description of the “footer-max-length” option
+  footer-max-line-length:
+  - 2
+  - always
+  - 250
+
+  # [OPTION] 120 as Python line length
   header-max-length:
   - 2
   - always
@@ -317,6 +348,9 @@ rules:
 
     # [INFO] Delete unneeded
     - del
+
+    # [INFO] Initialize the project
+    - init
 
     # [INFO] Changes for linters/checkers/validators.
     # Example scopes — “eslint”, “stylint”

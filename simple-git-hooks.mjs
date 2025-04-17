@@ -2,7 +2,7 @@
 	@Author: Kristinita
 	@Date: 2025-02-20 17:25:48
 	@Last Modified by: Kristinita
-	@Last Modified time: 2025-03-10 19:14:59
+	@Last Modified time: 2025-04-05 15:10:36
 */
 
 /* #################
@@ -20,8 +20,11 @@ after each change in “commit-msg” command:
 https://github.com/toplenboren/simple-git-hooks#update-git-hooks-command
 
 
-[NOTE] I use “.simple-git-hooks.js”, not “simple-git-hooks.js” configuration file,
-because when I run the “npx simple-git-hooks” command, the file “simple-git-hooks.js” opens in my Sublime Text editor.
+[CONFIGURATION]
+https://github.com/toplenboren/simple-git-hooks#additional-configuration-options
+
+[CONFIGURATION][ESM]
+https://github.com/toplenboren/simple-git-hooks#es-modules
 
 
 [INFO] I migrated to simple-git-hooks from Husky:
@@ -38,15 +41,8 @@ scripts from “package.json”, where I can’t add comments to scripts.
 https://github.com/toplenboren/simple-git-hooks#add-simple-git-hooks-to-the-project
 
 
-[INFO] Using Commitlint with git hooks:
+[COMMITLINT][INFO] Using Commitlint with git hooks:
 https://commitlint.js.org/#/guides-local-setup?id=add-hook
-
-```
-module.exports = {
-  "commit-msg": "npx commitlint --edit \"$1\" --verbose"
-};
-
-```
 
 [INFO] After the user writes “git commit …” and presses “Enter” Commitlint lint this commit.
 If commit is non-valid, it’s not accepted and doesn’t appear to the commit log.
@@ -56,23 +52,7 @@ The user will be able to make a “git push” solely after adding a valid commi
 https://commitlint.js.org/#/reference-cli
 
 [INFO] “commit-msg” hook required for linting commits via Commitlint:
-https://typicode.github.io/husky/getting-started.html#automatic-recommended
-*/
-
-
-/* eslint-disable unicorn/prefer-module --
-
-[NOTE] I can’t use “export default” instead of “module.exports” in this file. I get error:
-
-```shell
-[ERROR], Was not able to set git hooks.
-Error: [ERROR] Config was not found! Please add `.simple-git-hooks.js` or `simple-git-hooks.js`
-or `.simple-git-hooks.json` or `simple-git-hooks.json` or `simple-git-hooks` entry in package.json.
-Check README for details
-```
-*/
-module.exports = {
+https://typicode.github.io/husky/getting-started.html#automatic-recommended */
+export default {
 	"commit-msg": "npx commitlint --edit \"$1\" --verbose"
-};
-
-/* eslint-enable unicorn/prefer-module */
+}

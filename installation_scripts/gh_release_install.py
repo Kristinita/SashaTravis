@@ -1,8 +1,8 @@
 # @Author: Kristinita
 # @Date: 2025-03-17 20:26:53
 # @Last Modified by: SashaChernykh
-# @Last Modified time: 2025-03-18 21:43:38
-"""[OVERVIEW] Install non-Node and non-Python binaries from GitHub releases.
+# @Last Modified time: 2025-04-17 08:40:40
+"""[OVERVIEW] Install binaries of non-Node and non-Python packages from GitHub releases.
 
 ######################
 # gh-release-install #
@@ -31,9 +31,10 @@ https://github.com/Rishang/install-release
 I can’t run “grab-github-release”:
 https://github.com/prantlf/grab-github-release/issues/2
 """
-import subprocess
-import sys
-import os
+from pathlib import Path
+from subprocess import Popen
+from sys import exit as sysexit
+from sys import platform, stderr
 
 # [LEARN][PYTHON] “sys.platform” — check current operating system.
 # Windows always has the value “win32”, macOS — “darwin”, Linux — “linux”:
@@ -42,18 +43,16 @@ KIRA_PLATFORM_MACOS = "darwin"
 KIRA_PLATFORM_WINDOWS = "win32"
 
 
-def kira_save_binaries_from_github_releases():
+def kira_save_binaries_from_github_releases() -> None:
     """[FUNCTION_DESCRIPTION] Save non-Node/non-Python binaries from GitHub releases into Pipenv virtual environment.
 
     Steps:
-    -----
-
-    1. Set gh-release-install commands.
-    2. Run gh-release-install commands.
-    3. Exit “github_release_install.py” with the same exit code as exit codes of gh-release-install commands.
+        1. Set gh-release-install commands.
+        2. Run gh-release-install commands.
+        3. Exit “github_release_install.py” with the same exit code as exit codes of gh-release-install commands.
     """
-    kira_current_os_is_windows = sys.platform == KIRA_PLATFORM_WINDOWS
-    kira_current_os_is_macos = sys.platform == KIRA_PLATFORM_MACOS
+    kira_current_os_is_windows = platform == KIRA_PLATFORM_WINDOWS
+    kira_current_os_is_macos = platform == KIRA_PLATFORM_MACOS
 
     # [NOTE] Pipenv has different paths for executable binaries for Linux/macOS and Windows.
     # “.venv/bin” — is the path for Linux and macOS, “.venv/Scripts” — the path for Windows.
@@ -63,8 +62,8 @@ def kira_save_binaries_from_github_releases():
     # https://github.com/Kristinita/tidy-html5/releases/tag/5.9.20
     # Release contains solely binaries, not archives.
     #
-    # [NOTE] I created my own HTML Tidy release, because Tidy is no longer maintained,
-    # and the latest official Tidy versions contains critical bugs:
+    # [TIDY][NOTE] I created my own HTML Tidy release, because Tidy is no longer maintained,
+    # and the latest official Tidy versions contains critical bug:
     # https://github.com/Kristinita/tidy-html5#2-why-it-was-created
     #
     #
@@ -76,13 +75,13 @@ def kira_save_binaries_from_github_releases():
     kira_tidy_repository = "Kristinita/tidy-html5"
     kira_tidy_executable_file = "tidy.exe" if kira_current_os_is_windows else "tidy"
 
-    kira_gh_release_install_command_for_tidy = [
-        "pipenv", "run", "gh-release-install",
-        kira_tidy_repository,
-        kira_tidy_executable_file,
-        kira_destination_path,
-        "--verbose"
-    ]
+    # [LEARN][PYTHON][PERFORMANCE] Indexing tuples is faster than indexing lists.
+    # Use tuples, not lists, if you don’t need to modify your list:
+    # https://github.com/tonybaloney/perflint#w8301--use-tuple-instead-of-list-for-a-non-mutated-sequence-use-tuple-over-list
+    kira_gh_release_install_command_for_tidy = (
+        "pipenv", "run",
+        "gh-release-install", kira_tidy_repository, kira_tidy_executable_file, kira_destination_path,
+        "--verbose")
 
     # [PURPOSE] Save binaries from the latest fd release:
     # https://github.com/sharkdp/fd/releases
@@ -116,25 +115,32 @@ def kira_save_binaries_from_github_releases():
         kira_fd_archive = "fd-{tag}-x86_64-unknown-linux-gnu.tar.gz"
         kira_fd_extract = "fd-{tag}-x86_64-unknown-linux-gnu/fd"
 
-    kira_gh_release_install_command_for_fd = [
-        "pipenv", "run", "gh-release-install",
-        kira_fd_repository,
-        kira_fd_archive,
-        "--extract",
-        kira_fd_extract,
-        os.path.join(kira_destination_path, kira_fd_executable_file),
-        "--verbose"
-    ]
+    # [LEARN][PYTHON][REFACTORING] Use “Path()” object instead of “os.path.join” for joining strings:
+    # https://github.com/dosisod/refurb/blob/master/docs/checks.md#furb147-no-path-join
+    kira_gh_release_install_command_for_fd = (
+        "pipenv", "run",
+        "gh-release-install", kira_fd_repository, kira_fd_archive,
+        "--extract", kira_fd_extract, Path(kira_destination_path, kira_fd_executable_file),
+        "--verbose")
 
     # [PURPOSE] Run gh-release-install commands
     #
-    # [NOTE][PYLINT] Use “subprocess.Popen” with “with” keyword to avoid “R1732” Pylint warning:
+    # [LEARN][PYTHON] “subprocess.call” a blocking function — it waits the execution of a subprocess by default,
+    # “subprocess.Popen” — isn’t a blocking function.
+    # https://stackoverflow.com/a/59615896/5951529
+    #
+    # “subprocess.check_output” also a blocking function:
+    # https://stackoverflow.com/a/40766307/5951529
+    #
+    # “subprocess.Popen” required, “subprocess.call” and “subprocess.check_output”
+    # don’t allow running subprocesses in parallel.
+    #
+    # [PYLINT][NOTE] Use “subprocess.Popen” with “with” keyword to avoid “R1732” Pylint warning:
     # https://pylint.pycqa.org/en/latest/user_guide/messages/refactor/consider-using-with.html
-    with subprocess.Popen(
-            kira_gh_release_install_command_for_tidy) as kira_tidy_process, subprocess.Popen(
+    with Popen(kira_gh_release_install_command_for_tidy) as kira_tidy_process, Popen(
             kira_gh_release_install_command_for_fd) as kira_fd_process:
 
-        # [PURPOSE][LEARN][PYTHON] Wait until subprocesses are finished:
+        # [PURPOSE][LEARN][PYTHON] Wait until subprocesses are finished and return “returncode”:
         # https://stackoverflow.com/a/15108096/5951529
         # https://docs.python.org/3/library/subprocess.html#subprocess.Popen.wait
         kira_tidy_process.wait()
@@ -151,18 +157,22 @@ def kira_save_binaries_from_github_releases():
         kira_fd_exit_code = kira_fd_process.returncode
 
         if kira_tidy_exit_code != 0:
-            print(f"Error: Tidy installation failed with exit code {kira_tidy_exit_code}")
+
+            # [LEARN][PYTHON] Prefer “stderr.write()” or “stdout.write()” to “print()” in a production code:
+            # https://stackoverflow.com/a/2570272/5951529
+            # https://stackoverflow.com/a/3264118/5951529
+            stderr.write(f"Error: Tidy installation failed with exit code {kira_tidy_exit_code}")
         if kira_fd_exit_code != 0:
-            print(f"Error: Fd installation failed with exit code {kira_fd_exit_code}")
+            stderr.write(f"Error: Fd installation failed with exit code {kira_fd_exit_code}")
 
         if kira_tidy_exit_code != 0 or kira_fd_exit_code != 0:
 
             # [LEARN][PYTHON][NOTE] “sys.exit()”, not “exit()” should be used in real Python scripts:
             # https://stackoverflow.com/a/6501134/5951529
             # https://stackoverflow.com/a/19747557/5951529
-            sys.exit(1)
+            sysexit(1)
         else:
-            sys.exit(0)
+            sysexit(0)
 
 
 kira_save_binaries_from_github_releases()
