@@ -1,25 +1,11 @@
 {
-	"name": "sashatravis",
-	"version": "1.0.0",
-	"description": "",
-	"homepage": "https://github.com/Kristinita/SashaTravis#readme",
-	"bugs": {
-		"url": "https://github.com/Kristinita/SashaTravis/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Kristinita/SashaTravis.git"
-	},
-	"license": "ISC",
-	"author": "",
-	"type": "commonjs",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.8.0",
 		"@commitlint/config-conventional": "^19.8.0",
+		"@dotenvx/dotenvx": "^1.41.0",
+		"coffeescript": "^2.7.0",
+		"grunt": "^1.5.3",
+		"grunt-shell": "^4.0.0",
 		"simple-git-hooks": "^2.11.1"
 	}
 }

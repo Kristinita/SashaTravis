@@ -1,24 +1,24 @@
 build_script:
-- python installation_scripts/gh_release_install.py
+- grunt shell:appveyorlint --verbose
 
 cache:
-# - "%LOCALAPPDATA%\\npm-cache"
+- "%LOCALAPPDATA%\\npm-cache"
 - "%LOCALAPPDATA%\\pip\\cache"
-- "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
 
 clone_depth: 1
 
 environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
+  DOTENV_PRIVATE_KEY_CREDENTIALS:
+    secure: Ai82TZjeThZXRh3fq4PtYkScL0xOuHm6L7kqHTXk9as5m8rUjKOLOWT8RvoSV6/Lr2LxCYDqVsrsDPodk1+m4XiTbmcWDV6QrvfGzkkBYB4=
 
 image: Visual Studio 2022
 
 install:
-- pip install pipenv
-- pipenv install --dev
+- choco install --yes nodejs
+- npm install --global grunt-cli
+- npm ci --loglevel=error
+- pip install httpie
 
 platform: x64
-
-test_script:
-- pipenv run fd --version
-- pipenv run tidy --version

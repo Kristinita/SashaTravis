@@ -1,25 +1,28 @@
 cache:
   directories:
-  # - $HOME/.npm
+  - $HOME/.npm
   - $HOME/.cache/pip
-  - $HOME/.cache/pipenv
+# - $HOME/.cache/pipenv
 
 dist: noble
+
+env:
+  global:
+    secure: iCBlWewfhKmw85rnkYBGBIXR1tt6GJq2A4WbDifKX3b7Cit2lrcmmkqKL/gl9z1GCIQ52mY+pDkHuCPwyxaV7eI9DCJ9OHO8KK3TkDfKfS76bM/z83RT9cc37uf/tWIc1Dirc1gmU9NVQMF9yxKt0lokGK/e/31OGlksjjXy9ozoOQV8Kl84JxawDDxg+ZSNveCapYJf61Zk565Tm0EAaAoc+t1aUguszq5QIWEh7sSjQ12SABYeRqYnNnOchCUOf+h5uRReZ4kMH/UPZLY/3m4+BbWCvrxxIXmiYQSjI9oegjAMDU5qvMPPZF4fxNsYtjLR6k3NhYBTpI7ECEdUt6HtX2uFDaF9oiVzBFyOjKS/xcM+yD0UnKS9hq5yUeaqZ911CCd4vSfKj0RlsopCOushuIED59vDnA2abW+xCg6Iznx9DHDVIljcUnLLTbFwiXcPD1/qDZG0/qbv8THc6It0XJKiku1Y0hA8UNgAAIojSbOpIYo1pARHLIBKHRLgK4iKf9vmP707XzWLCndgCBIisAi6pOaHAJZp2mSgzin/m5lQv6c+zCnZWPDxIKY3aElK3bXuHo40+yZ0tNOqXOCbaSJfcbxiH/vDotOSW5Cb+3LNOsi3IsyZJviKuwsWEO0Z2iOmqUr19yL3HS3Wwgu2vSKHAYjpWjOFpnjh8jI=
 
 git:
   depth: 1
 
 install:
-- pip install pipenv
-- pipenv install --dev
+- npm install --global grunt-cli
+- npm ci --loglevel=error
+- pip install httpie
 
-language: python
+language: node_js
+
+node_js: node
 
 os: linux
 
-python: 3.13
-
 script:
-- python installation_scripts/gh_release_install.py
-- pipenv run fd --version
-- pipenv run tidy --version
+- grunt shell:appveyorlint --verbose

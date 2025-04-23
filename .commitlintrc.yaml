@@ -164,7 +164,7 @@
 # https://docs.github.com/ru/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message#commit-has-not-been-pushed-online
 #
 # [GIT][LEARN] “--force-with-lease” — safe force push;
-# If someone else pushed changes to the same branch, this argument prevents pushing:
+# If someone else push changes to the same branch, this argument prevents pushing:
 # https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lease
 
 
@@ -197,7 +197,7 @@ rules:
 
   # [OPTION] 120 as Python line length
   #
-  # [NOTE][BUG] Commitlint recognizes body with URLs as footer:
+  # [BUG] Commitlint recognizes body with URLs as footer:
   # https://github.com/conventional-changelog/commitlint/issues/4101
   # So, I increased footer-max-length from 120 to 250
   footer-max-length:
@@ -205,7 +205,6 @@ rules:
   - always
   - 250
 
-  # [NOTE][BUG] See the description of the “footer-max-length” option
   footer-max-line-length:
   - 2
   - always
@@ -349,15 +348,14 @@ rules:
     # [INFO] Delete unneeded
     - del
 
-    # [INFO] Initialize the project
-    - init
-
     # [INFO] Changes for linters/checkers/validators.
     # Example scopes — “eslint”, “stylint”
     - lint
 
     # [INFO] Migrate from one tool to another
     - migrate
+
+    - sec
 
     # [INFO] Update
     - upd
