@@ -1,22 +1,16 @@
 cache:
   directories:
   - $HOME/.npm
-  - $HOME/.cache/pip
+# - $HOME/.cache/pip
 # - $HOME/.cache/pipenv
 
 dist: noble
-
-env:
-  global:
-    secure: K/jgE6CX/RoQ3oKPFLBB1vloKZ2Vs7Xz4w3l4VtQpFfNyJW2xVU0QmVZFZuECxgkqMwKNjNNNwxffgg955o5QfNeEFuCXOcx83MWZdImzj69KHuX0b1IOgvV05+puk6jhDJ9OapcvnNdizIaU69b/O36QlrPwdhhSFtnF6tmFxcDWr5FO9+q0Lpbs3g6BMUNqYVDZX38U34IaDZQBG6JGWYUxyyz330kJTnRQyuM01bKd//uxiiVyVNJNFyZxUmpuDSLCLyyXQSx/uQVabIO8Qdkraube0Bs/Y0qi6HKjrckO3E3X0AJC3yD2bfRzQvY4isAAccOnloCZp5V8OsvpKt5eKOSMJ9YbV2qJxkzGHIOdvxtV7O1ojcHDGH3/qxPjoS4Yr8b+WsHWassZX4mZz7VnvGOtJnClWkYdEU8AMP7E+EcDEfIWLpxWD22FmKgyZcKXapnw20ue9VFyRozyntCk+IzMWakuYkBkLHo+ri+kIuMvGQIrAZGx4b3D+YfU7Z4colHQTF05p22HbFS/HZbXF4Vj10OWNSqfeY2FHg0dFqiMlPejxnXmrQZx3oYAeYq9Fd5vaRQF8hOdCxU2FXdFSGaAbzU+suPIPspCwnjOTI8hjc/zcG7wRkQp3vtM2zmRtC47Aolmlz2D5tBPTPAonRjP9z2/8HnZWUunbo=
 
 git:
   depth: 1
 
 install:
-- npm install --global grunt-cli
-- npm ci --loglevel=error
-- pip install httpie
+- npm install --global json
 
 language: node_js
 
@@ -25,4 +19,6 @@ node_js: node
 os: linux
 
 script:
-- grunt shell:appveyorlint --verbose
+- json -e "this['1.2.0']='messages/1.2.0.txt'" -f messages.json --in-place --output json-tab
+- json -e "this['1.11.0']='messages/1.11.0.txt'" -f messages.json --in-place --output json-tab
+- cat messages.json
