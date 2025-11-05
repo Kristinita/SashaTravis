@@ -1,7 +1,5 @@
 build_script:
-- json -e "this['1.2.0']='messages/1.2.0.txt'" -f messages.json --in-place --output json-tab
-- json -e "this['1.11.0']='messages/1.11.0.txt'" -f messages.json --in-place --output json-tab
-- cat messages.json
+- npx eslint KiraExampleReDoS.js
 
 cache:
 - "%LOCALAPPDATA%\\npm-cache"
@@ -17,6 +15,6 @@ image: Visual Studio 2022
 
 install:
 - choco install --yes nodejs
-- npm install --global json
+- npm install
 
 platform: x64

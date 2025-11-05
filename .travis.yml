@@ -12,13 +12,11 @@ git:
 install:
 - npm install --global json
 
-language: node_js
+language: generic
 
 node_js: node
 
 os: linux
 
 script:
-- json -e "this['1.2.0']='messages/1.2.0.txt'" -f messages.json --in-place --output json-tab
-- json -e "this['1.11.0']='messages/1.11.0.txt'" -f messages.json --in-place --output json-tab
-- cat messages.json
+- npx eslint KiraExampleReDoS.js
