@@ -1,4 +1,9 @@
+before_build:
+- node --version
+- npm --version
+
 build_script:
+- npx eslint KiraExampleSafeRegEx.js
 - npx eslint KiraExampleReDoS.js
 
 cache:

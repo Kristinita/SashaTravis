@@ -1,0 +1,1 @@
+const kiraRegex = /^\d$/u;

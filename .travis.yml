@@ -1,3 +1,7 @@
+before_script:
+- node --version
+- npm --version
+
 cache:
   directories:
   - $HOME/.npm
@@ -10,7 +14,7 @@ git:
   depth: 1
 
 install:
-- npm install --global json
+- npm install
 
 language: generic
 
@@ -19,4 +23,5 @@ node_js: node
 os: linux
 
 script:
+- npx eslint KiraExampleSafeRegEx.js
 - npx eslint KiraExampleReDoS.js
