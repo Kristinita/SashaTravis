@@ -1,5 +1,5 @@
 after_script:
-- tree output /a /f
+- tree output
 - ls --human-readable --recursive --size output
 
 before_script:
@@ -7,7 +7,7 @@ before_script:
 - npm --version
 - imagemin --version
 - foreach --version
-- tree output /a /f
+- tree output
 
 cache:
   directories:
