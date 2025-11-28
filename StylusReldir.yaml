@@ -1,0 +1,11 @@
+# Cross-platform solution using Python within shell command
+steps:
+  - name: pypyr.steps.glob
+    in:
+      glob: output/theme/stylus/**/*.styl
+
+  # Using python directly as part of the command to handle path manipulation
+  - name: pypyr.steps.shell
+    foreach: '{globOut}'
+    in:
+      cmd: 'python -c "import os, subprocess, sys; input_file=sys.argv[1]; rel_path=os.path.dirname(os.path.relpath(input_file, ''output/theme/stylus'')); output_dir = os.path.join(''output'', ''theme'', ''css'', rel_path) if rel_path != ''.'' and rel_path != '''' else os.path.join(''output'', ''theme'', ''css''); os.makedirs(output_dir, exist_ok=True); result=subprocess.run([''stylus'', input_file, ''--out'', output_dir], capture_output=True, shell=True); print(result.stdout.decode() if result.stdout else ''''); print(result.stderr.decode() if result.stderr else ''''); sys.exit(result.returncode)" "{i}"'

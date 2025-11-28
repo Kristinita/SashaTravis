@@ -1,21 +1,3 @@
-platform: x64
-
-image: Visual Studio 2022
-
-clone_depth: 1
-
-environment:
-  APPVEYOR_SAVE_CACHE_ON_ERROR: true
-
-cache:
-- "%LOCALAPPDATA%\\npm-cache"
-# - "%LOCALAPPDATA%\\pip\\cache"
-# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
-
-install:
-- choco install --yes nodejs
-- npm install --global MohamedLamineAllal/foreach-cli#fix_reldir stylus
-
 before_build:
 - node --version
 - npm --version
@@ -24,7 +6,25 @@ before_build:
 
 build_script:
 - 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
-- stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
-- stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
-- stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
+# - stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
+# - stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
+# - stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
 - tree output /a /f
+
+cache:
+- "%LOCALAPPDATA%\\npm-cache"
+# - "%LOCALAPPDATA%\\pip\\cache"
+# - "%LOCALAPPDATA%\\pipenv\\pipenv\\cache"
+
+clone_depth: 1
+
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+image: Visual Studio 2022
+
+install:
+- choco install --yes nodejs
+- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths stylus
+
+platform: x64
