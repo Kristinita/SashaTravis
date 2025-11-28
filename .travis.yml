@@ -21,6 +21,7 @@ git:
   depth: 1
 
 install:
+- apt install tree
 - npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths stylus
 
 language: node_js
