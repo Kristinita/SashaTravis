@@ -1,8 +1,13 @@
+after_script:
+- tree output /a /f
+- ls --human-readable --recursive --size output
+
 before_script:
 - node --version
 - npm --version
 - imagemin --version
 - foreach --version
+- tree output /a /f
 
 cache:
   directories:
@@ -17,7 +22,7 @@ git:
 
 install:
 - sudo apt install tree
-- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths imagemin-cli imagemin-webp
+- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths imagemin-cli imagemin-jpegtran imagemin-optipng imagemin-webp
 
 language: node_js
 
@@ -26,5 +31,6 @@ node_js: node
 os: linux
 
 script:
-- 'foreach --glob "output/theme/images/**/*.{jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp"'
-- tree output
+- 'foreach --glob "output/theme/images/**/*.{jpeg,jpg}" --execute "imagemin #{path} --plugin.jpegtran.progressive=true > output/theme/images/#{reldir}/#{name}.min#{ext}"'
+- 'foreach --glob "output/theme/images/**/*.png" --execute "imagemin #{path} --plugin.optipng.optimizationLevel=7 > output/theme/images/#{reldir}/#{name}.min#{ext}"'
+- 'foreach --glob "output/theme/images/**/*.min.{jpeg,jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp"'
