@@ -1,14 +1,11 @@
 before_build:
 - node --version
 - npm --version
-- stylus --version
+- imagemin --version
 - foreach --version
 
 build_script:
-- 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
-# - stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
+- 'foreach --glob "output/theme/images/**/*.{jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp"'
 - tree output /a /f
 
 cache:
@@ -25,6 +22,6 @@ image: Visual Studio 2022
 
 install:
 - choco install --yes nodejs
-- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths stylus
+- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths imagemin-cli imagemin-webp
 
 platform: x64

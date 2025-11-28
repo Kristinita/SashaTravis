@@ -1,12 +1,7 @@
-# after_failure:
-# - stylus output/theme/stylus/KiraFirstFolder/KiraFirstFile.styl --out output/theme/css/KiraFirstFolder/KiraFirstFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSecondFile.styl --out output/theme/css/KiraSecondFolder/KiraSecondFile.css
-# - stylus output/theme/stylus/KiraSecondFolder/KiraSubfolder/KiraThirdFile.styl --out output/theme/css/KiraSecondFolder/KiraSubfolder/KiraThirdFile.css
-
 before_script:
 - node --version
 - npm --version
-- stylus --version
+- imagemin --version
 - foreach --version
 
 cache:
@@ -22,7 +17,7 @@ git:
 
 install:
 - sudo apt install tree
-- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths stylus
+- npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths imagemin-cli imagemin-webp
 
 language: node_js
 
@@ -31,5 +26,5 @@ node_js: node
 os: linux
 
 script:
-- 'foreach --glob "output/theme/stylus/**/*.styl" --execute "stylus #{path} --out output/theme/css/#{reldir}/#{name}.css"'
+- 'foreach --glob "output/theme/images/**/*.{jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp"'
 - tree output
