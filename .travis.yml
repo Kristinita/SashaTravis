@@ -32,6 +32,6 @@ node_js: node
 os: linux
 
 script:
-- 'foreach --glob "output/theme/images/**/*.{jpeg,jpg}" --execute "imagemin #{path} --plugin.jpegtran.progressive=true > output/theme/images/#{reldir}/#{name}.min#{ext}"'
-- 'foreach --glob "output/theme/images/**/*.png" --execute "imagemin #{path} --plugin.optipng.optimizationLevel=7 > output/theme/images/#{reldir}/#{name}.min#{ext}"'
-- 'foreach --glob "output/theme/images/**/*.min.{jpeg,jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp"'
+- 'foreach --glob "output/theme/images/**/*.{jpeg,jpg}" --execute "imagemin #{path} --plugin.jpegtran.progressive=true > output/theme/images/#{reldir}/#{name}.min#{ext}" --no-spin'
+- 'foreach --glob "output/theme/images/**/*.png" --execute "imagemin #{path} --plugin.optipng.optimizationLevel=7 > output/theme/images/#{reldir}/#{name}.min#{ext}" --no-spin'
+- 'foreach --glob "output/theme/images/**/*.min.{jpeg,jpg,png}" --execute "imagemin #{path} --plugin=webp > output/theme/images/#{reldir}/#{name}.webp" --no-spin'
