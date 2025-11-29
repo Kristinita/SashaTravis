@@ -21,6 +21,7 @@ git:
   depth: 1
 
 install:
+- sudo apt update
 - sudo apt install tree
 - npm install --global Kristinita/foreach-cli#KiraPatchReldirWindowsPaths imagemin-cli imagemin-jpegtran imagemin-optipng imagemin-webp
 
